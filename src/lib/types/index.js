@@ -1,3 +1,4 @@
+
 export type CalderaPaySettings = {
 	apiRoot: string,
 	bundleOrder: Array<string|number>
@@ -11,7 +12,7 @@ export type CalderaPayPriceOption = {
 	ID: number,
 	name: string,
 	amount: number,
-	addtocart: string,
+	addToCart: string,
 
 };
 
@@ -40,10 +41,11 @@ export type CalderaPayProductInfo = {
 	}
 }
 export type Product = {
+	id: number|string,
 	title: WordPressFieldWithRendered,
 	content: WordPressFieldWithRendered,
 	excerpt: WordPressFieldWithRendered,
-	calderaPay?: CalderaPayProductInfo
+	calderaPay: CalderaPayProductInfo
 }
 
 
@@ -51,7 +53,8 @@ export type ColumnHeader = {
 	key: string|number,
 	label: string,
 	className?: string,
-	id: number
+	id: number,
+	addToCart?: string
 };
 
 export type Row = {
@@ -61,6 +64,6 @@ export type Row = {
 }
 
 export type ProductCollection = {
-	products?: ?Array<Product>,
-	bundles?:Array<Product>
+	products: ?Array<Product>,
+	bundles:Array<Product>
 }

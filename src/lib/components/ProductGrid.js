@@ -23,6 +23,14 @@ export  const  ProductGrid =  (props: Props) => {
 			<thead>
 			<tr>
 				{props.headers.map((header:ColumnHeader) => {
+					if( header.addToCart ){
+						return (<th key={header.key}>
+							<a href={header.addToCart} >
+								{header.label}
+							</a>
+						</th>);
+
+					}
 					return (<th key={header.key}>{header.label}</th>);
 				})}
 			</tr>

@@ -1,10 +1,13 @@
 // @flow
 import React,{Component} from 'react';
 import {ProductGrid} from "./ProductGrid";
-import type {Product, ColumnHeader, CalderaPaySettings, ProductCollection, Row} from "../types";
+import type {Product, ColumnHeader, CalderaPaySettings,
+	//ProductCollection,
+	Row} from "../types";
 import {ProductSearch} from "./ProductSearch";
 import Fuse from 'fuse.js';
 import {pickArray,intersect,inBundle} from "../util";
+
 /**
  * Props type for CalderaPay Component
  */
@@ -17,7 +20,8 @@ type Props = {
  * State type for CalderaPay Component
  */
 type State = {
-	...ProductCollection,
+	products: Array<Product>,
+	bundles:Array<Product>,
 	ordered: Array<number>,
 	searchTerm: string
 
@@ -107,22 +111,22 @@ export class CalderaPay extends Component<Props,State> {
 			});
 
 		}).then(() => {
-			type bundleMapType = bundleOrder;
-			let bundleMap : bundleMapType = {};
+
+			let bundleMap = {};
 			const {products,bundles} = this.state;
 			bundles.forEach((bundle) => {
 				bundleMap[bundle.id] = products.filter( product => inBundle(product.id, bundle.calderaPay));
 			});
 			bundleMap['isFree'] = products.filter( (product: Product ) => product.calderaPay.prices.free );
-			let ordered = [];
+			let ordered : Array<number> = [];
 
 			/**
-			 * Concact two arrays of numbers/strings, adding ONLY unique values
-			 * @param {(number|string)[]} currentValues Array to add to. All values of this array will remain.
-			 * @param {(number|string)[]} newValues Values to add to current values. Only values NOT present in currentValues will be added.
-			 * @return {(number|string)[]}
+			 * Concact two arrays of numbers, adding ONLY unique values
+			 * @param {(number)[]} currentValues Array to add to. All values of this array will remain.
+			 * @param {(number)[]} newValues Values to add to current values. Only values NOT present in currentValues will be added.
+			 * @return {(number)[]}
 			 */
-			const addToArrayUniqueNewOnly = (currentValues: Array<number|string>, newValues: Array<number|string> ) : Array<number|string> =>{
+			const addToArrayUniqueNewOnly = (currentValues: Array<number>, newValues: Array<number> ) : Array<number> =>{
 				return Array.from(new Set( currentValues.concat(newValues)));
 			};
 
@@ -181,7 +185,23 @@ export class CalderaPay extends Component<Props,State> {
 			},
 
 		];
-		this.state.bundles.forEach((bundle): Product => {
+		const {bundles} = this.state;
+		//Bundles not set yet? Bail early
+		if( ! bundles.length ){
+			return columns;
+		}
+
+		const {bundleOrder} = this.props.settings;
+		const bundleIds = bundleOrder.filter( x => ! isNaN(x));
+		bundleOrder
+			.filter( x => ! isNaN(x))
+			.forEach((bundleId:number) => {
+				function findBundle(bundleId:number) : Product {
+					return bundles.find( (bundle:Product) => bundle.id === bundleId );
+				}
+
+				const bundle = findBundle(bundleId);
+			console.log(bundle.title.rendered);
 			columns.push({
 				label: bundle.title.rendered,
 				className: '',
