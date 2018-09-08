@@ -1,8 +1,5 @@
-import Example from './components/Example';
-import SecondExample from './components/SecondExample';
-
-export default Example;
+import {CalderaPay} from './components/CalderaPay';
 
 export {
-  SecondExample,
+	CalderaPay,
 };

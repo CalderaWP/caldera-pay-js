@@ -1,0 +1,1630 @@
+[
+  {
+    "id": 116223,
+    "date": "2018-07-27T12:35:28",
+    "date_gmt": "2018-07-27T16:35:28",
+    "guid": {
+      "rendered": "https:\/\/test-calderaformscom.pantheonsite.io\/?post_type=download&#038;p=116223"
+    },
+    "modified": "2018-08-19T16:16:44",
+    "modified_gmt": "2018-08-19T20:16:44",
+    "slug": "active-campaign-caldera-forms",
+    "status": "publish",
+    "type": "download",
+    "link": "https:\/\/calderaformscom.lndo.site\/downloads\/active-campaign-caldera-forms\/",
+    "title": {
+      "rendered": "ActiveCampaign For Caldera Forms"
+    },
+    "content": {
+      "rendered": "<p>With Caldera Forms\u2019 ActiveCampaign add-on you\u2019ll quickly be able to integrate your WordPress forms with ActiveCampaign\u2019s powerful suite of marketing tools, thus making your website a well-oiled marketing powerhouse.<\/p>\n<h3>Simple Integration<\/h3>\n<p>Once you connect to your ActiveCampaign account in Caldera Forms, you\u2019ll be able to add subscribers to your lists, tag them, and more. Caldera Forms is already a favorite and trusted forms plugin for WordPress. The ActiveCampaign add-on is built with ease-of-use and stability first.<\/p>\n<p>If you\u2019re already a Caldera Forms user, setting up and using ActiveCampaign add-on will be a snap! You can convert your existing forms in just a few clicks. Simply authenticate to your ActiveCampaign account! No coding required, folks!<\/p>\n<h3><strong>Map Your Caldera Form Fields To ActiveCampaign Contact Fields<\/strong><\/h3>\n<p>With the Caldera Forms ActiveCampaign add-on, make sense of your subscriber\u2019s critical information in ActiveCampaign by mapping your form fields to your ActiveCampaign contact fields. Custom Contact Fields in ActiveCampaign are supported, too!<\/p>\n<p>The ability to gather any type of data you want and send it to ActiveCampaign not only makes this integration flexible but it helps you collect more meaningful data that can improve your marketing efforts! Want to know what types of customers subscribe most on your website? By simply adding fields for people to fill out in Caldera Forms, you can send it to ActiveCampaign and create meaningful reports and take informed actions that help produce more sales and more interaction.<\/p>\n<h3><strong>GDPR Compliance and Double Opt-in<\/strong><\/h3>\n<p>By leveraging Caldera Forms\u2019s conditional fields logic you can easily ensure your forms are compliant and adhere to European Union\u2019s new GDPR regulations.<\/p>\n<p>The Caldera Forms ActiveCampaign add-on also allows you to ensure the collection email addresses easily and safely and help you grow your audience. Depending on your organization\u2019s needs, you may want to try the double opt-in process, which includes an extra confirmation step that verifies each email address.<\/p>\n<p>https:\/\/test-calderaformscom.pantheonsite.io\/doc\/getting-started-activecampaign-for-caldera-forms\/<\/p>\n",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "<p>Quickly integrate your WordPress forms with ActiveCampaign\u2019s powerful suite of marketing tools.<\/p>\n",
+      "protected": false
+    },
+    "author": 5340,
+    "featured_media": 116260,
+    "template": "",
+    "caldera_admin_help": [
+      549
+    ],
+    "caldera_doc_overview": [],
+    "calderaPay": {
+      "prices": {
+        "ID": 116223,
+        "price": "99.99",
+        "free": false,
+        "options": [
+          {
+            "index": "1",
+            "name": "One Site",
+            "amount": "99.99",
+            "license_limit": "1",
+            "recurring": "yes",
+            "period": "year",
+            "times": "0",
+            "signup_fee": "0",
+            "addtocart": "https:\/\/calderaformscom.lndo.site\/checkout?edd_action=add_to_cart&download_id=116223&edd_options[price_id]=1"
+          },
+          {
+            "index": "2",
+            "name": "Up To Five Sites",
+            "amount": "149.99",
+            "license_limit": "5",
+            "recurring": "yes",
+            "period": "year",
+            "times": "0",
+            "signup_fee": "0",
+            "addtocart": "https:\/\/calderaformscom.lndo.site\/checkout?edd_action=add_to_cart&download_id=116223&edd_options[price_id]=2"
+          },
+          {
+            "index": "3",
+            "name": "Up To Fifteen Sites",
+            "amount": "199.99",
+            "license_limit": "15",
+            "recurring": "yes",
+            "period": "year",
+            "times": "0",
+            "signup_fee": "0",
+            "addtocart": "https:\/\/calderaformscom.lndo.site\/checkout?edd_action=add_to_cart&download_id=116223&edd_options[price_id]=3"
+          }
+        ]
+      },
+      "featuredImage": {
+        "ID": 116260,
+        "html": "<img width=\"660\" height=\"240\" src=\"https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2018\/06\/caldera-3rd-party-banner_RevJune18-1024x372.png\" class=\"attachment-large size-large\" alt=\"banner image stating &quot;ActiveCampaign&quot; and 3rd party plugin\" srcset=\"https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2018\/06\/caldera-3rd-party-banner_RevJune18-1024x372.png 1024w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2018\/06\/caldera-3rd-party-banner_RevJune18-300x109.png 300w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2018\/06\/caldera-3rd-party-banner_RevJune18-768x279.png 768w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2018\/06\/caldera-3rd-party-banner_RevJune18.png 1200w\" sizes=\"(max-width: 660px) 100vw, 660px\" \/>",
+        "url": "https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2018\/06\/caldera-3rd-party-banner_RevJune18.png",
+        "width": "1200",
+        "height": "437",
+        "srcset": "https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2018\/06\/caldera-3rd-party-banner_RevJune18-300x109.png 300w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2018\/06\/caldera-3rd-party-banner_RevJune18-768x279.png 768w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2018\/06\/caldera-3rd-party-banner_RevJune18-1024x372.png 1024w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2018\/06\/caldera-3rd-party-banner_RevJune18.png 1200w",
+        "sizes": "(max-width: 150px) 100vw, 150px",
+        "alt": "banner image stating \"ActiveCampaign\" and 3rd party plugin"
+      }
+    },
+    "cfdc_image": {
+      "ID": 116260,
+      "html": "<img width=\"660\" height=\"240\" src=\"https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2018\/06\/caldera-3rd-party-banner_RevJune18-1024x372.png\" class=\"attachment-large size-large\" alt=\"banner image stating &quot;ActiveCampaign&quot; and 3rd party plugin\" srcset=\"https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2018\/06\/caldera-3rd-party-banner_RevJune18-1024x372.png 1024w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2018\/06\/caldera-3rd-party-banner_RevJune18-300x109.png 300w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2018\/06\/caldera-3rd-party-banner_RevJune18-768x279.png 768w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2018\/06\/caldera-3rd-party-banner_RevJune18.png 1200w\" sizes=\"(max-width: 660px) 100vw, 660px\" \/>",
+      "url": "https:\/\/calderaforms.com\/wp-content\/uploads\/edd\/2016\/11\/mark-viewed.png",
+      "width": "1200",
+      "height": "437",
+      "srcset": "https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2018\/06\/caldera-3rd-party-banner_RevJune18-300x109.png 300w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2018\/06\/caldera-3rd-party-banner_RevJune18-768x279.png 768w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2018\/06\/caldera-3rd-party-banner_RevJune18-1024x372.png 1024w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2018\/06\/caldera-3rd-party-banner_RevJune18.png 1200w",
+      "sizes": "(max-width: 150px) 100vw, 150px",
+      "alt": "banner image stating \"ActiveCampaign\" and 3rd party plugin"
+    },
+    "cfdc_prices": {
+      "ID": 116223,
+      "price": "99.99",
+      "free": false,
+      "options": {
+        "1": {
+          "index": "1",
+          "name": "One Site",
+          "amount": "99.99",
+          "license_limit": "1",
+          "recurring": "yes",
+          "period": "year",
+          "times": "0",
+          "signup_fee": "0",
+          "addtocart": "https:\/\/calderaformscom.lndo.site\/checkout?edd_action=add_to_cart&download_id=116223&edd_options[price_id]=1"
+        },
+        "2": {
+          "index": "2",
+          "name": "Up To Five Sites",
+          "amount": "149.99",
+          "license_limit": "5",
+          "recurring": "yes",
+          "period": "year",
+          "times": "0",
+          "signup_fee": "0",
+          "addtocart": "https:\/\/calderaformscom.lndo.site\/checkout?edd_action=add_to_cart&download_id=116223&edd_options[price_id]=2"
+        },
+        "3": {
+          "index": "3",
+          "name": "Up To Fifteen Sites",
+          "amount": "199.99",
+          "license_limit": "15",
+          "recurring": "yes",
+          "period": "year",
+          "times": "0",
+          "signup_fee": "0",
+          "addtocart": "https:\/\/calderaformscom.lndo.site\/checkout?edd_action=add_to_cart&download_id=116223&edd_options[price_id]=3"
+        }
+      }
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https:\/\/calderaformscom.lndo.site\/wp-json\/wp\/v2\/download\/116223"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https:\/\/calderaformscom.lndo.site\/wp-json\/wp\/v2\/download"
+        }
+      ],
+      "about": [
+        {
+          "href": "https:\/\/calderaformscom.lndo.site\/wp-json\/wp\/v2\/types\/download"
+        }
+      ],
+      "author": [
+        {
+          "embeddable": true,
+          "href": "https:\/\/calderaformscom.lndo.site\/wp-json\/wp\/v2\/users\/5340"
+        }
+      ],
+      "version-history": [
+        {
+          "count": 8,
+          "href": "https:\/\/calderaformscom.lndo.site\/wp-json\/wp\/v2\/download\/116223\/revisions"
+        }
+      ],
+      "predecessor-version": [
+        {
+          "id": 118832,
+          "href": "https:\/\/calderaformscom.lndo.site\/wp-json\/wp\/v2\/download\/116223\/revisions\/118832"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "embeddable": true,
+          "href": "https:\/\/calderaformscom.lndo.site\/wp-json\/wp\/v2\/media\/116260"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https:\/\/calderaformscom.lndo.site\/wp-json\/wp\/v2\/media?parent=116223"
+        }
+      ],
+      "wp:term": [
+        {
+          "taxonomy": "caldera_admin_help",
+          "embeddable": true,
+          "href": "https:\/\/calderaformscom.lndo.site\/wp-json\/wp\/v2\/caldera_admin_help?post=116223"
+        },
+        {
+          "taxonomy": "caldera_doc_overview",
+          "embeddable": true,
+          "href": "https:\/\/calderaformscom.lndo.site\/wp-json\/wp\/v2\/caldera_doc_overview?post=116223"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https:\/\/api.w.org\/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 99738,
+    "date": "2018-02-01T18:10:58",
+    "date_gmt": "2018-02-01T23:10:58",
+    "guid": {
+      "rendered": "https:\/\/test-calderaformscom.pantheonsite.io\/?post_type=download&#038;p=99738"
+    },
+    "modified": "2018-02-01T18:10:58",
+    "modified_gmt": "2018-02-01T23:10:58",
+    "slug": "pre-order-signature-field-caldera-forms",
+    "status": "publish",
+    "type": "download",
+    "link": "https:\/\/calderaformscom.lndo.site\/downloads\/pre-order-signature-field-caldera-forms\/",
+    "title": {
+      "rendered": "Pre-Order Signature Field for Caldera Forms"
+    },
+    "content": {
+      "rendered": "<p>Accept digital signatures on a Caldera Form with an upload field especially for signature images, with the functionality to swipe a signature on the laptop trackpad.\u00a0<strong>Please note this is a pre-order. This add-on is scheduled for release on May 30th, 2018.\u00a0<\/strong>Buy now to get 50% off.<\/p>\n",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "<p>Accept digital signatures on a Caldera Form with an upload field especially for signature images, with the functionality to swipe a signature on the laptop trackpad.<\/p>\n",
+      "protected": false
+    },
+    "author": 1866,
+    "featured_media": 99739,
+    "template": "",
+    "caldera_admin_help": [],
+    "caldera_doc_overview": [],
+    "calderaPay": {
+      "prices": {
+        "ID": 99738,
+        "price": "37.50",
+        "free": false,
+        "options": [
+          {
+            "index": "1",
+            "name": "Caldera Forms Pro Starter",
+            "amount": "37.50",
+            "license_limit": "0",
+            "recurring": "no",
+            "addtocart": "https:\/\/calderaformscom.lndo.site\/checkout?edd_action=add_to_cart&download_id=99738&edd_options[price_id]=1"
+          }
+        ]
+      },
+      "featuredImage": {
+        "ID": 99739,
+        "html": "<img width=\"660\" height=\"240\" src=\"https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2018\/02\/4-1024x372.png\" class=\"attachment-large size-large\" alt=\"\" srcset=\"https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2018\/02\/4-1024x372.png 1024w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2018\/02\/4-300x109.png 300w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2018\/02\/4-768x279.png 768w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2018\/02\/4.png 1200w\" sizes=\"(max-width: 660px) 100vw, 660px\" \/>",
+        "url": "https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2018\/02\/4.png",
+        "width": "1200",
+        "height": "437",
+        "srcset": "https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2018\/02\/4-300x109.png 300w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2018\/02\/4-768x279.png 768w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2018\/02\/4-1024x372.png 1024w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2018\/02\/4.png 1200w",
+        "sizes": "(max-width: 150px) 100vw, 150px",
+        "alt": ""
+      }
+    },
+    "cfdc_image": {
+      "ID": 99739,
+      "html": "<img width=\"660\" height=\"240\" src=\"https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2018\/02\/4-1024x372.png\" class=\"attachment-large size-large\" alt=\"\" srcset=\"https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2018\/02\/4-1024x372.png 1024w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2018\/02\/4-300x109.png 300w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2018\/02\/4-768x279.png 768w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2018\/02\/4.png 1200w\" sizes=\"(max-width: 660px) 100vw, 660px\" \/>",
+      "url": "https:\/\/calderaforms.com\/wp-content\/uploads\/edd\/2016\/11\/mark-viewed.png",
+      "width": "1200",
+      "height": "437",
+      "srcset": "https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2018\/02\/4-300x109.png 300w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2018\/02\/4-768x279.png 768w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2018\/02\/4-1024x372.png 1024w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2018\/02\/4.png 1200w",
+      "sizes": "(max-width: 150px) 100vw, 150px",
+      "alt": ""
+    },
+    "cfdc_prices": {
+      "ID": 99738,
+      "price": "37.50",
+      "free": false,
+      "options": {
+        "1": {
+          "index": "1",
+          "name": "Caldera Forms Pro Starter",
+          "amount": "37.50",
+          "license_limit": "0",
+          "recurring": "no",
+          "addtocart": "https:\/\/calderaformscom.lndo.site\/checkout?edd_action=add_to_cart&download_id=99738&edd_options[price_id]=1"
+        }
+      }
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https:\/\/calderaformscom.lndo.site\/wp-json\/wp\/v2\/download\/99738"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https:\/\/calderaformscom.lndo.site\/wp-json\/wp\/v2\/download"
+        }
+      ],
+      "about": [
+        {
+          "href": "https:\/\/calderaformscom.lndo.site\/wp-json\/wp\/v2\/types\/download"
+        }
+      ],
+      "author": [
+        {
+          "embeddable": true,
+          "href": "https:\/\/calderaformscom.lndo.site\/wp-json\/wp\/v2\/users\/1866"
+        }
+      ],
+      "version-history": [
+        {
+          "count": 1,
+          "href": "https:\/\/calderaformscom.lndo.site\/wp-json\/wp\/v2\/download\/99738\/revisions"
+        }
+      ],
+      "predecessor-version": [
+        {
+          "id": 99740,
+          "href": "https:\/\/calderaformscom.lndo.site\/wp-json\/wp\/v2\/download\/99738\/revisions\/99740"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "embeddable": true,
+          "href": "https:\/\/calderaformscom.lndo.site\/wp-json\/wp\/v2\/media\/99739"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https:\/\/calderaformscom.lndo.site\/wp-json\/wp\/v2\/media?parent=99738"
+        }
+      ],
+      "wp:term": [
+        {
+          "taxonomy": "caldera_admin_help",
+          "embeddable": true,
+          "href": "https:\/\/calderaformscom.lndo.site\/wp-json\/wp\/v2\/caldera_admin_help?post=99738"
+        },
+        {
+          "taxonomy": "caldera_doc_overview",
+          "embeddable": true,
+          "href": "https:\/\/calderaformscom.lndo.site\/wp-json\/wp\/v2\/caldera_doc_overview?post=99738"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https:\/\/api.w.org\/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 99735,
+    "date": "2018-02-01T18:07:39",
+    "date_gmt": "2018-02-01T23:07:39",
+    "guid": {
+      "rendered": "https:\/\/test-calderaformscom.pantheonsite.io\/?post_type=download&#038;p=99735"
+    },
+    "modified": "2018-02-01T18:07:39",
+    "modified_gmt": "2018-02-01T23:07:39",
+    "slug": "pre-order-date-range-picker-caldera-forms",
+    "status": "publish",
+    "type": "download",
+    "link": "https:\/\/calderaformscom.lndo.site\/downloads\/pre-order-date-range-picker-caldera-forms\/",
+    "title": {
+      "rendered": "Pre-Order Date Range Picker for Caldera Forms"
+    },
+    "content": {
+      "rendered": "<p>Allows Caldera Forms date fields to select a range of dates. Perfect for booking forms, appointment contact forms and more.\u00a0<strong>Please note this is a pre-order. This add-on is scheduled for release on May 30th, 2018.\u00a0<\/strong>Buy now to get 50% off.<\/p>\n",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "<p>Allows Caldera Forms date fields to select a range of dates. Perfect for booking forms, appointment contact forms and more.\u00a0<\/p>\n",
+      "protected": false
+    },
+    "author": 1866,
+    "featured_media": 99736,
+    "template": "",
+    "caldera_admin_help": [],
+    "caldera_doc_overview": [],
+    "calderaPay": {
+      "prices": {
+        "ID": 99735,
+        "price": "37.50",
+        "free": false,
+        "options": [
+          {
+            "index": "1",
+            "name": "Caldera Forms Pro Starter",
+            "amount": "37.50",
+            "license_limit": "0",
+            "recurring": "no",
+            "addtocart": "https:\/\/calderaformscom.lndo.site\/checkout?edd_action=add_to_cart&download_id=99735&edd_options[price_id]=1"
+          }
+        ]
+      },
+      "featuredImage": {
+        "ID": 99736,
+        "html": "<img width=\"660\" height=\"240\" src=\"https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2018\/02\/3-1024x372.png\" class=\"attachment-large size-large\" alt=\"\" srcset=\"https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2018\/02\/3-1024x372.png 1024w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2018\/02\/3-300x109.png 300w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2018\/02\/3-768x279.png 768w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2018\/02\/3.png 1200w\" sizes=\"(max-width: 660px) 100vw, 660px\" \/>",
+        "url": "https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2018\/02\/3.png",
+        "width": "1200",
+        "height": "437",
+        "srcset": "https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2018\/02\/3-300x109.png 300w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2018\/02\/3-768x279.png 768w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2018\/02\/3-1024x372.png 1024w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2018\/02\/3.png 1200w",
+        "sizes": "(max-width: 150px) 100vw, 150px",
+        "alt": ""
+      }
+    },
+    "cfdc_image": {
+      "ID": 99736,
+      "html": "<img width=\"660\" height=\"240\" src=\"https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2018\/02\/3-1024x372.png\" class=\"attachment-large size-large\" alt=\"\" srcset=\"https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2018\/02\/3-1024x372.png 1024w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2018\/02\/3-300x109.png 300w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2018\/02\/3-768x279.png 768w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2018\/02\/3.png 1200w\" sizes=\"(max-width: 660px) 100vw, 660px\" \/>",
+      "url": "https:\/\/calderaforms.com\/wp-content\/uploads\/edd\/2016\/11\/mark-viewed.png",
+      "width": "1200",
+      "height": "437",
+      "srcset": "https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2018\/02\/3-300x109.png 300w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2018\/02\/3-768x279.png 768w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2018\/02\/3-1024x372.png 1024w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2018\/02\/3.png 1200w",
+      "sizes": "(max-width: 150px) 100vw, 150px",
+      "alt": ""
+    },
+    "cfdc_prices": {
+      "ID": 99735,
+      "price": "37.50",
+      "free": false,
+      "options": {
+        "1": {
+          "index": "1",
+          "name": "Caldera Forms Pro Starter",
+          "amount": "37.50",
+          "license_limit": "0",
+          "recurring": "no",
+          "addtocart": "https:\/\/calderaformscom.lndo.site\/checkout?edd_action=add_to_cart&download_id=99735&edd_options[price_id]=1"
+        }
+      }
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https:\/\/calderaformscom.lndo.site\/wp-json\/wp\/v2\/download\/99735"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https:\/\/calderaformscom.lndo.site\/wp-json\/wp\/v2\/download"
+        }
+      ],
+      "about": [
+        {
+          "href": "https:\/\/calderaformscom.lndo.site\/wp-json\/wp\/v2\/types\/download"
+        }
+      ],
+      "author": [
+        {
+          "embeddable": true,
+          "href": "https:\/\/calderaformscom.lndo.site\/wp-json\/wp\/v2\/users\/1866"
+        }
+      ],
+      "version-history": [
+        {
+          "count": 1,
+          "href": "https:\/\/calderaformscom.lndo.site\/wp-json\/wp\/v2\/download\/99735\/revisions"
+        }
+      ],
+      "predecessor-version": [
+        {
+          "id": 99737,
+          "href": "https:\/\/calderaformscom.lndo.site\/wp-json\/wp\/v2\/download\/99735\/revisions\/99737"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "embeddable": true,
+          "href": "https:\/\/calderaformscom.lndo.site\/wp-json\/wp\/v2\/media\/99736"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https:\/\/calderaformscom.lndo.site\/wp-json\/wp\/v2\/media?parent=99735"
+        }
+      ],
+      "wp:term": [
+        {
+          "taxonomy": "caldera_admin_help",
+          "embeddable": true,
+          "href": "https:\/\/calderaformscom.lndo.site\/wp-json\/wp\/v2\/caldera_admin_help?post=99735"
+        },
+        {
+          "taxonomy": "caldera_doc_overview",
+          "embeddable": true,
+          "href": "https:\/\/calderaformscom.lndo.site\/wp-json\/wp\/v2\/caldera_doc_overview?post=99735"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https:\/\/api.w.org\/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 99732,
+    "date": "2018-02-01T18:05:11",
+    "date_gmt": "2018-02-01T23:05:11",
+    "guid": {
+      "rendered": "https:\/\/test-calderaformscom.pantheonsite.io\/?post_type=download&#038;p=99732"
+    },
+    "modified": "2018-02-01T18:05:11",
+    "modified_gmt": "2018-02-01T23:05:11",
+    "slug": "pre-order-discount-codes-caldera-forms",
+    "status": "publish",
+    "type": "download",
+    "link": "https:\/\/calderaformscom.lndo.site\/downloads\/pre-order-discount-codes-caldera-forms\/",
+    "title": {
+      "rendered": "Pre-Order Discount Codes for Caldera Forms"
+    },
+    "content": {
+      "rendered": "<p>Allow a Caldera Form to accept discount codes and automatically calculate the new payment amount. Used alongside a payment processor, your Caldera Form can be a one-page checkout.\u00a0<strong>Please note this is a pre-order. This add-on is scheduled for release on May 30th, 2018.\u00a0<\/strong>Buy now to get 50% off.<\/p>\n",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "<p>Allow a Caldera Form to accept discount codes and automatically calculate the new payment amount. Used alongside a payment processor, your Caldera Form can be a one-page checkout.\u00a0<\/p>\n",
+      "protected": false
+    },
+    "author": 1866,
+    "featured_media": 99733,
+    "template": "",
+    "caldera_admin_help": [],
+    "caldera_doc_overview": [],
+    "calderaPay": {
+      "prices": {
+        "ID": 99732,
+        "price": "37.50",
+        "free": false,
+        "options": [
+          {
+            "index": "1",
+            "name": "Caldera Forms Pro Starter",
+            "amount": "37.50",
+            "license_limit": "0",
+            "recurring": "no",
+            "addtocart": "https:\/\/calderaformscom.lndo.site\/checkout?edd_action=add_to_cart&download_id=99732&edd_options[price_id]=1"
+          }
+        ]
+      },
+      "featuredImage": {
+        "ID": 99733,
+        "html": "<img width=\"660\" height=\"240\" src=\"https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2018\/02\/Product-Banners-4-1024x372.png\" class=\"attachment-large size-large\" alt=\"\" srcset=\"https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2018\/02\/Product-Banners-4-1024x372.png 1024w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2018\/02\/Product-Banners-4-300x109.png 300w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2018\/02\/Product-Banners-4-768x279.png 768w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2018\/02\/Product-Banners-4.png 1200w\" sizes=\"(max-width: 660px) 100vw, 660px\" \/>",
+        "url": "https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2018\/02\/Product-Banners-4.png",
+        "width": "1200",
+        "height": "437",
+        "srcset": "https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2018\/02\/Product-Banners-4-300x109.png 300w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2018\/02\/Product-Banners-4-768x279.png 768w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2018\/02\/Product-Banners-4-1024x372.png 1024w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2018\/02\/Product-Banners-4.png 1200w",
+        "sizes": "(max-width: 150px) 100vw, 150px",
+        "alt": ""
+      }
+    },
+    "cfdc_image": {
+      "ID": 99733,
+      "html": "<img width=\"660\" height=\"240\" src=\"https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2018\/02\/Product-Banners-4-1024x372.png\" class=\"attachment-large size-large\" alt=\"\" srcset=\"https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2018\/02\/Product-Banners-4-1024x372.png 1024w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2018\/02\/Product-Banners-4-300x109.png 300w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2018\/02\/Product-Banners-4-768x279.png 768w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2018\/02\/Product-Banners-4.png 1200w\" sizes=\"(max-width: 660px) 100vw, 660px\" \/>",
+      "url": "https:\/\/calderaforms.com\/wp-content\/uploads\/edd\/2016\/11\/mark-viewed.png",
+      "width": "1200",
+      "height": "437",
+      "srcset": "https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2018\/02\/Product-Banners-4-300x109.png 300w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2018\/02\/Product-Banners-4-768x279.png 768w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2018\/02\/Product-Banners-4-1024x372.png 1024w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2018\/02\/Product-Banners-4.png 1200w",
+      "sizes": "(max-width: 150px) 100vw, 150px",
+      "alt": ""
+    },
+    "cfdc_prices": {
+      "ID": 99732,
+      "price": "37.50",
+      "free": false,
+      "options": {
+        "1": {
+          "index": "1",
+          "name": "Caldera Forms Pro Starter",
+          "amount": "37.50",
+          "license_limit": "0",
+          "recurring": "no",
+          "addtocart": "https:\/\/calderaformscom.lndo.site\/checkout?edd_action=add_to_cart&download_id=99732&edd_options[price_id]=1"
+        }
+      }
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https:\/\/calderaformscom.lndo.site\/wp-json\/wp\/v2\/download\/99732"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https:\/\/calderaformscom.lndo.site\/wp-json\/wp\/v2\/download"
+        }
+      ],
+      "about": [
+        {
+          "href": "https:\/\/calderaformscom.lndo.site\/wp-json\/wp\/v2\/types\/download"
+        }
+      ],
+      "author": [
+        {
+          "embeddable": true,
+          "href": "https:\/\/calderaformscom.lndo.site\/wp-json\/wp\/v2\/users\/1866"
+        }
+      ],
+      "version-history": [
+        {
+          "count": 1,
+          "href": "https:\/\/calderaformscom.lndo.site\/wp-json\/wp\/v2\/download\/99732\/revisions"
+        }
+      ],
+      "predecessor-version": [
+        {
+          "id": 99734,
+          "href": "https:\/\/calderaformscom.lndo.site\/wp-json\/wp\/v2\/download\/99732\/revisions\/99734"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "embeddable": true,
+          "href": "https:\/\/calderaformscom.lndo.site\/wp-json\/wp\/v2\/media\/99733"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https:\/\/calderaformscom.lndo.site\/wp-json\/wp\/v2\/media?parent=99732"
+        }
+      ],
+      "wp:term": [
+        {
+          "taxonomy": "caldera_admin_help",
+          "embeddable": true,
+          "href": "https:\/\/calderaformscom.lndo.site\/wp-json\/wp\/v2\/caldera_admin_help?post=99732"
+        },
+        {
+          "taxonomy": "caldera_doc_overview",
+          "embeddable": true,
+          "href": "https:\/\/calderaformscom.lndo.site\/wp-json\/wp\/v2\/caldera_doc_overview?post=99732"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https:\/\/api.w.org\/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 99720,
+    "date": "2018-02-01T18:01:06",
+    "date_gmt": "2018-02-01T23:01:06",
+    "guid": {
+      "rendered": "https:\/\/test-calderaformscom.pantheonsite.io\/?post_type=download&#038;p=99720"
+    },
+    "modified": "2018-04-04T21:33:44",
+    "modified_gmt": "2018-04-05T01:33:44",
+    "slug": "pre-order-activecampaign-caldera-forms",
+    "status": "publish",
+    "type": "download",
+    "link": "https:\/\/calderaformscom.lndo.site\/downloads\/pre-order-activecampaign-caldera-forms\/",
+    "title": {
+      "rendered": "Pre-Order ActiveCampaign for Caldera Forms"
+    },
+    "content": {
+      "rendered": "<p>Send Caldera Forms submission data to ActiveCampaign for the ultimately easy marketing automation setup on WordPress.<strong> Please note this is a pre-order. This add-on is scheduled for release on May 30th, 2018.\u00a0<\/strong>Buy now to get 50% off.<\/p>\n",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "<p>Send Caldera Forms submission data to ActiveCampaign for the ultimately easy marketing automation setup on WordPress. <\/p>\n",
+      "protected": false
+    },
+    "author": 1866,
+    "featured_media": 99730,
+    "template": "",
+    "caldera_admin_help": [],
+    "caldera_doc_overview": [],
+    "calderaPay": {
+      "prices": {
+        "ID": 99720,
+        "price": "37.50",
+        "free": false,
+        "options": [
+          {
+            "index": "1",
+            "name": "Caldera Forms Pro Starter",
+            "amount": "37.50",
+            "license_limit": "0",
+            "recurring": "no",
+            "addtocart": "https:\/\/calderaformscom.lndo.site\/checkout?edd_action=add_to_cart&download_id=99720&edd_options[price_id]=1"
+          }
+        ]
+      },
+      "featuredImage": {
+        "ID": 99730,
+        "html": "<img width=\"660\" height=\"240\" src=\"https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2018\/02\/2-1024x372.png\" class=\"attachment-large size-large\" alt=\"\" srcset=\"https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2018\/02\/2-1024x372.png 1024w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2018\/02\/2-300x109.png 300w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2018\/02\/2-768x279.png 768w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2018\/02\/2.png 1200w\" sizes=\"(max-width: 660px) 100vw, 660px\" \/>",
+        "url": "https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2018\/02\/2.png",
+        "width": "1200",
+        "height": "437",
+        "srcset": "https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2018\/02\/2-300x109.png 300w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2018\/02\/2-768x279.png 768w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2018\/02\/2-1024x372.png 1024w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2018\/02\/2.png 1200w",
+        "sizes": "(max-width: 150px) 100vw, 150px",
+        "alt": ""
+      }
+    },
+    "cfdc_image": {
+      "ID": 99730,
+      "html": "<img width=\"660\" height=\"240\" src=\"https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2018\/02\/2-1024x372.png\" class=\"attachment-large size-large\" alt=\"\" srcset=\"https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2018\/02\/2-1024x372.png 1024w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2018\/02\/2-300x109.png 300w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2018\/02\/2-768x279.png 768w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2018\/02\/2.png 1200w\" sizes=\"(max-width: 660px) 100vw, 660px\" \/>",
+      "url": "https:\/\/calderaforms.com\/wp-content\/uploads\/edd\/2016\/11\/mark-viewed.png",
+      "width": "1200",
+      "height": "437",
+      "srcset": "https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2018\/02\/2-300x109.png 300w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2018\/02\/2-768x279.png 768w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2018\/02\/2-1024x372.png 1024w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2018\/02\/2.png 1200w",
+      "sizes": "(max-width: 150px) 100vw, 150px",
+      "alt": ""
+    },
+    "cfdc_prices": {
+      "ID": 99720,
+      "price": "37.50",
+      "free": false,
+      "options": {
+        "1": {
+          "index": "1",
+          "name": "Caldera Forms Pro Starter",
+          "amount": "37.50",
+          "license_limit": "0",
+          "recurring": "no",
+          "addtocart": "https:\/\/calderaformscom.lndo.site\/checkout?edd_action=add_to_cart&download_id=99720&edd_options[price_id]=1"
+        }
+      }
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https:\/\/calderaformscom.lndo.site\/wp-json\/wp\/v2\/download\/99720"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https:\/\/calderaformscom.lndo.site\/wp-json\/wp\/v2\/download"
+        }
+      ],
+      "about": [
+        {
+          "href": "https:\/\/calderaformscom.lndo.site\/wp-json\/wp\/v2\/types\/download"
+        }
+      ],
+      "author": [
+        {
+          "embeddable": true,
+          "href": "https:\/\/calderaformscom.lndo.site\/wp-json\/wp\/v2\/users\/1866"
+        }
+      ],
+      "version-history": [
+        {
+          "count": 1,
+          "href": "https:\/\/calderaformscom.lndo.site\/wp-json\/wp\/v2\/download\/99720\/revisions"
+        }
+      ],
+      "predecessor-version": [
+        {
+          "id": 99731,
+          "href": "https:\/\/calderaformscom.lndo.site\/wp-json\/wp\/v2\/download\/99720\/revisions\/99731"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "embeddable": true,
+          "href": "https:\/\/calderaformscom.lndo.site\/wp-json\/wp\/v2\/media\/99730"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https:\/\/calderaformscom.lndo.site\/wp-json\/wp\/v2\/media?parent=99720"
+        }
+      ],
+      "wp:term": [
+        {
+          "taxonomy": "caldera_admin_help",
+          "embeddable": true,
+          "href": "https:\/\/calderaformscom.lndo.site\/wp-json\/wp\/v2\/caldera_admin_help?post=99720"
+        },
+        {
+          "taxonomy": "caldera_doc_overview",
+          "embeddable": true,
+          "href": "https:\/\/calderaformscom.lndo.site\/wp-json\/wp\/v2\/caldera_doc_overview?post=99720"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https:\/\/api.w.org\/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 99707,
+    "date": "2018-02-01T16:54:43",
+    "date_gmt": "2018-02-01T21:54:43",
+    "guid": {
+      "rendered": "https:\/\/test-calderaformscom.pantheonsite.io\/?post_type=download&#038;p=99707"
+    },
+    "modified": "2018-02-01T17:02:24",
+    "modified_gmt": "2018-02-01T22:02:24",
+    "slug": "pre-order-salesforce-caldera-forms",
+    "status": "publish",
+    "type": "download",
+    "link": "https:\/\/calderaformscom.lndo.site\/downloads\/pre-order-salesforce-caldera-forms\/",
+    "title": {
+      "rendered": "Pre-Order Salesforce for Caldera Forms"
+    },
+    "content": {
+      "rendered": "<p>Send Caldera Forms submission data to Salesforce, the world&#8217;s leading customer relationship management platform.<strong> Please note this is a pre-order. This add-on is scheduled for release on May 30th, 2018.\u00a0<\/strong>Buy now to get 50% off.<\/p>\n",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "<p>Send Caldera Forms submission data to Salesforce, the world&#8217;s leading customer relationship management platform.<\/p>\n",
+      "protected": false
+    },
+    "author": 1866,
+    "featured_media": 99710,
+    "template": "",
+    "caldera_admin_help": [],
+    "caldera_doc_overview": [],
+    "calderaPay": {
+      "prices": {
+        "ID": 99707,
+        "price": "37.50",
+        "free": false,
+        "options": [
+          {
+            "index": "1",
+            "name": "Caldera Forms Pro Starter",
+            "amount": "37.50",
+            "license_limit": "0",
+            "recurring": "no",
+            "addtocart": "https:\/\/calderaformscom.lndo.site\/checkout?edd_action=add_to_cart&download_id=99707&edd_options[price_id]=1"
+          }
+        ]
+      },
+      "featuredImage": {
+        "ID": 99710,
+        "html": "<img width=\"660\" height=\"240\" src=\"https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2018\/02\/Product-Banners-2-1024x372.png\" class=\"attachment-large size-large\" alt=\"\" srcset=\"https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2018\/02\/Product-Banners-2-1024x372.png 1024w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2018\/02\/Product-Banners-2-300x109.png 300w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2018\/02\/Product-Banners-2-768x279.png 768w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2018\/02\/Product-Banners-2.png 1200w\" sizes=\"(max-width: 660px) 100vw, 660px\" \/>",
+        "url": "https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2018\/02\/Product-Banners-2.png",
+        "width": "1200",
+        "height": "437",
+        "srcset": "https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2018\/02\/Product-Banners-2-300x109.png 300w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2018\/02\/Product-Banners-2-768x279.png 768w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2018\/02\/Product-Banners-2-1024x372.png 1024w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2018\/02\/Product-Banners-2.png 1200w",
+        "sizes": "(max-width: 150px) 100vw, 150px",
+        "alt": ""
+      }
+    },
+    "cfdc_image": {
+      "ID": 99710,
+      "html": "<img width=\"660\" height=\"240\" src=\"https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2018\/02\/Product-Banners-2-1024x372.png\" class=\"attachment-large size-large\" alt=\"\" srcset=\"https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2018\/02\/Product-Banners-2-1024x372.png 1024w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2018\/02\/Product-Banners-2-300x109.png 300w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2018\/02\/Product-Banners-2-768x279.png 768w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2018\/02\/Product-Banners-2.png 1200w\" sizes=\"(max-width: 660px) 100vw, 660px\" \/>",
+      "url": "https:\/\/calderaforms.com\/wp-content\/uploads\/edd\/2016\/11\/mark-viewed.png",
+      "width": "1200",
+      "height": "437",
+      "srcset": "https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2018\/02\/Product-Banners-2-300x109.png 300w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2018\/02\/Product-Banners-2-768x279.png 768w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2018\/02\/Product-Banners-2-1024x372.png 1024w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2018\/02\/Product-Banners-2.png 1200w",
+      "sizes": "(max-width: 150px) 100vw, 150px",
+      "alt": ""
+    },
+    "cfdc_prices": {
+      "ID": 99707,
+      "price": "37.50",
+      "free": false,
+      "options": {
+        "1": {
+          "index": "1",
+          "name": "Caldera Forms Pro Starter",
+          "amount": "37.50",
+          "license_limit": "0",
+          "recurring": "no",
+          "addtocart": "https:\/\/calderaformscom.lndo.site\/checkout?edd_action=add_to_cart&download_id=99707&edd_options[price_id]=1"
+        }
+      }
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https:\/\/calderaformscom.lndo.site\/wp-json\/wp\/v2\/download\/99707"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https:\/\/calderaformscom.lndo.site\/wp-json\/wp\/v2\/download"
+        }
+      ],
+      "about": [
+        {
+          "href": "https:\/\/calderaformscom.lndo.site\/wp-json\/wp\/v2\/types\/download"
+        }
+      ],
+      "author": [
+        {
+          "embeddable": true,
+          "href": "https:\/\/calderaformscom.lndo.site\/wp-json\/wp\/v2\/users\/1866"
+        }
+      ],
+      "version-history": [
+        {
+          "count": 4,
+          "href": "https:\/\/calderaformscom.lndo.site\/wp-json\/wp\/v2\/download\/99707\/revisions"
+        }
+      ],
+      "predecessor-version": [
+        {
+          "id": 99715,
+          "href": "https:\/\/calderaformscom.lndo.site\/wp-json\/wp\/v2\/download\/99707\/revisions\/99715"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "embeddable": true,
+          "href": "https:\/\/calderaformscom.lndo.site\/wp-json\/wp\/v2\/media\/99710"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https:\/\/calderaformscom.lndo.site\/wp-json\/wp\/v2\/media?parent=99707"
+        }
+      ],
+      "wp:term": [
+        {
+          "taxonomy": "caldera_admin_help",
+          "embeddable": true,
+          "href": "https:\/\/calderaformscom.lndo.site\/wp-json\/wp\/v2\/caldera_admin_help?post=99707"
+        },
+        {
+          "taxonomy": "caldera_doc_overview",
+          "embeddable": true,
+          "href": "https:\/\/calderaformscom.lndo.site\/wp-json\/wp\/v2\/caldera_doc_overview?post=99707"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https:\/\/api.w.org\/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 82236,
+    "date": "2017-10-16T16:23:19",
+    "date_gmt": "2017-10-16T20:23:19",
+    "guid": {
+      "rendered": "https:\/\/test-calderaformscom.pantheonsite.io\/?post_type=download&#038;p=82236"
+    },
+    "modified": "2018-05-11T11:55:24",
+    "modified_gmt": "2018-05-11T15:55:24",
+    "slug": "caldera-forms-style-customizer-divi",
+    "status": "publish",
+    "type": "download",
+    "link": "https:\/\/calderaformscom.lndo.site\/downloads\/caldera-forms-style-customizer-divi\/",
+    "title": {
+      "rendered": "Caldera Forms Style Customizer For Divi &#038; Extra"
+    },
+    "content": {
+      "rendered": "<p>Caldera Forms Style Customizer brings a touch of elegance by helping you easily make your forms beautiful.<\/p>\n<p>Simply use the WordPress customizer to style each field with tons of options (from text fields to toggle switches, passing by checkboxes, radio buttons, selects dropdown, success alert\u2026) and make your own design in just a few clicks.<\/p>\n<p>Caldera Forms Style Customizer is the perfect addon to Caldera Forms, an essential tool for non-coders or those who just want to save time.<\/p>\n<p>You can even export your custom settings to backup or reuse on another site! Caldera Forms and Caldera Forms Style Customizer is a unique toolset to create awesome advanced custom forms with ease.<\/p>\n<p><iframe width=\"660\" height=\"371\" src=\"https:\/\/www.youtube.com\/embed\/L4yBgWaffDs?feature=oembed\" frameborder=\"0\" allow=\"autoplay; encrypted-media\" allowfullscreen><\/iframe><\/p>\n<h2><span style=\"font-size: x-large;\">Requirements<\/span><\/h2>\n<p>Caldera Forms Style Customizer for Divi &amp; Extra requires the Caldera Forms plugin and <a href=\"https:\/\/www.elegantthemes.com\/gallery\/divi\/\">Divi<\/a> or <a href=\"https:\/\/www.elegantthemes.com\/gallery\/extra\/\">Extra<\/a> themes by <a href=\"https:\/\/www.elegantthemes.com\/\">Elegant Themes<\/a>.<\/p>\n<h2>Getting Started Guide<\/h2>\n<blockquote class=\"wp-embedded-content\" data-secret=\"Ub3AQeVfJe\"><p><a href=\"https:\/\/test-calderaformscom.pantheonsite.io\/doc\/caldera-forms-style-customizer-getting-started\/\">Caldera Forms Style Customizer: Getting Started<\/a><\/p><\/blockquote>\n<p><iframe class=\"wp-embedded-content\" sandbox=\"allow-scripts\" security=\"restricted\" style=\"position: absolute; clip: rect(1px, 1px, 1px, 1px);\" src=\"https:\/\/test-calderaformscom.pantheonsite.io\/doc\/caldera-forms-style-customizer-getting-started\/embed\/#?secret=Ub3AQeVfJe\" data-secret=\"Ub3AQeVfJe\" width=\"600\" height=\"338\" title=\"&#8220;Caldera Forms Style Customizer: Getting Started&#8221; &#8212; WordPress Form Builder | Caldera Forms\" frameborder=\"0\" marginwidth=\"0\" marginheight=\"0\" scrolling=\"no\"><\/iframe><\/p>\n",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "<p>Make your forms beautiful. Style any element of a Caldera Forms form using the WordPress customizer. No CSS required. Works with Divi and Extra from Elegant Themes.<\/p>\n",
+      "protected": false
+    },
+    "author": 1,
+    "featured_media": 83208,
+    "template": "",
+    "caldera_admin_help": [],
+    "caldera_doc_overview": [],
+    "calderaPay": {
+      "prices": {
+        "ID": 82236,
+        "price": "49.99",
+        "free": false,
+        "options": [
+          {
+            "index": "1",
+            "name": "1 Site",
+            "amount": "49.99",
+            "license_limit": "1",
+            "recurring": "yes",
+            "period": "year",
+            "times": "0",
+            "signup_fee": "0",
+            "addtocart": "https:\/\/calderaformscom.lndo.site\/checkout?edd_action=add_to_cart&download_id=82236&edd_options[price_id]=1"
+          },
+          {
+            "index": "2",
+            "name": "5 Sites",
+            "amount": "99.99",
+            "license_limit": "5",
+            "recurring": "yes",
+            "period": "year",
+            "times": "0",
+            "signup_fee": "0",
+            "addtocart": "https:\/\/calderaformscom.lndo.site\/checkout?edd_action=add_to_cart&download_id=82236&edd_options[price_id]=2"
+          },
+          {
+            "index": "3",
+            "name": "15 Sites",
+            "amount": "129.99",
+            "license_limit": "0",
+            "recurring": "yes",
+            "period": "year",
+            "times": "0",
+            "signup_fee": "0",
+            "addtocart": "https:\/\/calderaformscom.lndo.site\/checkout?edd_action=add_to_cart&download_id=82236&edd_options[price_id]=3"
+          }
+        ]
+      },
+      "featuredImage": {
+        "ID": 83208,
+        "html": "<img width=\"660\" height=\"240\" src=\"https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2017\/09\/cfsc-banner-1024x372.png\" class=\"attachment-large size-large\" alt=\"Caldera Forms Style Customizer Banner\" srcset=\"https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2017\/09\/cfsc-banner-1024x372.png 1024w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2017\/09\/cfsc-banner-300x109.png 300w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2017\/09\/cfsc-banner-768x279.png 768w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2017\/09\/cfsc-banner.png 1200w\" sizes=\"(max-width: 660px) 100vw, 660px\" \/>",
+        "url": "https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2017\/09\/cfsc-banner.png",
+        "width": "1200",
+        "height": "437",
+        "srcset": "https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2017\/09\/cfsc-banner-300x109.png 300w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2017\/09\/cfsc-banner-768x279.png 768w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2017\/09\/cfsc-banner-1024x372.png 1024w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2017\/09\/cfsc-banner.png 1200w",
+        "sizes": "(max-width: 150px) 100vw, 150px",
+        "alt": "Caldera Forms Style Customizer Banner"
+      }
+    },
+    "cfdc_image": {
+      "ID": 83208,
+      "html": "<img width=\"660\" height=\"240\" src=\"https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2017\/09\/cfsc-banner-1024x372.png\" class=\"attachment-large size-large\" alt=\"Caldera Forms Style Customizer Banner\" srcset=\"https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2017\/09\/cfsc-banner-1024x372.png 1024w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2017\/09\/cfsc-banner-300x109.png 300w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2017\/09\/cfsc-banner-768x279.png 768w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2017\/09\/cfsc-banner.png 1200w\" sizes=\"(max-width: 660px) 100vw, 660px\" \/>",
+      "url": "https:\/\/calderaforms.com\/wp-content\/uploads\/edd\/2016\/11\/mark-viewed.png",
+      "width": "1200",
+      "height": "437",
+      "srcset": "https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2017\/09\/cfsc-banner-300x109.png 300w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2017\/09\/cfsc-banner-768x279.png 768w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2017\/09\/cfsc-banner-1024x372.png 1024w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2017\/09\/cfsc-banner.png 1200w",
+      "sizes": "(max-width: 150px) 100vw, 150px",
+      "alt": "Caldera Forms Style Customizer Banner"
+    },
+    "cfdc_prices": {
+      "ID": 82236,
+      "price": "49.99",
+      "free": false,
+      "options": {
+        "1": {
+          "index": "1",
+          "name": "1 Site",
+          "amount": "49.99",
+          "license_limit": "1",
+          "recurring": "yes",
+          "period": "year",
+          "times": "0",
+          "signup_fee": "0",
+          "addtocart": "https:\/\/calderaformscom.lndo.site\/checkout?edd_action=add_to_cart&download_id=82236&edd_options[price_id]=1"
+        },
+        "2": {
+          "index": "2",
+          "name": "5 Sites",
+          "amount": "99.99",
+          "license_limit": "5",
+          "recurring": "yes",
+          "period": "year",
+          "times": "0",
+          "signup_fee": "0",
+          "addtocart": "https:\/\/calderaformscom.lndo.site\/checkout?edd_action=add_to_cart&download_id=82236&edd_options[price_id]=2"
+        },
+        "3": {
+          "index": "3",
+          "name": "15 Sites",
+          "amount": "129.99",
+          "license_limit": "0",
+          "recurring": "yes",
+          "period": "year",
+          "times": "0",
+          "signup_fee": "0",
+          "addtocart": "https:\/\/calderaformscom.lndo.site\/checkout?edd_action=add_to_cart&download_id=82236&edd_options[price_id]=3"
+        }
+      }
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https:\/\/calderaformscom.lndo.site\/wp-json\/wp\/v2\/download\/82236"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https:\/\/calderaformscom.lndo.site\/wp-json\/wp\/v2\/download"
+        }
+      ],
+      "about": [
+        {
+          "href": "https:\/\/calderaformscom.lndo.site\/wp-json\/wp\/v2\/types\/download"
+        }
+      ],
+      "author": [
+        {
+          "embeddable": true,
+          "href": "https:\/\/calderaformscom.lndo.site\/wp-json\/wp\/v2\/users\/1"
+        }
+      ],
+      "version-history": [
+        {
+          "count": 6,
+          "href": "https:\/\/calderaformscom.lndo.site\/wp-json\/wp\/v2\/download\/82236\/revisions"
+        }
+      ],
+      "predecessor-version": [
+        {
+          "id": 87800,
+          "href": "https:\/\/calderaformscom.lndo.site\/wp-json\/wp\/v2\/download\/82236\/revisions\/87800"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "embeddable": true,
+          "href": "https:\/\/calderaformscom.lndo.site\/wp-json\/wp\/v2\/media\/83208"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https:\/\/calderaformscom.lndo.site\/wp-json\/wp\/v2\/media?parent=82236"
+        }
+      ],
+      "wp:term": [
+        {
+          "taxonomy": "caldera_admin_help",
+          "embeddable": true,
+          "href": "https:\/\/calderaformscom.lndo.site\/wp-json\/wp\/v2\/caldera_admin_help?post=82236"
+        },
+        {
+          "taxonomy": "caldera_doc_overview",
+          "embeddable": true,
+          "href": "https:\/\/calderaformscom.lndo.site\/wp-json\/wp\/v2\/caldera_doc_overview?post=82236"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https:\/\/api.w.org\/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 56332,
+    "date": "2017-06-14T15:37:38",
+    "date_gmt": "2017-06-14T19:37:38",
+    "guid": {
+      "rendered": "https:\/\/test-calderaformscom.pantheonsite.io\/?post_type=download&#038;p=56332"
+    },
+    "modified": "2018-05-10T21:29:22",
+    "modified_gmt": "2018-05-11T01:29:22",
+    "slug": "caldera-forms-zapier",
+    "status": "publish",
+    "type": "download",
+    "link": "https:\/\/calderaformscom.lndo.site\/downloads\/caldera-forms-zapier\/",
+    "title": {
+      "rendered": "Zapier Connector For Caldera Forms"
+    },
+    "content": {
+      "rendered": "<p>Connect Caldera Forms to anything with Zapier. This add-on for Caldera Forms is as powerful as it is simple.<\/p>\n<p>Zapier supports a ton of cool services from Facebook, to Google Sheets to SalesForce. With the Zapier Connector for Caldera Forms, you can connect to them all!<\/p>\n<blockquote class=\"wp-embedded-content\" data-secret=\"vsiVf9VaWr\"><p><a href=\"https:\/\/test-calderaformscom.pantheonsite.io\/doc\/caldera-forms-zapier\/\">Caldera Forms Zapier &#8211; Getting Started<\/a><\/p><\/blockquote>\n<p><iframe class=\"wp-embedded-content\" sandbox=\"allow-scripts\" security=\"restricted\" style=\"position: absolute; clip: rect(1px, 1px, 1px, 1px);\" src=\"https:\/\/test-calderaformscom.pantheonsite.io\/doc\/caldera-forms-zapier\/embed\/#?secret=vsiVf9VaWr\" data-secret=\"vsiVf9VaWr\" width=\"600\" height=\"338\" title=\"&#8220;Caldera Forms Zapier &#8211; Getting Started&#8221; &#8212; WordPress Form Builder | Caldera Forms\" frameborder=\"0\" marginwidth=\"0\" marginheight=\"0\" scrolling=\"no\"><\/iframe><\/p>\n",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "<p>All of the best web services are a zap away from Caldera Forms!<\/p>\n",
+      "protected": false
+    },
+    "author": 1,
+    "featured_media": 56329,
+    "template": "",
+    "caldera_admin_help": [],
+    "caldera_doc_overview": [],
+    "calderaPay": {
+      "prices": {
+        "ID": 56332,
+        "price": "74.99",
+        "free": false,
+        "options": [
+          {
+            "index": "1",
+            "name": "One Site",
+            "amount": "74.99",
+            "license_limit": "1",
+            "recurring": "yes",
+            "period": "year",
+            "times": "0",
+            "signup_fee": "0",
+            "addtocart": "https:\/\/calderaformscom.lndo.site\/checkout?edd_action=add_to_cart&download_id=56332&edd_options[price_id]=1"
+          },
+          {
+            "index": "2",
+            "name": "Up To Five Sites",
+            "amount": "99.99",
+            "license_limit": "5",
+            "recurring": "yes",
+            "period": "year",
+            "times": "0",
+            "signup_fee": "0",
+            "addtocart": "https:\/\/calderaformscom.lndo.site\/checkout?edd_action=add_to_cart&download_id=56332&edd_options[price_id]=2"
+          },
+          {
+            "index": "3",
+            "name": "Up To Fifteen Sites",
+            "amount": "149.99",
+            "license_limit": "15",
+            "recurring": "yes",
+            "period": "year",
+            "times": "0",
+            "signup_fee": "0",
+            "addtocart": "https:\/\/calderaformscom.lndo.site\/checkout?edd_action=add_to_cart&download_id=56332&edd_options[price_id]=3"
+          }
+        ]
+      },
+      "featuredImage": {
+        "ID": 56329,
+        "html": "<img width=\"660\" height=\"240\" src=\"https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/2017\/04\/zapier-1024x373.png\" class=\"attachment-large size-large\" alt=\"Caldera Forms Zapier Banner\" srcset=\"https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/2017\/04\/zapier-1024x373.png 1024w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/2017\/04\/zapier-300x109.png 300w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/2017\/04\/zapier-768x279.png 768w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/2017\/04\/zapier.png 1201w\" sizes=\"(max-width: 660px) 100vw, 660px\" \/>",
+        "url": "https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/2017\/04\/zapier.png",
+        "width": "1200",
+        "height": "437",
+        "srcset": "https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/2017\/04\/zapier-300x109.png 300w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/2017\/04\/zapier-768x279.png 768w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/2017\/04\/zapier-1024x373.png 1024w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/2017\/04\/zapier.png 1201w",
+        "sizes": "(max-width: 150px) 100vw, 150px",
+        "alt": "Caldera Forms Zapier Banner"
+      }
+    },
+    "cfdc_image": {
+      "ID": 56329,
+      "html": "<img width=\"660\" height=\"240\" src=\"https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/2017\/04\/zapier-1024x373.png\" class=\"attachment-large size-large\" alt=\"Caldera Forms Zapier Banner\" srcset=\"https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/2017\/04\/zapier-1024x373.png 1024w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/2017\/04\/zapier-300x109.png 300w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/2017\/04\/zapier-768x279.png 768w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/2017\/04\/zapier.png 1201w\" sizes=\"(max-width: 660px) 100vw, 660px\" \/>",
+      "url": "https:\/\/calderaforms.com\/wp-content\/uploads\/edd\/2016\/11\/mark-viewed.png",
+      "width": "1200",
+      "height": "437",
+      "srcset": "https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/2017\/04\/zapier-300x109.png 300w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/2017\/04\/zapier-768x279.png 768w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/2017\/04\/zapier-1024x373.png 1024w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/2017\/04\/zapier.png 1201w",
+      "sizes": "(max-width: 150px) 100vw, 150px",
+      "alt": "Caldera Forms Zapier Banner"
+    },
+    "cfdc_prices": {
+      "ID": 56332,
+      "price": "74.99",
+      "free": false,
+      "options": {
+        "1": {
+          "index": "1",
+          "name": "One Site",
+          "amount": "74.99",
+          "license_limit": "1",
+          "recurring": "yes",
+          "period": "year",
+          "times": "0",
+          "signup_fee": "0",
+          "addtocart": "https:\/\/calderaformscom.lndo.site\/checkout?edd_action=add_to_cart&download_id=56332&edd_options[price_id]=1"
+        },
+        "2": {
+          "index": "2",
+          "name": "Up To Five Sites",
+          "amount": "99.99",
+          "license_limit": "5",
+          "recurring": "yes",
+          "period": "year",
+          "times": "0",
+          "signup_fee": "0",
+          "addtocart": "https:\/\/calderaformscom.lndo.site\/checkout?edd_action=add_to_cart&download_id=56332&edd_options[price_id]=2"
+        },
+        "3": {
+          "index": "3",
+          "name": "Up To Fifteen Sites",
+          "amount": "149.99",
+          "license_limit": "15",
+          "recurring": "yes",
+          "period": "year",
+          "times": "0",
+          "signup_fee": "0",
+          "addtocart": "https:\/\/calderaformscom.lndo.site\/checkout?edd_action=add_to_cart&download_id=56332&edd_options[price_id]=3"
+        }
+      }
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https:\/\/calderaformscom.lndo.site\/wp-json\/wp\/v2\/download\/56332"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https:\/\/calderaformscom.lndo.site\/wp-json\/wp\/v2\/download"
+        }
+      ],
+      "about": [
+        {
+          "href": "https:\/\/calderaformscom.lndo.site\/wp-json\/wp\/v2\/types\/download"
+        }
+      ],
+      "author": [
+        {
+          "embeddable": true,
+          "href": "https:\/\/calderaformscom.lndo.site\/wp-json\/wp\/v2\/users\/1"
+        }
+      ],
+      "version-history": [
+        {
+          "count": 4,
+          "href": "https:\/\/calderaformscom.lndo.site\/wp-json\/wp\/v2\/download\/56332\/revisions"
+        }
+      ],
+      "predecessor-version": [
+        {
+          "id": 111839,
+          "href": "https:\/\/calderaformscom.lndo.site\/wp-json\/wp\/v2\/download\/56332\/revisions\/111839"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "embeddable": true,
+          "href": "https:\/\/calderaformscom.lndo.site\/wp-json\/wp\/v2\/media\/56329"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https:\/\/calderaformscom.lndo.site\/wp-json\/wp\/v2\/media?parent=56332"
+        }
+      ],
+      "wp:term": [
+        {
+          "taxonomy": "caldera_admin_help",
+          "embeddable": true,
+          "href": "https:\/\/calderaformscom.lndo.site\/wp-json\/wp\/v2\/caldera_admin_help?post=56332"
+        },
+        {
+          "taxonomy": "caldera_doc_overview",
+          "embeddable": true,
+          "href": "https:\/\/calderaformscom.lndo.site\/wp-json\/wp\/v2\/caldera_doc_overview?post=56332"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https:\/\/api.w.org\/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 62145,
+    "date": "2017-05-24T16:36:23",
+    "date_gmt": "2017-05-24T20:36:23",
+    "guid": {
+      "rendered": "https:\/\/test-calderaformscom.pantheonsite.io\/?post_type=download&#038;p=62145"
+    },
+    "modified": "2017-10-31T16:03:10",
+    "modified_gmt": "2017-10-31T20:03:10",
+    "slug": "caldera-forms-translations",
+    "status": "publish",
+    "type": "download",
+    "link": "https:\/\/calderaformscom.lndo.site\/downloads\/caldera-forms-translations\/",
+    "title": {
+      "rendered": "Caldera Forms Translations"
+    },
+    "content": {
+      "rendered": "<div id=\"tab-description\" class=\"plugin-description section \">\n<h2 id=\"description-header\">Now, you can easily translate <a href=\"https:\/\/calderawp.com\/caldera-forms?utm_source=dotOrg&amp;utm_medium=plugins&amp;utm_campaign=caldera-forms-translate\" rel=\"nofollow\">Caldera Forms<\/a> fields.<\/h2>\n<p>What it does:<\/p>\n<ul>\n<li>Translate form field labels, descriptions, default values and option values for select fields.<\/li>\n<li>Adds a language picker field.<\/li>\n<\/ul>\n<p>One form, all the languages you need.<\/p>\n<ul>\n<li><a href=\"https:\/\/calderawp.com\/doc\/caldera-forms-translation-getting-started?utm_source=dotOrg&amp;utm_medium=plugins&amp;utm_campaign=caldera-forms-translate\" rel=\"nofollow\">Documentation<\/a><\/li>\n<li>Language switching via <a href=\"https:\/\/wpml.org\">WPML<\/a> now supported.<\/li>\n<li>Requires Caldera Forms 1.4.4 or later.<\/li>\n<\/ul>\n<p>&nbsp;<\/p>\n<\/div>\n<p><iframe width=\"660\" height=\"495\" src=\"https:\/\/www.youtube.com\/embed\/A8r8q8zFR00?feature=oembed\" frameborder=\"0\" gesture=\"media\" allowfullscreen><\/iframe><\/p>\n<p>&nbsp;<\/p>\n",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "<p>Translate your Caldera Form into many languages with the easy use of a user-selected dropdown. <\/p>\n",
+      "protected": false
+    },
+    "author": 1866,
+    "featured_media": 60558,
+    "template": "",
+    "caldera_admin_help": [],
+    "caldera_doc_overview": [],
+    "calderaPay": {
+      "prices": {
+        "ID": 62145,
+        "price": "0.00",
+        "free": true,
+        "options": [
+          {
+            "index": "1",
+            "name": "One Site",
+            "amount": "0.00",
+            "license_limit": "0",
+            "recurring": "no",
+            "addtocart": "https:\/\/calderaformscom.lndo.site\/checkout?edd_action=add_to_cart&download_id=62145&edd_options[price_id]=1"
+          }
+        ]
+      },
+      "featuredImage": {
+        "ID": 60558,
+        "html": "<img width=\"660\" height=\"214\" src=\"https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/2015\/02\/catdeta-caldera-forms-banner-1024x332.png\" class=\"attachment-large size-large\" alt=\"Catdera Caldera Forms Banner\" srcset=\"https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/2015\/02\/catdeta-caldera-forms-banner-1024x332.png 1024w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/2015\/02\/catdeta-caldera-forms-banner-300x97.png 300w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/2015\/02\/catdeta-caldera-forms-banner-768x249.png 768w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/2015\/02\/catdeta-caldera-forms-banner.png 1544w\" sizes=\"(max-width: 660px) 100vw, 660px\" \/>",
+        "url": "https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/2015\/02\/catdeta-caldera-forms-banner.png",
+        "width": "1200",
+        "height": "437",
+        "srcset": "https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/2015\/02\/catdeta-caldera-forms-banner-300x97.png 300w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/2015\/02\/catdeta-caldera-forms-banner-768x249.png 768w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/2015\/02\/catdeta-caldera-forms-banner-1024x332.png 1024w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/2015\/02\/catdeta-caldera-forms-banner.png 1544w",
+        "sizes": "(max-width: 150px) 100vw, 150px",
+        "alt": "Catdera Caldera Forms Banner"
+      }
+    },
+    "cfdc_image": {
+      "ID": 60558,
+      "html": "<img width=\"660\" height=\"214\" src=\"https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/2015\/02\/catdeta-caldera-forms-banner-1024x332.png\" class=\"attachment-large size-large\" alt=\"Catdera Caldera Forms Banner\" srcset=\"https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/2015\/02\/catdeta-caldera-forms-banner-1024x332.png 1024w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/2015\/02\/catdeta-caldera-forms-banner-300x97.png 300w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/2015\/02\/catdeta-caldera-forms-banner-768x249.png 768w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/2015\/02\/catdeta-caldera-forms-banner.png 1544w\" sizes=\"(max-width: 660px) 100vw, 660px\" \/>",
+      "url": "https:\/\/calderaforms.com\/wp-content\/uploads\/edd\/2016\/11\/mark-viewed.png",
+      "width": "1200",
+      "height": "437",
+      "srcset": "https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/2015\/02\/catdeta-caldera-forms-banner-300x97.png 300w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/2015\/02\/catdeta-caldera-forms-banner-768x249.png 768w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/2015\/02\/catdeta-caldera-forms-banner-1024x332.png 1024w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/2015\/02\/catdeta-caldera-forms-banner.png 1544w",
+      "sizes": "(max-width: 150px) 100vw, 150px",
+      "alt": "Catdera Caldera Forms Banner"
+    },
+    "cfdc_prices": {
+      "ID": 62145,
+      "price": "0.00",
+      "free": true,
+      "options": {
+        "1": {
+          "index": "1",
+          "name": "One Site",
+          "amount": "0.00",
+          "license_limit": "0",
+          "recurring": "no",
+          "addtocart": "https:\/\/calderaformscom.lndo.site\/checkout?edd_action=add_to_cart&download_id=62145&edd_options[price_id]=1"
+        }
+      }
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https:\/\/calderaformscom.lndo.site\/wp-json\/wp\/v2\/download\/62145"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https:\/\/calderaformscom.lndo.site\/wp-json\/wp\/v2\/download"
+        }
+      ],
+      "about": [
+        {
+          "href": "https:\/\/calderaformscom.lndo.site\/wp-json\/wp\/v2\/types\/download"
+        }
+      ],
+      "author": [
+        {
+          "embeddable": true,
+          "href": "https:\/\/calderaformscom.lndo.site\/wp-json\/wp\/v2\/users\/1866"
+        }
+      ],
+      "version-history": [
+        {
+          "count": 5,
+          "href": "https:\/\/calderaformscom.lndo.site\/wp-json\/wp\/v2\/download\/62145\/revisions"
+        }
+      ],
+      "predecessor-version": [
+        {
+          "id": 76644,
+          "href": "https:\/\/calderaformscom.lndo.site\/wp-json\/wp\/v2\/download\/62145\/revisions\/76644"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "embeddable": true,
+          "href": "https:\/\/calderaformscom.lndo.site\/wp-json\/wp\/v2\/media\/60558"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https:\/\/calderaformscom.lndo.site\/wp-json\/wp\/v2\/media?parent=62145"
+        }
+      ],
+      "wp:term": [
+        {
+          "taxonomy": "caldera_admin_help",
+          "embeddable": true,
+          "href": "https:\/\/calderaformscom.lndo.site\/wp-json\/wp\/v2\/caldera_admin_help?post=62145"
+        },
+        {
+          "taxonomy": "caldera_doc_overview",
+          "embeddable": true,
+          "href": "https:\/\/calderaformscom.lndo.site\/wp-json\/wp\/v2\/caldera_doc_overview?post=62145"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https:\/\/api.w.org\/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 55330,
+    "date": "2017-04-25T10:47:03",
+    "date_gmt": "2017-04-25T14:47:03",
+    "guid": {
+      "rendered": "https:\/\/test-calderaformscom.pantheonsite.io\/?post_type=download&#038;p=55330"
+    },
+    "modified": "2018-05-10T21:29:30",
+    "modified_gmt": "2018-05-11T01:29:30",
+    "slug": "caldera-forms-youtube",
+    "status": "publish",
+    "type": "download",
+    "link": "https:\/\/calderaformscom.lndo.site\/downloads\/caldera-forms-youtube\/",
+    "title": {
+      "rendered": "Caldera Forms YouTube"
+    },
+    "content": {
+      "rendered": "<p>Use your YouTube videos to build your lists and learn about your site visitors using Caldera Forms.<\/p>\n<p>Caldera Forms Youtube is a responsive YouTube video player for WordPress with an extra super power: when you click play the video stops and a form is shown instead. Once the form is filled out, the video continues. An excellent tool for those using WordPress for list building with <a href=\"https:\/\/test-calderaformscom.pantheonsite.io\/downloads\/caldera-forms-mailchimp-add-on\/\">MailChimp<\/a> or <a href=\"https:\/\/test-calderaformscom.pantheonsite.io\/downloads\/convertkit-caldera-forms\/\">ConvertKit<\/a>\u00a0&#8212; create a different video for each <a href=\"https:\/\/test-calderaformscom.pantheonsite.io\/doc\/mailchimp-interest-groups-caldera-forms\/\">MailChimp intrest group<\/a>\u00a0or\u00a0ConvertKit sequence and use the Caldera Forms to segment your lists.<\/p>\n<p>Once the form is submitted a cookie is written so that the form isn&#8217;t required for repeat views.<\/p>\n<h2>Key Features<\/h2>\n<ul>\n<li>Responsive videos and forms<\/li>\n<li>Cookie tracking of submissions<\/li>\n<li>Easy to use with the Caldera Forms shortcode<\/li>\n<\/ul>\n<h2>Learn How To Use This Add-on<\/h2>\n<p>This simple add-on just requires a Caldera Form and the ID of a YouTube Video. You can learn more in <a href=\"https:\/\/test-calderaformscom.pantheonsite.io\/doc\/caldera-forms-youtube-getting-started\">the getting started guide<\/a>.<\/p>\n<blockquote class=\"wp-embedded-content\" data-secret=\"NBtjhu4Mnl\"><p><a href=\"https:\/\/test-calderaformscom.pantheonsite.io\/doc\/caldera-forms-youtube-getting-started\/\">Caldera Forms YouTube &#8211; Getting Started<\/a><\/p><\/blockquote>\n<p><iframe class=\"wp-embedded-content\" sandbox=\"allow-scripts\" security=\"restricted\" style=\"position: absolute; clip: rect(1px, 1px, 1px, 1px);\" src=\"https:\/\/test-calderaformscom.pantheonsite.io\/doc\/caldera-forms-youtube-getting-started\/embed\/#?secret=NBtjhu4Mnl\" data-secret=\"NBtjhu4Mnl\" width=\"600\" height=\"338\" title=\"&#8220;Caldera Forms YouTube &#8211; Getting Started&#8221; &#8212; WordPress Form Builder | Caldera Forms\" frameborder=\"0\" marginwidth=\"0\" marginheight=\"0\" scrolling=\"no\"><\/iframe><\/p>\n",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "<p>Use Caldera Forms to unlock YouTube videos that play in a responsive video player.<\/p>\n",
+      "protected": false
+    },
+    "author": 1,
+    "featured_media": 56213,
+    "template": "",
+    "caldera_admin_help": [],
+    "caldera_doc_overview": [],
+    "calderaPay": {
+      "prices": {
+        "ID": 55330,
+        "price": "74.99",
+        "free": false,
+        "options": [
+          {
+            "index": "0",
+            "name": "One Site",
+            "amount": "74.99",
+            "license_limit": "1",
+            "recurring": "yes",
+            "period": "year",
+            "times": "0",
+            "signup_fee": "0",
+            "addtocart": "https:\/\/calderaformscom.lndo.site\/checkout?edd_action=add_to_cart&download_id=55330&edd_options[price_id]=1"
+          }
+        ]
+      },
+      "featuredImage": {
+        "ID": 56213,
+        "html": "<img width=\"660\" height=\"240\" src=\"https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2017\/04\/youtube-1024x373.png\" class=\"attachment-large size-large\" alt=\"Caldera Forms YouTube Banner\" srcset=\"https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2017\/04\/youtube-1024x373.png 1024w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2017\/04\/youtube-300x109.png 300w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2017\/04\/youtube-768x279.png 768w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2017\/04\/youtube.png 1201w\" sizes=\"(max-width: 660px) 100vw, 660px\" \/>",
+        "url": "https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2017\/04\/youtube.png",
+        "width": "1200",
+        "height": "437",
+        "srcset": "https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2017\/04\/youtube-300x109.png 300w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2017\/04\/youtube-768x279.png 768w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2017\/04\/youtube-1024x373.png 1024w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2017\/04\/youtube.png 1201w",
+        "sizes": "(max-width: 150px) 100vw, 150px",
+        "alt": "Caldera Forms YouTube Banner"
+      }
+    },
+    "cfdc_image": {
+      "ID": 56213,
+      "html": "<img width=\"660\" height=\"240\" src=\"https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2017\/04\/youtube-1024x373.png\" class=\"attachment-large size-large\" alt=\"Caldera Forms YouTube Banner\" srcset=\"https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2017\/04\/youtube-1024x373.png 1024w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2017\/04\/youtube-300x109.png 300w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2017\/04\/youtube-768x279.png 768w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2017\/04\/youtube.png 1201w\" sizes=\"(max-width: 660px) 100vw, 660px\" \/>",
+      "url": "https:\/\/calderaforms.com\/wp-content\/uploads\/edd\/2016\/11\/mark-viewed.png",
+      "width": "1200",
+      "height": "437",
+      "srcset": "https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2017\/04\/youtube-300x109.png 300w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2017\/04\/youtube-768x279.png 768w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2017\/04\/youtube-1024x373.png 1024w, https:\/\/calderaformscom.lndo.site\/wp-content\/uploads\/edd\/2017\/04\/youtube.png 1201w",
+      "sizes": "(max-width: 150px) 100vw, 150px",
+      "alt": "Caldera Forms YouTube Banner"
+    },
+    "cfdc_prices": {
+      "ID": 55330,
+      "price": "74.99",
+      "free": false,
+      "options": {
+        "1": {
+          "index": "0",
+          "name": "One Site",
+          "amount": "74.99",
+          "license_limit": "1",
+          "recurring": "yes",
+          "period": "year",
+          "times": "0",
+          "signup_fee": "0",
+          "addtocart": "https:\/\/calderaformscom.lndo.site\/checkout?edd_action=add_to_cart&download_id=55330&edd_options[price_id]=1"
+        }
+      }
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https:\/\/calderaformscom.lndo.site\/wp-json\/wp\/v2\/download\/55330"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https:\/\/calderaformscom.lndo.site\/wp-json\/wp\/v2\/download"
+        }
+      ],
+      "about": [
+        {
+          "href": "https:\/\/calderaformscom.lndo.site\/wp-json\/wp\/v2\/types\/download"
+        }
+      ],
+      "author": [
+        {
+          "embeddable": true,
+          "href": "https:\/\/calderaformscom.lndo.site\/wp-json\/wp\/v2\/users\/1"
+        }
+      ],
+      "version-history": [
+        {
+          "count": 5,
+          "href": "https:\/\/calderaformscom.lndo.site\/wp-json\/wp\/v2\/download\/55330\/revisions"
+        }
+      ],
+      "predecessor-version": [
+        {
+          "id": 111840,
+          "href": "https:\/\/calderaformscom.lndo.site\/wp-json\/wp\/v2\/download\/55330\/revisions\/111840"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "embeddable": true,
+          "href": "https:\/\/calderaformscom.lndo.site\/wp-json\/wp\/v2\/media\/56213"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https:\/\/calderaformscom.lndo.site\/wp-json\/wp\/v2\/media?parent=55330"
+        }
+      ],
+      "wp:term": [
+        {
+          "taxonomy": "caldera_admin_help",
+          "embeddable": true,
+          "href": "https:\/\/calderaformscom.lndo.site\/wp-json\/wp\/v2\/caldera_admin_help?post=55330"
+        },
+        {
+          "taxonomy": "caldera_doc_overview",
+          "embeddable": true,
+          "href": "https:\/\/calderaformscom.lndo.site\/wp-json\/wp\/v2\/caldera_doc_overview?post=55330"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https:\/\/api.w.org\/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  }
+]
