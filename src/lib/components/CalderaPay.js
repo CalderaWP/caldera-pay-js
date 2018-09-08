@@ -1,9 +1,10 @@
 // @flow
 import React,{Component} from 'react';
 import {ProductGrid} from "./ProductGrid";
-import type {Product, ColumnHeader, CalderaPaySettings, ProductCollection, CalderaPayProductInfo, Row} from "../types";
+import type {Product, ColumnHeader, CalderaPaySettings, ProductCollection, Row} from "../types";
 import {ProductSearch} from "./ProductSearch";
 import Fuse from 'fuse.js';
+import {pickArray,intersect,inBundle} from "../util";
 /**
  * Props type for CalderaPay Component
  */
@@ -22,37 +23,7 @@ type State = {
 
 };
 
-/**
- * Check if a product is in a bundle
- * @param {Number}productId
- * @param {CalderaPayProductInfo}bundleProductInfo
- * @return {Boolean}
- */
-const inBundle = (productId: number, bundleProductInfo: CalderaPayProductInfo) : boolean => {
-	const bundledDownloads = bundleProductInfo.bundle.includes.map((value: string): number => { return parseInt(value,10)});
-	return bundledDownloads.includes(parseInt(productId,10));
-};
 
-/**
- * Get the intersection of two numeric arrays
- *
- * @see https://stackoverflow.com/a/37041756/1469799
- *
- * @param {number[]} arrayOne First array
- * @param {number[]} arrayTwo Second array
- * @return {number[]}
- */
-const intersect = (arrayOne: Array<number>, arrayTwo: Array<number>) :  Array<number>  => {
-	return [...new Set(arrayTwo)].filter(x => new Set(arrayTwo).has(x));
-};
-
-//This is copied from caldera-admin. Choose one location.
-const pickArray = (array, key) => {
-	return array.reduce(
-		(accumualtor, item) =>
-			accumualtor.concat([item[key]]), []
-	);
-};
 
 /**
  * The outermost container for CalderaPay UI
@@ -101,7 +72,7 @@ export class CalderaPay extends Component<Props,State> {
 		 * Get the products
 		 * @type {Promise<Response | never>}
 		 */
-		const productsRequest = fetch(`${apiRoot}?category=caldera-forms-add-ons&per_page=50`, {
+		const productsRequest = fetch(`${apiRoot}?category=caldera-forms-add-ons&per_page=50&calderaPay=1`, {
 			mode: 'cors',
 			redirect: 'follow',
 			cache: "default",
@@ -117,7 +88,7 @@ export class CalderaPay extends Component<Props,State> {
 		 * @type {Promise<Response | never>}
 		 */
 		const bundlesRequest =
-			fetch(`${apiRoot}?cf-pro=1`, {
+			fetch(`${apiRoot}?cf-pro=1&calderaPay=1`, {
 				mode: 'cors',
 				redirect: 'follow',
 				cache: "default",
@@ -164,8 +135,6 @@ export class CalderaPay extends Component<Props,State> {
 	}
 
 
-
-
 	/**
 	 * Get the product table rows of products, in order
 	 * @return {Array}
@@ -188,9 +157,7 @@ export class CalderaPay extends Component<Props,State> {
 			rows.push(row);
 		});
 
-
 		return rows;
-
 
 	}
 
