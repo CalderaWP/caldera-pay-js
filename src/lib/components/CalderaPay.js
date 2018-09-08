@@ -7,6 +7,7 @@ import type {Product, ColumnHeader, CalderaPaySettings,
 import {ProductSearch} from "./ProductSearch";
 import Fuse from 'fuse.js';
 import {pickArray,intersect,inBundle} from "../util";
+import {Spinner} from '@wordpress/components';
 
 /**
  * Props type for CalderaPay Component
@@ -23,8 +24,8 @@ type State = {
 	products: Array<Product>,
 	bundles:Array<Product>,
 	ordered: Array<number>,
-	searchTerm: string
-
+	searchTerm: string,
+	hasLoaded: boolean
 };
 
 
@@ -51,6 +52,8 @@ export class CalderaPay extends Component<Props,State> {
 		},
 	};
 
+	loaded: boolean;
+
 	/**
 	 * @type State
 	 */
@@ -58,13 +61,15 @@ export class CalderaPay extends Component<Props,State> {
 		products: [],
 		bundles: [],
 		ordered: [],
-		searchTerm: ''
+		searchTerm: '',
+		hasLoaded: false
 	};
 
 	/** @inheritDoc **/
 	constructor(props: Props){
 		super(props);
 		(this: any).setSearchTerm = this.setSearchTerm.bind(this);
+
 
 	}
 
@@ -133,7 +138,10 @@ export class CalderaPay extends Component<Props,State> {
 			bundleOrder.forEach( (key:number|string) => {
 				ordered = addToArrayUniqueNewOnly( ordered, pickArray(bundleMap[key], 'id'));
 			});
-			this.setState({ordered});
+			this.setState({
+				ordered,
+				isLoaded: true
+			});
 		});
 
 	}
@@ -238,11 +246,14 @@ export class CalderaPay extends Component<Props,State> {
 	/** @inheritDoc **/
 	render() {
 		const {state} = this;
-
+		const {searchTerm, isLoaded } = state;
+		if( ! isLoaded ){
+			return <div><div className={'sr-only'}>Loading</div><Spinner/></div>
+		}
 		return (
 			<div>
 				<ProductSearch
-					searchTerm={state.searchTerm}
+					searchTerm={searchTerm}
 					onProductSearch={this.setSearchTerm}
 				/>
 				<ProductGrid
