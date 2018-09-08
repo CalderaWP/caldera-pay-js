@@ -20,9 +20,11 @@
   "homepage": "https://github.com/DimiMikadze/create-react-library#readme",
   "license": "MIT",
   "dependencies": {
+    "@caldera-labs/components": "^1.6.0",
     "@wordpress/api-request": "^1.0.0-alpha.3",
     "@wordpress/element": "^2.0.0",
     "classnames": "^2.2.6",
+    "fuse.js": "^3.2.1",
     "react-bootstrap": "^0.32.4"
   },
   "devDependencies": {

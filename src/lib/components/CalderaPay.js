@@ -2,19 +2,25 @@
 import React,{Component} from 'react';
 import {ProductGrid} from "./ProductGrid";
 import type {Product, ColumnHeader, CalderaPaySettings, ProductCollection, CalderaPayProductInfo, Row} from "../types";
-
+import {ProductSearch} from "./ProductSearch";
+import Fuse from 'fuse.js';
 /**
  * Props type for CalderaPay Component
  */
 type Props = {
 	settings: CalderaPaySettings,
-
+	fuseOptions: ?Fuse.FuseOptions
 };
 
 /**
  * State type for CalderaPay Component
  */
-type State = {...ProductCollection, ordered: Array<number> };
+type State = {
+	...ProductCollection,
+	ordered: Array<number>,
+	searchTerm: string
+
+};
 
 /**
  * Check if a product is in a bundle
@@ -27,12 +33,48 @@ const inBundle = (productId: number, bundleProductInfo: CalderaPayProductInfo) :
 	return bundledDownloads.includes(parseInt(productId,10));
 };
 
+/**
+ * Get the intersection of two numeric arrays
+ *
+ * @see https://stackoverflow.com/a/37041756/1469799
+ *
+ * @param {number[]} arrayOne First array
+ * @param {number[]} arrayTwo Second array
+ * @return {number[]}
+ */
+const intersect = (arrayOne: Array<number>, arrayTwo: Array<number>) :  Array<number>  => {
+	return [...new Set(arrayTwo)].filter(x => new Set(arrayTwo).has(x));
+};
+
+//This is copied from caldera-admin. Choose one location.
+const pickArray = (array, key) => {
+	return array.reduce(
+		(accumualtor, item) =>
+			accumualtor.concat([item[key]]), []
+	);
+};
 
 /**
  * The outermost container for CalderaPay UI
  */
 export class CalderaPay extends Component<Props,State> {
 
+	/** @inheritDoc **/
+	static defaultProps = {
+		fuseOptions: {
+			shouldSort: false,
+			threshold: 0.6,
+			location: 0,
+			distance: 100,
+			maxPatternLength: 32,
+			minMatchCharLength: 3,
+			keys: [
+				'title.rendered',
+				'content.rendered',
+				'excerpt.rendered'
+			]
+		},
+	};
 
 	/**
 	 * @type State
@@ -40,8 +82,16 @@ export class CalderaPay extends Component<Props,State> {
 	state = {
 		products: [],
 		bundles: [],
-		ordered: []
+		ordered: [],
+		searchTerm: ''
 	};
+
+	/** @inheritDoc **/
+	constructor(props: Props){
+		super(props);
+		(this: any).setSearchTerm = this.setSearchTerm.bind(this);
+
+	}
 
 	/** @inheritDoc **/
 	componentDidMount() {
@@ -94,22 +144,27 @@ export class CalderaPay extends Component<Props,State> {
 			});
 			bundleMap['isFree'] = products.filter( (product: Product ) => product.calderaPay.prices.free );
 			let ordered = [];
-			//This is copied from caldera-admin. Choose one location.
-			const pickArray = (array, key) => {
-				return array.reduce(
-					(accumualtor, item) =>
-						accumualtor.concat([item[key]]), []
-				);
+
+			/**
+			 * Concact two arrays of numbers/strings, adding ONLY unique values
+			 * @param {(number|string)[]} currentValues Array to add to. All values of this array will remain.
+			 * @param {(number|string)[]} newValues Values to add to current values. Only values NOT present in currentValues will be added.
+			 * @return {(number|string)[]}
+			 */
+			const addToArrayUniqueNewOnly = (currentValues: Array<number|string>, newValues: Array<number|string> ) : Array<number|string> =>{
+				return Array.from(new Set( currentValues.concat(newValues)));
 			};
+
 			bundleOrder.forEach( (key:number|string) => {
-
-				ordered = Array.from(new Set( ordered.concat(pickArray(bundleMap[key], 'id'))));
-
+				ordered = addToArrayUniqueNewOnly( ordered, pickArray(bundleMap[key], 'id'));
 			});
 			this.setState({ordered});
 		});
 
 	}
+
+
+
 
 	/**
 	 * Get the product table rows of products, in order
@@ -171,17 +226,41 @@ export class CalderaPay extends Component<Props,State> {
 
 	}
 
+	/**
+	 * Mutate search term in state
+	 *
+	 * @param {string} searchTerm
+	 */
+	setSearchTerm(searchTerm:string) {
+		const {ordered} = this.state;
+		this.setState({searchTerm});
+		//This should be its own method
+		const {products} = this.state;
+		//No way newing Fuse everytime will be performant.
+		//Would need to new it every time this.state.products mutates though
+		const result = new Fuse(products,this.props.fuseOptions).search(searchTerm);
+		this.setState({ordered:pickArray(intersect(ordered,result),'id')});
+
+	}
+
 	/** @inheritDoc **/
 	render() {
 		const {state} = this;
 
 		return (
-			<ProductGrid
-				products={state.products}
-				rows={this.getRows()}
-				headers={this.getHeaders()}
-			/>
+			<div>
+				<ProductSearch
+					searchTerm={state.searchTerm}
+					onProductSearch={this.setSearchTerm}
+				/>
+				<ProductGrid
+					products={state.products}
+					rows={this.getRows()}
+					headers={this.getHeaders()}
+				/>
+			</div>
 		);
+
 
 	}
 }
