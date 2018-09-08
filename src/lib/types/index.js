@@ -1,7 +1,9 @@
 
 export type CalderaPaySettings = {
 	apiRoot: string,
-	bundleOrder: Array<string|number>
+	bundleOrder: Array<string|number>,
+	cartRoute: string,
+	checkoutLink: string
 }
 
 export type WordPressFieldWithRendered = {

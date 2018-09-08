@@ -6,6 +6,7 @@ import type {ColumnHeader, Row} from "../types";
 type Props = {
 	headers: Array<ColumnHeader>,
 	rows: Array<Row>,
+	onAddToCart: Function
 };
 
 /**
@@ -15,6 +16,7 @@ type Props = {
  * @constructor
  */
 export  const  ProductGrid =  (props: Props) => {
+
 	return(
 		<table
 			className={classNames([
@@ -48,18 +50,26 @@ export  const  ProductGrid =  (props: Props) => {
 			</tr>
 			</thead>
 			<tbody>
-			{props.rows.map((row: Row)=> {
-				return(
-					<tr
-						key={row.key}
-					>
-						{Object.values(props.headers).map((headerColumn: ColumnHeader) => {
-							return (<th key={headerColumn.key}>{row[headerColumn.key]}</th>)
-						})}
-					</tr>
-				);
+				{props.rows.map((row: Row)=> {
+					return(
+						<tr
+							key={row.key}
+						>
+							{Object.values(props.headers).map((headerColumn: ColumnHeader) => {
+								return (
+									<th key={headerColumn.key}>
+										<button onClick={() => {
+												props.onAddToCart(headerColumn.id);
+											}
+										}>
+											{row[headerColumn.key]}
+										</button>
+									</th>)
+							})}
+						</tr>
+					);
 
-			})}
+				})}
 
 			</tbody>
 		</table>

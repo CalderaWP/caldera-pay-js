@@ -8,7 +8,7 @@ import {ProductSearch} from "./ProductSearch";
 import Fuse from 'fuse.js';
 import {pickArray,intersect,inBundle} from "../util";
 import {Spinner} from '@wordpress/components';
-
+import {Cart} from "./Cart";
 /**
  * Props type for CalderaPay Component
  */
@@ -16,7 +16,11 @@ type Props = {
 	settings: CalderaPaySettings,
 	fuseOptions: ?Fuse.FuseOptions
 };
-
+type CartItem = {
+	id: number,
+	quantity: number
+};
+type CartContents = Array<CartItem>;
 /**
  * State type for CalderaPay Component
  */
@@ -25,7 +29,8 @@ type State = {
 	bundles:Array<Product>,
 	ordered: Array<number>,
 	searchTerm: string,
-	hasLoaded: boolean
+	hasLoaded: boolean,
+	cartContents: CartContents
 };
 
 
@@ -62,13 +67,15 @@ export class CalderaPay extends Component<Props,State> {
 		bundles: [],
 		ordered: [],
 		searchTerm: '',
-		hasLoaded: false
+		hasLoaded: false,
+		cartContents: []
 	};
 
 	/** @inheritDoc **/
 	constructor(props: Props){
 		super(props);
 		(this: any).setSearchTerm = this.setSearchTerm.bind(this);
+		(this: any).addToCart = this.addToCart.bind(this);
 
 
 	}
@@ -85,6 +92,9 @@ export class CalderaPay extends Component<Props,State> {
 			mode: 'cors',
 			redirect: 'follow',
 			cache: "default",
+			headers: {
+				'Accept': 'application/json',
+			},
 
 		}).then(response => response.json())
 			.catch(error => console.error('Error:', error))
@@ -96,23 +106,25 @@ export class CalderaPay extends Component<Props,State> {
 		 * Get the bundled products
 		 * @type {Promise<Response | never>}
 		 */
-		const bundlesRequest =
-			fetch(`${apiRoot}?cf-pro=1&calderaPay=1`, {
-				mode: 'cors',
-				redirect: 'follow',
-				cache: "default",
+		const bundlesRequest = fetch(`${apiRoot}?cf-pro=1&calderaPay=1`, {
+			mode: 'cors',
+			redirect: 'follow',
+			cache: "default",
+			headers: {
+				'Accept': 'application/json',
+			},
 
-			}).then(response => response.json())
-				.catch(error => console.error('Error:', error))
-				.then(response => {
-					return response;
+		}).then(response => response.json())
+			.catch(error => console.error('Error:', error))
+			.then(response => {
+				return response;
 		});
 
 		//Dispatch both requests at once, then order results and stuff
 		Promise.all([productsRequest,bundlesRequest]).then((values) =>{
 			this.setState({
-				products: values[0],
-				bundles: values[1]
+				products: undefined !== typeof values[0] ? values[0] : [],
+				bundles: undefined !== typeof values[1] ? values[1] : []
 			});
 
 		}).then(() => {
@@ -140,7 +152,7 @@ export class CalderaPay extends Component<Props,State> {
 			});
 			this.setState({
 				ordered,
-				isLoaded: true
+				hasLoaded: true
 			});
 		});
 
@@ -203,9 +215,7 @@ export class CalderaPay extends Component<Props,State> {
 			return columns;
 		}
 
-		const {bundleOrder} = this.props.settings;
-		const bundleIds = bundleOrder.filter( x => ! isNaN(x));
-		bundleOrder
+		this.props.settings.bundleOrder
 			.filter( x => ! isNaN(x))
 			.forEach((bundleId:number) => {
 				function findBundle(bundleId:number) : Product {
@@ -243,25 +253,92 @@ export class CalderaPay extends Component<Props,State> {
 
 	}
 
+	addToCart(addProduct:number){
+		const settings = this.props.settings;
+		const {cartRoute} = settings;
+		fetch(`${cartRoute}`, {
+			mode: 'cors',
+			redirect: 'follow',
+			method: 'POST',
+			headers: {
+				'Accept': 'application/json',
+				'Content-Type': 'application/json'
+			},
+			body: JSON.stringify({addProduct,calderaPay:true})
+
+
+		}).then(response => response.json())
+			.catch(error => console.error('Error:', error))
+			.then(cartContents => {
+
+				//this.setState({cartContents});
+				fetch(`${cartRoute}?calderaPay=1`, {
+					mode: 'cors',
+					redirect: 'follow',
+					cache: "default",
+					headers: {
+						'Accept': 'application/json',
+					},
+				}).then(response => response.json())
+					.catch(error => console.error('Error:', error))
+					.then(cartContents => {
+						this.setState({cartContents});
+					});
+			});
+	}
+
+	getProductsInCart() : Array<Product>
+	{
+		const {products,cartContents} = this.state;
+		const productsInCart = [];
+		if( cartContents.length ){
+			cartContents.forEach((item:CartItem) => {
+				productsInCart.push(products.find(
+					(product : Product) => product.id === item.id )
+				);
+			});
+		}
+
+		return productsInCart;
+	}
+
 	/** @inheritDoc **/
 	render() {
-		const {state} = this;
-		const {searchTerm, isLoaded } = state;
-		if( ! isLoaded ){
+		const {state,props} = this;
+		const {searchTerm, hasLoaded } = state;
+		if( ! hasLoaded ){
 			return <div><div className={'sr-only'}>Loading</div><Spinner/></div>
 		}
 		return (
-			<div>
-				<ProductSearch
-					searchTerm={searchTerm}
-					onProductSearch={this.setSearchTerm}
-				/>
-				<ProductGrid
-					products={state.products}
-					rows={this.getRows()}
-					headers={this.getHeaders()}
-				/>
+			<div className={'container'}>
+				<div className={'row'}>
+					<div className={'col-md-9'}>
+						<ProductSearch
+							searchTerm={searchTerm}
+							onProductSearch={this.setSearchTerm}
+						/>
+					</div>
+					<div className={'col-md-3'}>
+
+						<Cart
+							productsInCart={this.getProductsInCart()}
+							checkoutLink={props.settings.checkoutLink}
+						/>
+					</div>
+				</div>
+				<div>
+					<ProductGrid
+						products={state.products}
+						rows={this.getRows()}
+						headers={this.getHeaders()}
+						onAddToCart={this.addToCart}
+					/>
+				</div>
 			</div>
+
+
+
+
 		);
 
 

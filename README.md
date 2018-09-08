@@ -1,22 +1,7 @@
-# React NPM library starter kit
+# Caldera Pay JavaScript Client
 
-[![Build Status](https://travis-ci.org/DimiMikadze/create-react-library.svg?branch=master)](https://travis-ci.org/DimiMikadze/create-react-library)
-[![Dependencies](https://img.shields.io/david/DimiMikadze/create-react-library.svg)]()
-[![Dev Dependencies](https://img.shields.io/david/dev/DimiMikadze/create-react-library.svg)]()
 
-based on Facebook's <a href="https://github.com/facebookincubator/create-react-app" target="_blank">Create react app</a>.
-We are constantly updating repository with the updates of `create-react-app`, so we have all new features and bug fixes of it.
-
-## Converted to custom setup
-
-Moved all dependencies to dev dependencies because we don't need extra dependencies for our library after build, but we want all this features while developing: 
-
-* React, JSX, ES6, and Flow syntax support.
-* Language extras beyond ES6 like the object spread operator.
-* A dev server that lints for common errors.
-* Import CSS and image files directly from JavaScript.
-* Autoprefixed CSS, so you don’t need `-webkit` or other prefixes.
-* A `build` script to bundle JS, CSS, and images for production.
+This library's boilerplate is [DimiMikadze/create-react-library](https://github.com/DimiMikadze/create-react-library)
 
 ## Getting Started
 
@@ -43,15 +28,15 @@ All library files are located inside `src/lib`
 
 ## Demo app
 
-Is located inside `src/demo` directory, here you can test your library while developing
+Is located inside `src/demo` directory, this is the demo of the library, and useful for development
 
 ## Testing
 
-`npm run test` or `yarn run test`
+`yarn run test`
 
 ## Build library
 
-`npm run build` or `yarn run build`
+`yarn run build`
 
 Produces production version of library under the `build` folder.
 
@@ -59,6 +44,4 @@ Produces production version of library under the `build` folder.
 
 `npm publish`
 
-## Example library built with this starter kit
 
-https://github.com/DimiMikadze/react-under-construction
