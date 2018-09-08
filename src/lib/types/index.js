@@ -34,7 +34,7 @@ export type CalderaPayPrices = {
 
 export type CalderaPayProductInfo = {
 	prices: CalderaPayPrices,
-	featuredImage?: CalderaPayFeaturedImage,
+	featuredImage: ?CalderaPayFeaturedImage,
 	bundle: {
 		isBundle: boolean,
 		includes: Array<number>
@@ -42,6 +42,7 @@ export type CalderaPayProductInfo = {
 }
 export type Product = {
 	id: number|string,
+	link: string,
 	title: WordPressFieldWithRendered,
 	content: WordPressFieldWithRendered,
 	excerpt: WordPressFieldWithRendered,
@@ -60,7 +61,9 @@ export type ColumnHeader = {
 export type Row = {
 	key: string|number,
 	label: string,
-	isFree: boolean
+	isFree: boolean,
+	addToCart: ?string
+
 }
 
 export type ProductCollection = {

@@ -147,12 +147,16 @@ export class CalderaPay extends Component<Props,State> {
 		const rows = [];
 		const {products,bundles,ordered} = this.state;
 		ordered.forEach((productId: number) => {
-			const product : Product = products.find( product => productId === parseInt( product.id,10) );
+			const product : Product = products.find(
+				product => productId === parseInt( product.id,10)
+			);
 			const {calderaPay} = product;
 			const row : Row = {
 				key: product.id,
 				label: product.title.rendered,
-				isFree: calderaPay.prices.free ? 'Yes' : 'No'
+				isFree: calderaPay.prices.free ? 'Yes' : 'No',
+				addToCart: calderaPay.prices.addToCart,
+				link: product.link
 			};
 
 			bundles.forEach( (bundle) : Product => {
@@ -200,13 +204,14 @@ export class CalderaPay extends Component<Props,State> {
 					return bundles.find( (bundle:Product) => bundle.id === bundleId );
 				}
 
-				const bundle = findBundle(bundleId);
-			console.log(bundle.title.rendered);
+			const bundle = findBundle(bundleId);
+			const {calderaPay} = bundle;
 			columns.push({
 				label: bundle.title.rendered,
 				className: '',
 				id: bundle.id,
-				key: bundle.id
+				key: bundle.id,
+				addToCart: calderaPay.prices.addToCart
 			});
 		});
 		return columns;

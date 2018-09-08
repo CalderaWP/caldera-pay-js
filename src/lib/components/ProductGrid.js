@@ -45,7 +45,7 @@ export  const  ProductGrid =  (props: Props) => {
 							return (<th key={headerColumn.key}>{row[headerColumn.key]}</th>)
 						})}
 					</tr>
-				)
+				);
 
 			})}
 
