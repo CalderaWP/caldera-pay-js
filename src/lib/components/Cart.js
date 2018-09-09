@@ -18,7 +18,7 @@ export const Cart = (props: Props) => {
 		<div>
 			<div>Items In Cart: {props.productsInCart.length}</div>
 			{props.productsInCart.length &&
-			<div><a href={props.checkoutLink}>Checkout</a></div>
+				<div><a href={props.checkoutLink}>Checkout</a></div>
 			}
 		</div>
 	);

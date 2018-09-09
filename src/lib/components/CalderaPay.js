@@ -9,6 +9,7 @@ import Fuse from 'fuse.js';
 import {pickArray,intersect,inBundle} from "../util";
 import {Spinner} from '@wordpress/components';
 import {Cart} from "./Cart";
+import {BeforeCart} from './BeforeCart';
 /**
  * Props type for CalderaPay Component
  */
@@ -30,7 +31,8 @@ type State = {
 	ordered: Array<number>,
 	searchTerm: string,
 	hasLoaded: boolean,
-	cartContents: CartContents
+	cartContents: CartContents,
+	showBeforeCart: boolean
 };
 
 
@@ -68,7 +70,8 @@ export class CalderaPay extends Component<Props,State> {
 		ordered: [],
 		searchTerm: '',
 		hasLoaded: false,
-		cartContents: []
+		cartContents: [],
+		showBeforeCart: false
 	};
 
 	/** @inheritDoc **/
@@ -76,6 +79,7 @@ export class CalderaPay extends Component<Props,State> {
 		super(props);
 		(this: any).setSearchTerm = this.setSearchTerm.bind(this);
 		(this: any).addToCart = this.addToCart.bind(this);
+		(this: any).closeBeforeCart = this.closeBeforeCart.bind(this);
 
 
 	}
@@ -282,7 +286,10 @@ export class CalderaPay extends Component<Props,State> {
 				}).then(response => response.json())
 					.catch(error => console.error('Error:', error))
 					.then(cartContents => {
-						this.setState({cartContents});
+						this.setState({
+							cartContents,
+							showBeforeCart: true
+						});
 					});
 			});
 	}
@@ -302,13 +309,22 @@ export class CalderaPay extends Component<Props,State> {
 		return productsInCart;
 	}
 
+
+
+	closeBeforeCart(){
+		this.setState({showBeforeCart:false})
+	}
+
+
+
 	/** @inheritDoc **/
 	render() {
 		const {state,props} = this;
-		const {searchTerm, hasLoaded } = state;
+		const {searchTerm, hasLoaded,showBeforeCart } = state;
 		if( ! hasLoaded ){
 			return <div><div className={'sr-only'}>Loading</div><Spinner/></div>
 		}
+		const productsInCart = this.getProductsInCart();
 		return (
 			<div className={'container'}>
 				<div className={'row'}>
@@ -321,12 +337,22 @@ export class CalderaPay extends Component<Props,State> {
 					<div className={'col-md-3'}>
 
 						<Cart
-							productsInCart={this.getProductsInCart()}
+							productsInCart={productsInCart}
 							checkoutLink={props.settings.checkoutLink}
 						/>
 					</div>
 				</div>
+
+
 				<div>
+					{showBeforeCart &&
+						<BeforeCart
+							//This should be a modal?
+							productsInCart={productsInCart}
+							checkoutLink={props.settings.checkoutLink}
+							onClose={this.closeBeforeCart}
+						/>
+					}
 					<ProductGrid
 						products={state.products}
 						rows={this.getRows()}
