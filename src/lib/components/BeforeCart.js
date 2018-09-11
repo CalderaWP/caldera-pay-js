@@ -1,6 +1,7 @@
 // @flow
 import React from 'react';
 import type {Product} from "../types";
+import {Button} from '@wordpress/components';
 
 type Props = {
 	productsInCart: Array<Product>,
@@ -25,11 +26,11 @@ export const BeforeCart = (props: Props) => {
 			>
 				Checkout  Now
 			</a>
-			<button
+			<Button
 				onClick={props.onClose}
 			>
 				Continue
-			</button>
+			</Button>
 			<div>Items In Cart: {props.productsInCart.length}</div>
 		</div>
 	);

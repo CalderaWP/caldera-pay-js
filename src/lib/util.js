@@ -1,4 +1,4 @@
-import type {CalderaPayProductInfo} from "./types";
+import type {CalderaPayProductInfo, Product} from "./types";
 
 
 /**
@@ -32,3 +32,4 @@ export const pickArray = (array, key) => {
 			accumualtor.concat([item[key]]), []
 	);
 };
+

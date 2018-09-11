@@ -1,0 +1,315 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CalderaPay components BeforeCart snapshot empty cart 1`] = `
+<div>
+  <a
+    href="https://calderaformscom.lndo.site/checkout"
+  >
+    Checkout  Now
+  </a>
+  <button
+    className="components-button"
+    disabled={undefined}
+    onClick={[Function]}
+    type="button"
+  >
+    Continue
+  </button>
+  <div>
+    Items In Cart: 
+    0
+  </div>
+</div>
+`;
+
+exports[`CalderaPay components BeforeCart snapshot empty cart 2`] = `
+<div>
+  <a
+    href="https://calderaformscom.lndo.site/checkout"
+  >
+    Checkout  Now
+  </a>
+  <button
+    className="components-button"
+    disabled={undefined}
+    onClick={[Function]}
+    type="button"
+  >
+    Continue
+  </button>
+  <div>
+    Items In Cart: 
+    1
+  </div>
+</div>
+`;
+
+exports[`CalderaPay components Cart matches snapshot with  items in cart 1`] = `
+<div>
+  <div>
+    Items In Cart: 
+    1
+  </div>
+  <div>
+    <a
+      href="https://link.com"
+    >
+      Checkout
+    </a>
+  </div>
+</div>
+`;
+
+exports[`CalderaPay components Cart matches snapshot with no items in cart 1`] = `
+<div>
+  <div>
+    Items In Cart: 
+    0
+  </div>
+  0
+</div>
+`;
+
+exports[`CalderaPay components ProductGrid matches snapshot 1`] = `
+<table
+  className="striped bordered condensed hover table"
+>
+  <thead>
+    <tr>
+      <th
+        className="sr-only"
+      >
+        Add-On Name
+      </th>
+      <th
+        className=""
+      >
+        Free
+      </th>
+      <th
+        className=""
+      >
+        <a
+          href="https://cart.com"
+        >
+          Bundle 1
+        </a>
+      </th>
+      <th
+        className=""
+      >
+        <a
+          href="https://cart.com"
+        >
+          Bundle 2
+        </a>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>
+        <button
+          className="components-button"
+          disabled={undefined}
+          onClick={[Function]}
+          type="button"
+        >
+          Product in bundle 1
+        </button>
+      </th>
+      <th>
+        <button
+          className="components-button"
+          disabled={undefined}
+          onClick={[Function]}
+          type="button"
+        >
+          No
+        </button>
+      </th>
+      <th>
+        <button
+          className="components-button"
+          disabled={undefined}
+          onClick={[Function]}
+          type="button"
+        />
+      </th>
+      <th>
+        <button
+          className="components-button"
+          disabled={undefined}
+          onClick={[Function]}
+          type="button"
+        />
+      </th>
+    </tr>
+    <tr>
+      <th>
+        <button
+          className="components-button"
+          disabled={undefined}
+          onClick={[Function]}
+          type="button"
+        >
+          Product in bundle 1 and 2
+        </button>
+      </th>
+      <th>
+        <button
+          className="components-button"
+          disabled={undefined}
+          onClick={[Function]}
+          type="button"
+        >
+          No
+        </button>
+      </th>
+      <th>
+        <button
+          className="components-button"
+          disabled={undefined}
+          onClick={[Function]}
+          type="button"
+        />
+      </th>
+      <th>
+        <button
+          className="components-button"
+          disabled={undefined}
+          onClick={[Function]}
+          type="button"
+        />
+      </th>
+    </tr>
+  </tbody>
+</table>
+`;
+
+exports[`CalderaPay components ProductSearch matches snapshot with a search term 1`] = `
+<div>
+  <div
+    className="caldera-pay-product-search-options"
+  >
+    <div
+      className="caldera-config-group"
+    >
+      <div
+        className="caldera-config-field"
+      >
+        <label
+          htmlFor="caldera-pay-product-search"
+        >
+          Search Products
+        </label>
+        <input
+          aria-describedby={null}
+          className="field-config field-config"
+          disabled={false}
+          id="caldera-pay-product-search"
+          onBlur={undefined}
+          onChange={[Function]}
+          onFocus={undefined}
+          required={false}
+          type="text"
+          value="MailChimp"
+        />
+        
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`CalderaPay components ProductSearch matches snapshot with no search term 1`] = `
+<div>
+  <div
+    className="caldera-pay-product-search-options"
+  >
+    <div
+      className="caldera-config-group"
+    >
+      <div
+        className="caldera-config-field"
+      >
+        <label
+          htmlFor="caldera-pay-product-search"
+        >
+          Search Products
+        </label>
+        <input
+          aria-describedby={null}
+          className="field-config field-config"
+          disabled={false}
+          id="caldera-pay-product-search"
+          onBlur={undefined}
+          onChange={[Function]}
+          onFocus={undefined}
+          required={false}
+          type="text"
+          value=""
+        />
+        
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Individual components BeforeCart snapshot empty cart 1`] = `
+<div>
+  <a
+    href="https://calderaformscom.lndo.site/checkout"
+  >
+    Checkout  Now
+  </a>
+  <button
+    className="components-button"
+    disabled={undefined}
+    onClick={[Function]}
+    type="button"
+  >
+    Continue
+  </button>
+  <div>
+    Items In Cart: 
+    0
+  </div>
+</div>
+`;
+
+exports[`Individual components BeforeCart snapshot empty cart 2`] = `
+<div>
+  <a
+    href="https://calderaformscom.lndo.site/checkout"
+  >
+    Checkout  Now
+  </a>
+  <button
+    className="components-button"
+    disabled={undefined}
+    onClick={[Function]}
+    type="button"
+  >
+    Continue
+  </button>
+  <div>
+    Items In Cart: 
+    1
+  </div>
+</div>
+`;
+
+exports[`Main component Passes snapshot tests 1`] = `
+<div>
+  <div
+    className="sr-only"
+  >
+    Loading
+  </div>
+  <span
+    className="components-spinner"
+  />
+</div>
+`;

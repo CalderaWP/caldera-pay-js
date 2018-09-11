@@ -2,6 +2,8 @@
 import React from 'react';
 import  classNames from 'classnames';
 import type {ColumnHeader, Row} from "../types";
+import {Button} from '@wordpress/components'
+
 
 type Props = {
 	headers: Array<ColumnHeader>,
@@ -58,12 +60,12 @@ export  const  ProductGrid =  (props: Props) => {
 							{Object.values(props.headers).map((headerColumn: ColumnHeader) => {
 								return (
 									<th key={headerColumn.key}>
-										<button onClick={() => {
+										<Button onClick={() => {
 												props.onAddToCart(headerColumn.id);
 											}
 										}>
 											{row[headerColumn.key]}
-										</button>
+										</Button>
 									</th>)
 							})}
 						</tr>

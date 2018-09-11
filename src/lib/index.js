@@ -1,5 +1,6 @@
 import {CalderaPay} from './components/CalderaPay';
-
-export {
+import {factory}from './factory';
+export  {
 	CalderaPay,
+	factory
 };

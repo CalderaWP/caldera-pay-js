@@ -3,7 +3,47 @@
 
 This library's boilerplate is [DimiMikadze/create-react-library](https://github.com/DimiMikadze/create-react-library)
 
-## Getting Started
+## Usage
+There is a factory function to load app 
+```js
+import {factory} from '@caldera-labs/caldera-pay-js';
+import domReady from '@wordpress/dom-ready';
+
+domReady( () => {
+	const settings = {};
+	factory(
+		settings, //settings, see below
+	    'root'// ID of dom node to mount app on
+	);
+} );
+```
+
+Or you can use the component.
+```js
+import React from 'react';
+import {CalderaPay} from '@caldera-labs/caldera-pay-js';
+
+const App = () => (
+	<CalderaPay
+		settings={{
+			apiRoot: 'https://calderaformscom.lndo.site/wp-json/wp/v2/download',
+			cartRoute: 'https://calderaformscom.lndo.site/wp-json/calderapay/v1/cart',
+			checkoutLink: 'https://calderaformscom.lndo.site/checkout',
+			bundleOrder: [
+				'isFree',
+				20520, //Individual
+				20518, //Advanced
+				48255, //Agency
+			]
+		}}
+
+	/>
+);
+
+export default App;
+```
+
+## Development
 
 Clone repo
 

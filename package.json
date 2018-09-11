@@ -1,7 +1,7 @@
 {
-  "name": "create-react-library",
-  "version": "1.1.0",
-  "description": "React NPM library starter kit based on Facebook's create react app",
+  "name": "@caldera-labs/caldera-pay-js",
+  "version": "0.0.1",
+  "description": "Caldera Pay JavaScript client",
   "main": "build/index.js",
   "scripts": {
     "start": "node scripts/start.js",
@@ -11,22 +11,22 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/DimiMikadze/create-react-library.git"
+    "url": "git+https://github.com/calderawp/caldera-pay-js"
   },
   "author": "Dimi Mikadze <dimi@udilia.com>",
   "bugs": {
-    "url": "https://github.com/DimiMikadze/create-react-library/issues"
+    "url": "https://github.com/calderawp/caldera-pay-jsissues"
   },
-  "homepage": "https://github.com/DimiMikadze/create-react-library#readme",
+  "homepage": "https://github.com/calderawp/caldera-pay-js#readme",
   "license": "MIT",
   "dependencies": {
     "@caldera-labs/components": "^1.6.0",
     "@wordpress/api-request": "^1.0.0-alpha.3",
     "@wordpress/components": "^3.0.0",
+    "@wordpress/dom-ready": "^2.0.0",
     "@wordpress/element": "^2.0.0",
     "classnames": "^2.2.6",
-    "fuse.js": "^3.2.1",
-    "react-bootstrap": "^0.32.4"
+    "fuse.js": "^3.2.1"
   },
   "devDependencies": {
     "autoprefixer": "7.1.6",
@@ -62,6 +62,7 @@
     "react": "^16.5.0",
     "react-dev-utils": "^5.0.2",
     "react-dom": "^16.5.0",
+    "react-test-renderer": "^16.5.0",
     "style-loader": "0.19.0",
     "sw-precache-webpack-plugin": "0.11.4",
     "url-loader": "0.6.2",
