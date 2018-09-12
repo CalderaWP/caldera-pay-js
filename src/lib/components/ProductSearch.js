@@ -15,7 +15,7 @@ export  const ProductSearch = (props : Props) => {
 		desc: '',
 		type: 'input',
 		innerType: 'search',
-		inputClass: '',
+		inputClass: 'form-control',
 		value: props.searchTerm,
 		onValueChange: (newValue) => {
 			props.onProductSearch(newValue);

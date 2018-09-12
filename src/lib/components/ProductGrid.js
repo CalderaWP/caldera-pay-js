@@ -59,7 +59,16 @@ export  const  ProductGrid =  (props: Props) => {
 						>
 							{Object.values(props.headers).map((headerColumn: ColumnHeader) => {
 								if( headerColumn.showLabel ){
-									return <th key={headerColumn.key}>{row[headerColumn.key]}</th>
+									return (
+										<th
+											key={headerColumn.key}
+											style={{
+												backgroundImage: row.product.calderaPay.featuredImage.url
+											}}
+										>
+											{row[headerColumn.key]}
+										</th>
+									);
 								}
 								const bundle = props.bundles.find((bundle:Product) => {return headerColumn.key ===  bundle.id } );
 								return (
