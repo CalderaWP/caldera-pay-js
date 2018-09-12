@@ -24,7 +24,7 @@ export const BeforeCart = (props: Props) => {
 			<a
 				href={props.checkoutLink}
 			>
-				Checkout  Now
+				Checkout Now
 			</a>
 			<Button
 				onClick={props.onClose}

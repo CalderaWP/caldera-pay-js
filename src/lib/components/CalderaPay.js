@@ -11,6 +11,7 @@ import {Spinner} from '@wordpress/components';
 import {Cart} from "./Cart";
 import {BeforeCart} from './BeforeCart';
 import {orderProducts} from "../util/orderProducts";
+import bundles from "../__MOCKDATA__/bundles";
 /**
  * Props type for CalderaPay Component
  */
@@ -159,13 +160,14 @@ export class CalderaPay extends Component<Props,State> {
 			const row : Row = {
 				key: product.id,
 				label: product.title.rendered,
-				isFree: calderaPay.prices.free ? 'Yes' : 'No',
+				isFree: calderaPay.prices.free,
 				addToCart: calderaPay.prices.addToCart,
-				link: product.link
+				link: product.link,
+				product: product
 			};
 
 			bundles.forEach( (bundle) : Product => {
-				row[bundle.id] = inBundle(product.id, bundle.calderaPay) ? 'Yes' : 'no';
+				row[bundle.id] = inBundle(product.id, bundle.calderaPay);
 			});
 			rows.push(row);
 		});
@@ -184,13 +186,15 @@ export class CalderaPay extends Component<Props,State> {
 				label: 'Add-On Name',
 				className: 'sr-only',
 				key: 'label',
-				id: 0
+				id: 0,
+				showLabel: true,
 			},
 			{
 				key: 'isFree',
 				label: 'Free',
 				className: '',
-				id: 0
+				id: 0,
+				showLabel: false,
 			},
 
 		];
@@ -214,7 +218,10 @@ export class CalderaPay extends Component<Props,State> {
 				className: '',
 				id: bundle.id,
 				key: bundle.id,
-				addToCart: calderaPay.prices.addToCart
+				addToCart: calderaPay.prices.addToCart,
+				bundle: bundle,
+				showLabel: false,
+
 			});
 		});
 		return columns;
@@ -339,6 +346,7 @@ export class CalderaPay extends Component<Props,State> {
 						rows={this.getRows()}
 						headers={this.getHeaders()}
 						onAddToCart={this.addToCart}
+						bundles={bundles}
 					/>
 				</div>
 			</div>

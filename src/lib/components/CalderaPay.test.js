@@ -158,7 +158,7 @@ describe( 'CalderaPay components', () => {
 
 			const component = renderer.create(
 				<ProductGrid
-					headers={headers} rows={rows} onAddToCart={genericHandler}/>
+					headers={headers} rows={rows} onAddToCart={genericHandler} bundles={bundles}/>
 			);
 			expect(component.toJSON()).toMatchSnapshot();
 	});
@@ -189,7 +189,6 @@ describe( 'CalderaPay components', () => {
 			<ProductSearch onProductSearch={genericHandler} searchTerm={''}/>
 		);
 		expect(component.toJSON()).toMatchSnapshot();
-
 
 	});
 

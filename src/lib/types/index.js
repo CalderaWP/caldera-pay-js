@@ -57,14 +57,17 @@ export type ColumnHeader = {
 	label: string,
 	className?: string,
 	id: number,
-	addToCart?: string
+	addToCart?: string,
+	bundle: ?Product,
+	showLabel: boolean
 };
 
 export type Row = {
 	key: string|number,
 	label: string,
 	isFree: boolean,
-	addToCart: ?string
+	addToCart: ?string,
+	product: ?Product
 
 }
 

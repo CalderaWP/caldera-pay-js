@@ -1,14 +1,14 @@
 // @flow
 import React from 'react';
 import  classNames from 'classnames';
-import type {ColumnHeader, Row} from "../types";
-import {Button} from '@wordpress/components'
-
+import type {ColumnHeader, Product, Row} from "../types";
+import {ProductCell} from "./ProductCell";
 
 type Props = {
 	headers: Array<ColumnHeader>,
 	rows: Array<Row>,
-	onAddToCart: Function
+	onAddToCart: Function,
+	bundles: Array<Product>
 };
 
 /**
@@ -58,15 +58,20 @@ export  const  ProductGrid =  (props: Props) => {
 							key={row.key}
 						>
 							{Object.values(props.headers).map((headerColumn: ColumnHeader) => {
+								if( headerColumn.showLabel ){
+									return <th>{row[headerColumn.key]}</th>
+								}
+								const bundle = props.bundles.find((bundle:Product) => {return headerColumn.key ===  bundle.id } );
 								return (
-									<th key={headerColumn.key}>
-										<Button onClick={() => {
-												props.onAddToCart(headerColumn.id);
-											}
-										}>
-											{row[headerColumn.key]}
-										</Button>
-									</th>)
+
+									<ProductCell
+											key={headerColumn.key}
+											product={row.product}
+											bundle={bundle}
+											isIncluded={row[headerColumn.key]}
+											onAddToCart={props.onAddToCart}
+									/>
+									)
 							})}
 						</tr>
 					);

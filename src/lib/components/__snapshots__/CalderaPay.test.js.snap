@@ -5,7 +5,7 @@ exports[`CalderaPay components BeforeCart snapshot empty cart 1`] = `
   <a
     href="https://calderaformscom.lndo.site/checkout"
   >
-    Checkout  Now
+    Checkout Now
   </a>
   <button
     className="components-button"
@@ -27,7 +27,7 @@ exports[`CalderaPay components BeforeCart snapshot empty cart 2`] = `
   <a
     href="https://calderaformscom.lndo.site/checkout"
   >
-    Checkout  Now
+    Checkout Now
   </a>
   <button
     className="components-button"
@@ -108,79 +108,124 @@ exports[`CalderaPay components ProductGrid matches snapshot 1`] = `
   </thead>
   <tbody>
     <tr>
-      <th>
-        <button
-          className="components-button"
-          disabled={undefined}
-          onClick={[Function]}
-          type="button"
+      <th
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+      >
+        <i
+          aria-hidden="true"
+          className="fa fa-check"
         >
-          Product in bundle 1
-        </button>
+          <span
+            className="sr-only"
+          >
+            Hover For More Information
+          </span>
+        </i>
       </th>
-      <th>
-        <button
-          className="components-button"
-          disabled={undefined}
-          onClick={[Function]}
-          type="button"
+      <th
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+      >
+        <i
+          aria-hidden="true"
+          className="fa fa-check"
         >
-          No
-        </button>
+          <span
+            className="sr-only"
+          >
+            Hover For More Information
+          </span>
+        </i>
+      </th>
+      <th
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+      >
+        <i
+          aria-hidden="true"
+          className="fa fa-check"
+        >
+          <span
+            className="sr-only"
+          >
+            Hover For More Information
+          </span>
+        </i>
       </th>
       <th>
-        <button
-          className="components-button"
-          disabled={undefined}
-          onClick={[Function]}
-          type="button"
-        />
-      </th>
-      <th>
-        <button
-          className="components-button"
-          disabled={undefined}
-          onClick={[Function]}
-          type="button"
-        />
+        <i
+          aria-hidden="true"
+          className="fa fa-times"
+        >
+          <span
+            className="sr-only"
+          >
+            Not Included
+          </span>
+        </i>
       </th>
     </tr>
     <tr>
-      <th>
-        <button
-          className="components-button"
-          disabled={undefined}
-          onClick={[Function]}
-          type="button"
+      <th
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+      >
+        <i
+          aria-hidden="true"
+          className="fa fa-check"
         >
-          Product in bundle 1 and 2
-        </button>
+          <span
+            className="sr-only"
+          >
+            Hover For More Information
+          </span>
+        </i>
       </th>
-      <th>
-        <button
-          className="components-button"
-          disabled={undefined}
-          onClick={[Function]}
-          type="button"
+      <th
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+      >
+        <i
+          aria-hidden="true"
+          className="fa fa-check"
         >
-          No
-        </button>
+          <span
+            className="sr-only"
+          >
+            Hover For More Information
+          </span>
+        </i>
       </th>
-      <th>
-        <button
-          className="components-button"
-          disabled={undefined}
-          onClick={[Function]}
-          type="button"
-        />
+      <th
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+      >
+        <i
+          aria-hidden="true"
+          className="fa fa-check"
+        >
+          <span
+            className="sr-only"
+          >
+            Hover For More Information
+          </span>
+        </i>
       </th>
-      <th>
-        <button
-          className="components-button"
-          disabled={undefined}
-          onClick={[Function]}
-          type="button"
-        />
+      <th
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+      >
+        <i
+          aria-hidden="true"
+          className="fa fa-check"
+        >
+          <span
+            className="sr-only"
+          >
+            Hover For More Information
+          </span>
+        </i>
       </th>
     </tr>
   </tbody>
@@ -262,7 +307,7 @@ exports[`Individual components BeforeCart snapshot empty cart 1`] = `
   <a
     href="https://calderaformscom.lndo.site/checkout"
   >
-    Checkout  Now
+    Checkout Now
   </a>
   <button
     className="components-button"
@@ -284,7 +329,7 @@ exports[`Individual components BeforeCart snapshot empty cart 2`] = `
   <a
     href="https://calderaformscom.lndo.site/checkout"
   >
-    Checkout  Now
+    Checkout Now
   </a>
   <button
     className="components-button"
