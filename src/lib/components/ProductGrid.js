@@ -59,7 +59,7 @@ export  const  ProductGrid =  (props: Props) => {
 						>
 							{Object.values(props.headers).map((headerColumn: ColumnHeader) => {
 								if( headerColumn.showLabel ){
-									return <th>{row[headerColumn.key]}</th>
+									return <th key={headerColumn.key}>{row[headerColumn.key]}</th>
 								}
 								const bundle = props.bundles.find((bundle:Product) => {return headerColumn.key ===  bundle.id } );
 								return (
@@ -71,11 +71,10 @@ export  const  ProductGrid =  (props: Props) => {
 											isIncluded={row[headerColumn.key]}
 											onAddToCart={props.onAddToCart}
 									/>
-									)
+								)
 							})}
 						</tr>
 					);
-
 				})}
 
 			</tbody>

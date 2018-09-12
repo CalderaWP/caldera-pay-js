@@ -7,11 +7,12 @@ import type {Product, ColumnHeader, CalderaPaySettings,
 import {ProductSearch} from "./ProductSearch";
 import Fuse from 'fuse.js';
 import {pickArray,intersect,inBundle} from "../util";
-import {Spinner} from '@wordpress/components';
+import {Spinner,Modal} from '@wordpress/components';
 import {Cart} from "./Cart";
 import {BeforeCart} from './BeforeCart';
 import {orderProducts} from "../util/orderProducts";
 import bundles from "../__MOCKDATA__/bundles";
+
 /**
  * Props type for CalderaPay Component
  */
@@ -334,12 +335,18 @@ export class CalderaPay extends Component<Props,State> {
 
 				<div>
 					{showBeforeCart &&
+					<Modal
+						title="This is my modal"
+						onRequestClose={ this.closeBeforeCart }>
 						<BeforeCart
 							//This should be a modal?
 							productsInCart={productsInCart}
 							checkoutLink={props.settings.checkoutLink}
 							onClose={this.closeBeforeCart}
 						/>
+					</Modal>
+
+
 					}
 					<ProductGrid
 						products={state.products}
