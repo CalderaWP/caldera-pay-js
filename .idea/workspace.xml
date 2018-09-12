@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="2467cfb6-9d72-4e41-90b3-1b336ac64977" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/src/lib/components/CalderaPay.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/CalderaPay.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/components/ProductGrid.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/ProductGrid.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -52,7 +51,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="html" value="1" />
-          <entry key="js" value="13705" />
+          <entry key="js" value="13760" />
           <entry key="json" value="410" />
           <entry key="md" value="383" />
         </counts>
@@ -61,7 +60,7 @@
         <counts>
           <entry key="HTML" value="1" />
           <entry key="JSON" value="410" />
-          <entry key="JavaScript" value="13712" />
+          <entry key="JavaScript" value="13767" />
           <entry key="Markdown" value="376" />
         </counts>
       </usages-collector>
@@ -80,14 +79,14 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.15432873">
+    <splitter split-orientation="horizontal" split-proportion="0.38080302">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/lib/components/CalderaPay.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="409">
-                  <caret line="330" column="26" lean-forward="true" selection-start-line="330" selection-start-column="26" selection-end-line="330" selection-end-column="26" />
+                <state relative-caret-position="203">
+                  <caret line="250" column="7" selection-start-line="250" selection-start-column="7" selection-end-line="250" selection-end-column="7" />
                   <folding>
                     <element signature="e#9#47#0" expanded="true" />
                   </folding>
@@ -180,7 +179,7 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/lib/components/ProductGrid.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="573">
+                <state relative-caret-position="189">
                   <caret line="61" column="70" selection-start-line="61" selection-start-column="70" selection-end-line="61" selection-end-column="70" />
                   <folding>
                     <element signature="e#9#35#0" expanded="true" />
@@ -298,8 +297,8 @@
         <option value="$PROJECT_DIR$/src/lib/components/CalderaPay.test.js" />
         <option value="$PROJECT_DIR$/src/lib/util/orderProducts.js" />
         <option value="$PROJECT_DIR$/src/lib/components/ProductCell.js" />
-        <option value="$PROJECT_DIR$/src/lib/components/CalderaPay.js" />
         <option value="$PROJECT_DIR$/src/lib/components/ProductGrid.js" />
+        <option value="$PROJECT_DIR$/src/lib/components/CalderaPay.js" />
       </list>
     </option>
   </component>
@@ -422,18 +421,18 @@
       <workItem from="1536344509934" duration="26619000" />
       <workItem from="1536595786977" duration="3016000" />
       <workItem from="1536604180033" duration="5551000" />
-      <workItem from="1536679551297" duration="15858000" />
+      <workItem from="1536679551297" duration="16553000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51044000" />
+    <option name="totallyTimeSpent" value="51739000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="547" y="23" width="1920" height="1057" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1512247" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.0" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -449,8 +448,8 @@
       <window_info anchor="bottom" id="Flow" order="9" sideWeight="0.49733758" weight="0.2673575" />
       <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="TypeScript" order="11" />
-      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.49627262" weight="0.32953367" />
-      <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.5037274" side_tool="true" visible="true" weight="0.0" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="12" sideWeight="0.49574015" visible="true" weight="0.32953367" />
+      <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.5042598" side_tool="true" visible="true" weight="0.32953367" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -754,22 +753,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/lib/components/CalderaPay.js">
+    <entry file="file://$PROJECT_DIR$/src/lib/components/ProductGrid.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="409">
-          <caret line="330" column="26" lean-forward="true" selection-start-line="330" selection-start-column="26" selection-end-line="330" selection-end-column="26" />
+        <state relative-caret-position="189">
+          <caret line="61" column="70" selection-start-line="61" selection-start-column="70" selection-end-line="61" selection-end-column="70" />
           <folding>
-            <element signature="e#9#47#0" expanded="true" />
+            <element signature="e#9#35#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/lib/components/ProductGrid.js">
+    <entry file="file://$PROJECT_DIR$/src/lib/components/CalderaPay.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="573">
-          <caret line="61" column="70" selection-start-line="61" selection-start-column="70" selection-end-line="61" selection-end-column="70" />
+        <state relative-caret-position="203">
+          <caret line="250" column="7" selection-start-line="250" selection-start-column="7" selection-end-line="250" selection-end-column="7" />
           <folding>
-            <element signature="e#9#35#0" expanded="true" />
+            <element signature="e#9#47#0" expanded="true" />
           </folding>
         </state>
       </provider>

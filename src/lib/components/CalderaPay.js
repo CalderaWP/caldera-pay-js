@@ -246,6 +246,11 @@ export class CalderaPay extends Component<Props,State> {
 
 	}
 
+	/**
+	 * Handle Add To Cart
+	 *
+	 * @param addProduct
+	 */
 	addToCart(addProduct:number){
 		const settings = this.props.settings;
 		const {cartRoute} = settings;
@@ -283,6 +288,11 @@ export class CalderaPay extends Component<Props,State> {
 			});
 	}
 
+	/**
+	 * Get products in cart
+	 *
+	 * @return {Array}
+	 */
 	getProductsInCart() : Array<Product>
 	{
 		const {products,cartContents} = this.state;
@@ -299,7 +309,9 @@ export class CalderaPay extends Component<Props,State> {
 	}
 
 
-
+	/**
+	 * Close before cart info/modal
+	 */
 	closeBeforeCart(){
 		this.setState({showBeforeCart:false})
 	}
@@ -336,8 +348,13 @@ export class CalderaPay extends Component<Props,State> {
 				<div>
 					{showBeforeCart &&
 					<Modal
-						title="This is my modal"
-						onRequestClose={ this.closeBeforeCart }>
+						role={'dialog'}
+						title={'Modal Title'}
+						focusOnMount={true}
+						shouldCloseOnEsc={true}
+						shouldCloseOnClickOutside={true}
+						onRequestClose={ this.closeBeforeCart }
+					>
 						<BeforeCart
 							//This should be a modal?
 							productsInCart={productsInCart}
