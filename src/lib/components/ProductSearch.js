@@ -7,6 +7,13 @@ type Props = {
 	onProductSearch: Function,
 	searchTerm: string
 };
+
+/**
+ * Product search UI
+ * @param props
+ * @return {*}
+ * @constructor
+ */
 export  const ProductSearch = (props : Props) => {
 
 	const searchField = {

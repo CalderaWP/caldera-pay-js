@@ -13,7 +13,7 @@ type Props = {
  * @return {*}
  * @constructor
  */
-export const Cart = (props: Props) => {
+export const CartOverview = (props: Props) => {
 	return (
 		<div>
 			<div>Items In Cart: {props.productsInCart.length}</div>

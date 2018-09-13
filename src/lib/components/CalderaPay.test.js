@@ -6,7 +6,7 @@ import {BeforeCart} from "./BeforeCart";
 import {orderProducts} from "../util/orderProducts";
 import {ProductSearch} from "./ProductSearch";
 import type {Row} from "../types";
-import {Cart} from "./Cart";
+import {CartOverview} from "./CartOverview";
 import bundles from '../__MOCKDATA__/bundles';
 import products from '../__MOCKDATA__/products';
 
@@ -166,18 +166,18 @@ describe( 'CalderaPay components', () => {
 
 
 
-	it( 'Cart matches snapshot with no items in cart', () => {
+	it( 'CartOverview matches snapshot with no items in cart', () => {
 		const component = renderer.create(
-			<Cart productsInCart={[]} checkoutLink={'https://link.com'}/>
+			<CartOverview productsInCart={[]} checkoutLink={'https://link.com'}/>
 		);
 		expect(component.toJSON()).toMatchSnapshot();
 
 
 	});
 
-	it( 'Cart matches snapshot with  items in cart', () => {
+	it( 'CartOverview matches snapshot with  items in cart', () => {
 		const component = renderer.create(
-			<Cart productsInCart={cartItems} checkoutLink={'https://link.com'}/>
+			<CartOverview productsInCart={cartItems} checkoutLink={'https://link.com'}/>
 		);
 		expect(component.toJSON()).toMatchSnapshot();
 

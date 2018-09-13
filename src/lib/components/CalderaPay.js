@@ -1,24 +1,31 @@
 // @flow
 import React,{Component} from 'react';
 import {ProductGrid} from "./ProductGrid";
-import type {Product, ColumnHeader, CalderaPaySettings,
+import type {
+	Product, ColumnHeader, CalderaPaySettings,
 	//ProductCollection,
-	Row} from "../types";
+	Row, CalderaPayUserSettings
+} from "../types";
+import type {WordPressUser} from "../types/WordPress";
 import {ProductSearch} from "./ProductSearch";
 import Fuse from 'fuse.js';
 import {pickArray,intersect,inBundle} from "../util";
-import {Spinner,Modal} from '@wordpress/components';
-import {Cart} from "./Cart";
+import {Spinner} from '@wordpress/components';
+import {CartOverview} from "./CartOverview";
 import {BeforeCart} from './BeforeCart';
 import {orderProducts} from "../util/orderProducts";
 import bundles from "../__MOCKDATA__/bundles";
+import {CartContentsTable} from "./CartContentsTable";
+import {User} from "../containers/User";
+import {requestHeaders} from "../api/requestHeaders";
 
 /**
  * Props type for CalderaPay Component
  */
 type Props = {
 	settings: CalderaPaySettings,
-	fuseOptions: ?Fuse.FuseOptions
+	userSettings: CalderaPayUserSettings,
+	fuseOptions: ?Fuse.FuseOptions,
 };
 type CartItem = {
 	id: number,
@@ -35,7 +42,9 @@ type State = {
 	searchTerm: string,
 	hasLoaded: boolean,
 	cartContents: CartContents,
-	showBeforeCart: boolean
+	showBeforeCart: boolean,
+	user: WordPressUser,
+	jwtToken: string
 };
 
 
@@ -75,7 +84,16 @@ export class CalderaPay extends Component<Props,State> {
 		searchTerm: '',
 		hasLoaded: false,
 		cartContents: [],
-		showBeforeCart: false
+		jwtToken: '',
+		showBeforeCart: false,
+		user: {
+			id:0,
+			username:'',
+			name: '',
+			first_name: '',
+			last_name: '',
+			email: ''
+		},
 	};
 
 	/** @inheritDoc **/
@@ -84,7 +102,8 @@ export class CalderaPay extends Component<Props,State> {
 		(this: any).setSearchTerm = this.setSearchTerm.bind(this);
 		(this: any).addToCart = this.addToCart.bind(this);
 		(this: any).closeBeforeCart = this.closeBeforeCart.bind(this);
-
+		(this: any).requestCartContents = this.requestCartContents.bind(this);
+		(this: any).onValidateToken = this.onValidateToken.bind(this);
 
 	}
 
@@ -100,9 +119,7 @@ export class CalderaPay extends Component<Props,State> {
 			mode: 'cors',
 			redirect: 'follow',
 			cache: "default",
-			headers: {
-				'Accept': 'application/json',
-			},
+			headers:requestHeaders(this.state.jwtToken),
 
 		}).then(response => response.json())
 			.catch(error => console.error('Error:', error))
@@ -118,10 +135,7 @@ export class CalderaPay extends Component<Props,State> {
 			mode: 'cors',
 			redirect: 'follow',
 			cache: "default",
-			headers: {
-				'Accept': 'application/json',
-			},
-
+			headers:requestHeaders(this.state.jwtToken),
 		}).then(response => response.json())
 			.catch(error => console.error('Error:', error))
 			.then(response => {
@@ -141,6 +155,7 @@ export class CalderaPay extends Component<Props,State> {
 				ordered,
 				hasLoaded: true
 			});
+			this.requestCartContents();
 		});
 
 	}
@@ -247,44 +262,53 @@ export class CalderaPay extends Component<Props,State> {
 	}
 
 	/**
-	 * Handle Add To Cart
+	 * Handle Add To CartOverview
 	 *
 	 * @param addProduct
 	 */
 	addToCart(addProduct:number){
 		const settings = this.props.settings;
 		const {cartRoute} = settings;
+		this.setState({hasLoaded:false});
 		fetch(`${cartRoute}`, {
 			mode: 'cors',
 			redirect: 'follow',
 			method: 'POST',
-			headers: {
-				'Accept': 'application/json',
-				'Content-Type': 'application/json'
-			},
+			headers:requestHeaders(this.state.jwtToken),
+
 			body: JSON.stringify({addProduct,calderaPay:true})
 
 
 		}).then(response => response.json())
 			.catch(error => console.error('Error:', error))
 			.then(cartContents => {
-
-				//this.setState({cartContents});
-				fetch(`${cartRoute}?calderaPay=1`, {
-					mode: 'cors',
-					redirect: 'follow',
-					cache: "default",
-					headers: {
-						'Accept': 'application/json',
-					},
-				}).then(response => response.json())
-					.catch(error => console.error('Error:', error))
-					.then(cartContents => {
-						this.setState({
-							cartContents,
-							showBeforeCart: true
-						});
+				this.requestCartContents().then(() => {
+					this.setState({
+						hasLoaded: true
 					});
+				})
+			});
+	}
+
+	/**
+	 * Request cart contents via API
+	 */
+	requestCartContents() : Promise<any>{
+		const settings = this.props.settings;
+		const {cartRoute} = settings;
+		return fetch(`${cartRoute}?calderaPay=1`, {
+			mode: 'cors',
+			redirect: 'follow',
+			cache: "default",
+			headers:requestHeaders(this.state.jwtToken),
+		}).then(response => response.json())
+			.catch(error => console.error('Error:', error))
+			.then(cartContents => {
+				this.setState({
+					cartContents,
+					showBeforeCart: true,
+					hasLoaded: true
+				});
 			});
 	}
 
@@ -317,66 +341,73 @@ export class CalderaPay extends Component<Props,State> {
 	}
 
 
-
+	onValidateToken(jwtToken:string){
+		this.setState({jwtToken});
+	}
 	/** @inheritDoc **/
 	render() {
 		const {state,props} = this;
-		const {searchTerm, hasLoaded,showBeforeCart } = state;
+		const {searchTerm, hasLoaded,showBeforeCart,jwtToken } = state;
 		if( ! hasLoaded ){
 			return <div><div className={'sr-only'}>Loading</div><Spinner/></div>
 		}
 		const productsInCart = this.getProductsInCart();
 		return (
 			<div className={'container'}>
-				<div className={'row'}>
-					<div className={'col-md-9'}>
-						<ProductSearch
-							searchTerm={searchTerm}
-							onProductSearch={this.setSearchTerm}
-						/>
-					</div>
-					<div className={'col-md-3'}>
-
-						<Cart
-							productsInCart={productsInCart}
-							checkoutLink={props.settings.checkoutLink}
-						/>
-					</div>
-				</div>
-
-
-				<div>
-					{showBeforeCart &&
-					<Modal
-						role={'dialog'}
-						title={'Modal Title'}
-						focusOnMount={true}
-						shouldCloseOnEsc={true}
-						shouldCloseOnClickOutside={true}
-						onRequestClose={ this.closeBeforeCart }
-					>
+				{showBeforeCart &&
+					<React.Fragment>
 						<BeforeCart
-							//This should be a modal?
 							productsInCart={productsInCart}
 							checkoutLink={props.settings.checkoutLink}
 							onClose={this.closeBeforeCart}
 						/>
-					</Modal>
+						<CartContentsTable
+							productsInCart={productsInCart}
+						/>
+						<User
+							settings={this.props.userSettings}
+							jwtToken={jwtToken}
+							onValidateToken={this.onValidateToken}
+						/>
+
+					</React.Fragment>
+
+				}
+
+				{!showBeforeCart &&
+
+					<React.Fragment>
+						<div className={'row'}>
+							<div className={'col-md-9'}>
+								<ProductSearch
+									searchTerm={searchTerm}
+									onProductSearch={this.setSearchTerm}
+								/>
+							</div>
+							<div className={'col-md-3'}>
+								<CartOverview
+									productsInCart={productsInCart}
+									checkoutLink={props.settings.checkoutLink}
+								/>
+							</div>
+						</div>
+
+						<div>
+							<ProductGrid
+								products={state.products}
+								rows={this.getRows()}
+								headers={this.getHeaders()}
+								onAddToCart={this.addToCart}
+								bundles={bundles}
+							/>
+						</div>
+
+					</React.Fragment>
+
+				}
 
 
-					}
-					<ProductGrid
-						products={state.products}
-						rows={this.getRows()}
-						headers={this.getHeaders()}
-						onAddToCart={this.addToCart}
-						bundles={bundles}
-					/>
-				</div>
 			</div>
-
-
-
 
 		);
 

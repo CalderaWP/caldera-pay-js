@@ -1,9 +1,18 @@
+export type CalderaPayUserSettings = {
+	userExistsRoute: string,
+	jwtLoginRoute: string,
+	jwtValidateRoute: string,
+
+}
 
 export type CalderaPaySettings = {
 	apiRoot: string,
 	bundleOrder: Array<string|number>,
 	cartRoute: string,
-	checkoutLink: string
+	checkoutLink: string,
+	jwtToken: ?string
+
+
 }
 
 export type WordPressFieldWithRendered = {
