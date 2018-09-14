@@ -1,6 +1,8 @@
 import React from 'react';
 import {CalderaPay} from "../lib";
-
+import {userSettingsFactory} from '../lib';
+const apiRoot = 'https://calderaformscom.lndo.site/wp-json/wp/v2/download';
+const userSettings = userSettingsFactory(apiRoot);
 const App = () => (
 	<CalderaPay
 		settings={{
@@ -14,6 +16,7 @@ const App = () => (
 				48255, //Agency
 			]
 		}}
+		userSettings={userSettings}
 
 	/>
 );

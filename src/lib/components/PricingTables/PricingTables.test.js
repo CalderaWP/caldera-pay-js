@@ -13,7 +13,8 @@ describe( 'Pricing table components', () => {
 	});
 	it( 'Pricing Tables with 3 products', () => {
 		const componentWith3Products = renderer.create(
-			<PriceTables products={bundles} callToAction={'Buy This ONe'} onSelectOption={genericHandler}/>
+			<PriceTables
+				products={bundles} callToAction={'Buy This ONe'} onSelectOption={genericHandler}/>
 		);
 
 		expect( componentWith3Products.toJSON() ).toMatchSnapshot();

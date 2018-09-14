@@ -1,0 +1,556 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CalderaPay components ProductGrid matches snapshot 1`] = `
+<table
+  className="striped bordered condensed hover table"
+>
+  <thead>
+    <tr>
+      <th
+        className="sr-only"
+      >
+        Add-On Name
+      </th>
+      <th
+        className=""
+      >
+        Free
+      </th>
+      <th
+        className=""
+      >
+        <a
+          href="https://cart.com"
+        >
+          Bundle 1
+        </a>
+      </th>
+      <th
+        className=""
+      >
+        <a
+          href="https://cart.com"
+        >
+          Bundle 2
+        </a>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+      >
+        <i
+          aria-hidden="true"
+          className="fa fa-check"
+        >
+          <span
+            className="sr-only"
+          >
+            Hover For More Information
+          </span>
+        </i>
+      </th>
+      <th
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+      >
+        <i
+          aria-hidden="true"
+          className="fa fa-check"
+        >
+          <span
+            className="sr-only"
+          >
+            Hover For More Information
+          </span>
+        </i>
+      </th>
+      <th
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+      >
+        <i
+          aria-hidden="true"
+          className="fa fa-check"
+        >
+          <span
+            className="sr-only"
+          >
+            Hover For More Information
+          </span>
+        </i>
+      </th>
+      <th>
+        <i
+          aria-hidden="true"
+          className="fa fa-times"
+        >
+          <span
+            className="sr-only"
+          >
+            Not Included
+          </span>
+        </i>
+      </th>
+    </tr>
+    <tr>
+      <th
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+      >
+        <i
+          aria-hidden="true"
+          className="fa fa-check"
+        >
+          <span
+            className="sr-only"
+          >
+            Hover For More Information
+          </span>
+        </i>
+      </th>
+      <th
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+      >
+        <i
+          aria-hidden="true"
+          className="fa fa-check"
+        >
+          <span
+            className="sr-only"
+          >
+            Hover For More Information
+          </span>
+        </i>
+      </th>
+      <th
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+      >
+        <i
+          aria-hidden="true"
+          className="fa fa-check"
+        >
+          <span
+            className="sr-only"
+          >
+            Hover For More Information
+          </span>
+        </i>
+      </th>
+      <th
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+      >
+        <i
+          aria-hidden="true"
+          className="fa fa-check"
+        >
+          <span
+            className="sr-only"
+          >
+            Hover For More Information
+          </span>
+        </i>
+      </th>
+    </tr>
+  </tbody>
+</table>
+`;
+
+exports[`CalderaPay components ProductSearch matches snapshot with a search term 1`] = `
+<div>
+  <div
+    className="caldera-pay-product-search-options"
+  >
+    <div
+      className="caldera-config-group"
+    >
+      <div
+        className="caldera-config-field"
+      >
+        <label
+          htmlFor="caldera-pay-product-search"
+        >
+          Search Products
+        </label>
+        <input
+          aria-describedby={null}
+          className="field-config field-config"
+          disabled={false}
+          id="caldera-pay-product-search"
+          onBlur={undefined}
+          onChange={[Function]}
+          onFocus={undefined}
+          required={false}
+          type="text"
+          value="MailChimp"
+        />
+        
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`CalderaPay components ProductSearch matches snapshot with no search term 1`] = `
+<div>
+  <div
+    className="caldera-pay-product-search-options"
+  >
+    <div
+      className="caldera-config-group"
+    >
+      <div
+        className="caldera-config-field"
+      >
+        <label
+          htmlFor="caldera-pay-product-search"
+        >
+          Search Products
+        </label>
+        <input
+          aria-describedby={null}
+          className="field-config field-config"
+          disabled={false}
+          id="caldera-pay-product-search"
+          onBlur={undefined}
+          onChange={[Function]}
+          onFocus={undefined}
+          required={false}
+          type="text"
+          value=""
+        />
+        
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`UserInfo component Does not show password when told not to 1`] = `
+<div>
+  <div
+    className="caldera-pay-customer-information"
+  >
+    <div
+      className="caldera-config-group"
+    >
+      <div
+        className="caldera-config-field"
+      >
+        <label
+          htmlFor="caldera-pay-customer-email"
+        >
+          Email Address
+        </label>
+        <input
+          aria-describedby={null}
+          className="field-config field-config"
+          disabled={false}
+          id="caldera-pay-customer-email"
+          onBlur={undefined}
+          onChange={[Function]}
+          onFocus={undefined}
+          required={false}
+          type="text"
+          value=""
+        />
+        
+      </div>
+    </div>
+    <div
+      className="caldera-config-group"
+    >
+      <div
+        className="caldera-config-field"
+      >
+        <label
+          htmlFor="caldera-pay-customer-first-name"
+        >
+          First Name
+        </label>
+        <input
+          aria-describedby={null}
+          className="field-config field-config"
+          disabled={false}
+          id="caldera-pay-customer-first-name"
+          onBlur={undefined}
+          onChange={[Function]}
+          onFocus={undefined}
+          required={false}
+          type="text"
+          value=""
+        />
+        
+      </div>
+    </div>
+    <div
+      className="caldera-config-group"
+    >
+      <div
+        className="caldera-config-field"
+      >
+        <label
+          htmlFor="caldera-pay-customer-last-name"
+        >
+          Last Name
+        </label>
+        <input
+          aria-describedby={null}
+          className="field-config field-config"
+          disabled={false}
+          id="caldera-pay-customer-last-name"
+          onBlur={undefined}
+          onChange={[Function]}
+          onFocus={undefined}
+          required={false}
+          type="text"
+          value=""
+        />
+        
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`UserInfo component Does show first name and last name fields with first name and last name if provided 1`] = `
+<div>
+  <div
+    className="caldera-pay-customer-information"
+  >
+    <div
+      className="caldera-config-group"
+    >
+      <div
+        className="caldera-config-field"
+      >
+        <label
+          htmlFor="caldera-pay-customer-email"
+        >
+          Email Address
+        </label>
+        <input
+          aria-describedby={null}
+          className="field-config field-config"
+          disabled={false}
+          id="caldera-pay-customer-email"
+          onBlur={undefined}
+          onChange={[Function]}
+          onFocus={undefined}
+          required={false}
+          type="text"
+          value=""
+        />
+        
+      </div>
+    </div>
+    <div
+      className="caldera-config-group"
+    >
+      <div
+        className="caldera-config-field"
+      >
+        <label
+          htmlFor="caldera-pay-customer-password"
+        >
+          Password
+        </label>
+        <input
+          aria-describedby={null}
+          className="field-config field-config"
+          disabled={false}
+          id="caldera-pay-customer-password"
+          onBlur={undefined}
+          onChange={[Function]}
+          onFocus={undefined}
+          required={false}
+          type="text"
+          value=""
+        />
+        
+      </div>
+    </div>
+    <div
+      className="caldera-config-group"
+    >
+      <div
+        className="caldera-config-field"
+      >
+        <label
+          htmlFor="caldera-pay-customer-first-name"
+        >
+          First Name
+        </label>
+        <input
+          aria-describedby={null}
+          className="field-config field-config"
+          disabled={false}
+          id="caldera-pay-customer-first-name"
+          onBlur={undefined}
+          onChange={[Function]}
+          onFocus={undefined}
+          required={false}
+          type="text"
+          value=""
+        />
+        
+      </div>
+    </div>
+    <div
+      className="caldera-config-group"
+    >
+      <div
+        className="caldera-config-field"
+      >
+        <label
+          htmlFor="caldera-pay-customer-last-name"
+        >
+          Last Name
+        </label>
+        <input
+          aria-describedby={null}
+          className="field-config field-config"
+          disabled={false}
+          id="caldera-pay-customer-last-name"
+          onBlur={undefined}
+          onChange={[Function]}
+          onFocus={undefined}
+          required={false}
+          type="text"
+          value=""
+        />
+        
+      </div>
+    </div>
+  </div>
+  <button
+    onClick={[Function]}
+  >
+    Login
+  </button>
+</div>
+`;
+
+exports[`UserInfo component Does show password when told  to 1`] = `
+<div>
+  <div
+    className="caldera-pay-customer-information"
+  >
+    <div
+      className="caldera-config-group"
+    >
+      <div
+        className="caldera-config-field"
+      >
+        <label
+          htmlFor="caldera-pay-customer-email"
+        >
+          Email Address
+        </label>
+        <input
+          aria-describedby={null}
+          className="field-config field-config"
+          disabled={false}
+          id="caldera-pay-customer-email"
+          onBlur={undefined}
+          onChange={[Function]}
+          onFocus={undefined}
+          required={false}
+          type="text"
+          value=""
+        />
+        
+      </div>
+    </div>
+    <div
+      className="caldera-config-group"
+    >
+      <div
+        className="caldera-config-field"
+      >
+        <label
+          htmlFor="caldera-pay-customer-password"
+        >
+          Password
+        </label>
+        <input
+          aria-describedby={null}
+          className="field-config field-config"
+          disabled={false}
+          id="caldera-pay-customer-password"
+          onBlur={undefined}
+          onChange={[Function]}
+          onFocus={undefined}
+          required={false}
+          type="text"
+          value=""
+        />
+        
+      </div>
+    </div>
+    <div
+      className="caldera-config-group"
+    >
+      <div
+        className="caldera-config-field"
+      >
+        <label
+          htmlFor="caldera-pay-customer-first-name"
+        >
+          First Name
+        </label>
+        <input
+          aria-describedby={null}
+          className="field-config field-config"
+          disabled={false}
+          id="caldera-pay-customer-first-name"
+          onBlur={undefined}
+          onChange={[Function]}
+          onFocus={undefined}
+          required={false}
+          type="text"
+          value=""
+        />
+        
+      </div>
+    </div>
+    <div
+      className="caldera-config-group"
+    >
+      <div
+        className="caldera-config-field"
+      >
+        <label
+          htmlFor="caldera-pay-customer-last-name"
+        >
+          Last Name
+        </label>
+        <input
+          aria-describedby={null}
+          className="field-config field-config"
+          disabled={false}
+          id="caldera-pay-customer-last-name"
+          onBlur={undefined}
+          onChange={[Function]}
+          onFocus={undefined}
+          required={false}
+          type="text"
+          value=""
+        />
+        
+      </div>
+    </div>
+  </div>
+  <button
+    onClick={[Function]}
+  >
+    Login
+  </button>
+</div>
+`;

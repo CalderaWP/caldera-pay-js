@@ -288,10 +288,6 @@ export class CalderaPay extends Component<Props,State> {
 				bundlesIncludedIn.push(bundle);
 			});
 
-		console.log({
-			product,
-			bundlesIncludedIn,
-		});
 		return {
 			product,
 			bundlesIncludedIn,
@@ -329,7 +325,7 @@ export class CalderaPay extends Component<Props,State> {
 	render() {
 		const {state,props} = this;
 		const {searchTerm, hasLoaded,productSelectedId,jwtToken,productIdToPurchase } = state;
-		const {settings} = props;
+		const {settings,userSettings} = props;
 		if( ! hasLoaded ){
 			return <div><div className={'sr-only'}>Loading</div><Spinner/></div>
 		}
@@ -339,18 +335,21 @@ export class CalderaPay extends Component<Props,State> {
 					<React.Fragment>
 						<div>
 							<h2>Choose</h2>
-							<SelectBundle
-								product={this.getSelectedProduct().product}
-								bundlesIncludedIn={this.getSelectedProduct().bundlesIncludedIn}
-								onSelectForPurchase={this.productIdToPurchase}
-							/>
+							{!productIdToPurchase &&
+								<SelectBundle
+									product={this.getSelectedProduct().product}
+									bundlesIncludedIn={this.getSelectedProduct().bundlesIncludedIn}
+									onSelectForPurchase={this.productIdToPurchase}
+								/>
+							}
+
 						</div>
 
 						{productIdToPurchase &&
 							<React.Fragment>
 								{! jwtToken &&
 									<User
-										settings={props.userSettings}
+										settings={userSettings}
 										jwtToken={jwtToken}
 										onValidateToken={this.onValidateToken}
 									/>
@@ -394,7 +393,11 @@ export class CalderaPay extends Component<Props,State> {
 								/>
 							</div>
 							<div className={'col-md-3'}>
-								
+								<User
+									settings={userSettings}
+									jwtToken={jwtToken}
+									onValidateToken={this.onValidateToken}
+								/>
 							</div>
 						</div>
 

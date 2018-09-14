@@ -1,8 +1,8 @@
 
-import {factory} from "../lib";
-import domReady from '@wordpress/dom-ready';
+import {CalderaPay} from "../lib";
 
+import domReady from '@wordpress/dom-ready';
 domReady( () => {
-	factory({},'root');
+	CalderaPay.factory({},'root');
 } );
 

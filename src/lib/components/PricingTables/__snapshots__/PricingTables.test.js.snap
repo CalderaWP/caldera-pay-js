@@ -7,15 +7,17 @@ exports[`Pricing table components Item in table snapshot 1`] = `
   </h3>
   <ul>
     <li>
-      Includes 
-      31
-       Add-ons
+      feature1
     </li>
     <li>
-      Includes Caldera Pro Service
+      feature 2
     </li>
   </ul>
+  <div>
+    549.89
+  </div>
   <button
+    className={undefined}
     onClick={[Function]}
   >
     Buy Me!

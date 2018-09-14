@@ -1,6 +1,10 @@
 import {CalderaPay} from './components/CalderaPay';
 import {factory}from './factory';
-export  {
+
+import {userSettingsFactory} from "./util/userSettingsFactory";
+
+export {
 	CalderaPay,
-	factory
+	factory,
+	userSettingsFactory
 };
