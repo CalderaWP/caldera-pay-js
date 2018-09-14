@@ -10,7 +10,8 @@ export type CalderaPaySettings = {
 	bundleOrder: Array<string|number>,
 	cartRoute: string,
 	checkoutLink: string,
-	jwtToken: ?string
+	jwtToken: ?string,
+	merchantId: string
 
 
 }

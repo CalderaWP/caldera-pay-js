@@ -1,4 +1,4 @@
-import type {CalderaPayProductInfo, Product} from "./types";
+import type {CalderaPayProductInfo} from "./types";
 
 
 /**

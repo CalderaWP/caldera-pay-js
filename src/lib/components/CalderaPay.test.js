@@ -2,11 +2,9 @@ import  {CalderaPay} from "./CalderaPay";
 import React from "react";
 import renderer from "react-test-renderer";
 import {ProductGrid} from "./ProductGrid";
-import {BeforeCart} from "./BeforeCart";
 import {orderProducts} from "../util/orderProducts";
 import {ProductSearch} from "./ProductSearch";
 import type {Row} from "../types";
-import {CartOverview} from "./CartOverview";
 import bundles from '../__MOCKDATA__/bundles';
 import products from '../__MOCKDATA__/products';
 
@@ -43,64 +41,8 @@ const cartItems = [
 	}
 ];
 
-describe( 'Individual components', () => {
-	it( 'BeforeCart snapshot empty cart', () => {
-		const component = renderer.create(
-			<BeforeCart
-				productsInCart={[]}
-				checkoutLink={'https://calderaformscom.lndo.site/checkout'}
-				onClose={genericHandler}
-			/>
-		);
-		expect(component.toJSON()).toMatchSnapshot();
-	});
-
-
-	it( 'BeforeCart snapshot empty cart', () => {
-
-		const component = renderer.create(
-			<BeforeCart
-				productsInCart={cartItems}
-				checkoutLink={'https://calderaformscom.lndo.site/checkout'}
-				onClose={genericHandler}
-			/>
-		);
-		expect(component.toJSON()).toMatchSnapshot();
-	});
-
-});
 
 describe( 'CalderaPay components', () => {
-	it( 'BeforeCart snapshot empty cart', () => {
-		const component = renderer.create(
-			<BeforeCart
-				productsInCart={[]}
-				checkoutLink={'https://calderaformscom.lndo.site/checkout'}
-				onClose={genericHandler}
-			/>
-		);
-		expect(component.toJSON()).toMatchSnapshot();
-	});
-
-
-	it( 'BeforeCart snapshot empty cart', () => {
-		const cartItems = [
-			{
-				id:
-					20520,
-				options:
-					{},
-			}
-		];
-		const component = renderer.create(
-			<BeforeCart
-				productsInCart={cartItems}
-				checkoutLink={'https://calderaformscom.lndo.site/checkout'}
-				onClose={genericHandler}
-			/>
-		);
-		expect(component.toJSON()).toMatchSnapshot();
-	});
 
 
 	it( 'ProductGrid matches snapshot', () => {
@@ -163,26 +105,6 @@ describe( 'CalderaPay components', () => {
 			expect(component.toJSON()).toMatchSnapshot();
 	});
 
-
-
-
-	it( 'CartOverview matches snapshot with no items in cart', () => {
-		const component = renderer.create(
-			<CartOverview productsInCart={[]} checkoutLink={'https://link.com'}/>
-		);
-		expect(component.toJSON()).toMatchSnapshot();
-
-
-	});
-
-	it( 'CartOverview matches snapshot with  items in cart', () => {
-		const component = renderer.create(
-			<CartOverview productsInCart={cartItems} checkoutLink={'https://link.com'}/>
-		);
-		expect(component.toJSON()).toMatchSnapshot();
-
-
-	});
 
 	it( 'ProductSearch matches snapshot with no search term', () => {
 		const component = renderer.create(

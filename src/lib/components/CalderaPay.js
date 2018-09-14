@@ -11,13 +11,12 @@ import {ProductSearch} from "./ProductSearch";
 import Fuse from 'fuse.js';
 import {pickArray,intersect,inBundle} from "../util";
 import {Spinner} from '@wordpress/components';
-import {CartOverview} from "./CartOverview";
-import {BeforeCart} from './BeforeCart';
 import {orderProducts} from "../util/orderProducts";
 import bundles from "../__MOCKDATA__/bundles";
-import {CartContentsTable} from "./CartContentsTable";
 import {User} from "../containers/User";
 import {requestHeaders} from "../api/requestHeaders";
+import {SelectBundle} from "./SelectBundle";
+import {CreatePayment} from "../containers/CreatePayment";
 
 /**
  * Props type for CalderaPay Component
@@ -27,11 +26,7 @@ type Props = {
 	userSettings: CalderaPayUserSettings,
 	fuseOptions: ?Fuse.FuseOptions,
 };
-type CartItem = {
-	id: number,
-	quantity: number
-};
-type CartContents = Array<CartItem>;
+
 /**
  * State type for CalderaPay Component
  */
@@ -41,10 +36,10 @@ type State = {
 	ordered: Array<number>,
 	searchTerm: string,
 	hasLoaded: boolean,
-	cartContents: CartContents,
-	showBeforeCart: boolean,
 	user: WordPressUser,
-	jwtToken: string
+	jwtToken: string,
+	productSelectedId: ?number,
+	chosenBundleId: ?number
 };
 
 
@@ -83,9 +78,7 @@ export class CalderaPay extends Component<Props,State> {
 		ordered: [],
 		searchTerm: '',
 		hasLoaded: false,
-		cartContents: [],
 		jwtToken: '',
-		showBeforeCart: false,
 		user: {
 			id:0,
 			username:'',
@@ -94,16 +87,17 @@ export class CalderaPay extends Component<Props,State> {
 			last_name: '',
 			email: ''
 		},
+		productSelectedId: 0,
+		chosenBundleId: 0
 	};
 
 	/** @inheritDoc **/
 	constructor(props: Props){
 		super(props);
 		(this: any).setSearchTerm = this.setSearchTerm.bind(this);
-		(this: any).addToCart = this.addToCart.bind(this);
-		(this: any).closeBeforeCart = this.closeBeforeCart.bind(this);
-		(this: any).requestCartContents = this.requestCartContents.bind(this);
 		(this: any).onValidateToken = this.onValidateToken.bind(this);
+		(this: any).setProductSelected = this.setProductSelected.bind(this);
+		(this: any).setChosenBundleId = this.setChosenBundleId.bind(this);
 
 	}
 
@@ -155,7 +149,6 @@ export class CalderaPay extends Component<Props,State> {
 				ordered,
 				hasLoaded: true
 			});
-			this.requestCartContents();
 		});
 
 	}
@@ -262,120 +255,128 @@ export class CalderaPay extends Component<Props,State> {
 	}
 
 	/**
-	 * Handle Add To CartOverview
+	 * Set the product that is currently selected
 	 *
-	 * @param addProduct
+	 * @param productSelectedId
 	 */
-	addToCart(addProduct:number){
-		const settings = this.props.settings;
-		const {cartRoute} = settings;
-		this.setState({hasLoaded:false});
-		fetch(`${cartRoute}`, {
-			mode: 'cors',
-			redirect: 'follow',
-			method: 'POST',
-			headers:requestHeaders(this.state.jwtToken),
-
-			body: JSON.stringify({addProduct,calderaPay:true})
-
-
-		}).then(response => response.json())
-			.catch(error => console.error('Error:', error))
-			.then(cartContents => {
-				this.requestCartContents().then(() => {
-					this.setState({
-						hasLoaded: true
-					});
-				})
-			});
+	setProductSelected(productSelectedId:number){
+		this.setState({productSelectedId});
 	}
 
-	/**
-	 * Request cart contents via API
-	 */
-	requestCartContents() : Promise<any>{
-		const settings = this.props.settings;
-		const {cartRoute} = settings;
-		return fetch(`${cartRoute}?calderaPay=1`, {
-			mode: 'cors',
-			redirect: 'follow',
-			cache: "default",
-			headers:requestHeaders(this.state.jwtToken),
-		}).then(response => response.json())
-			.catch(error => console.error('Error:', error))
-			.then(cartContents => {
-				this.setState({
-					cartContents,
-					showBeforeCart: true,
-					hasLoaded: true
-				});
-			});
-	}
 
-	/**
-	 * Get products in cart
-	 *
-	 * @return {Array}
-	 */
-	getProductsInCart() : Array<Product>
-	{
-		const {products,cartContents} = this.state;
-		const productsInCart = [];
-		if( cartContents.length ){
-			cartContents.forEach((item:CartItem) => {
-				productsInCart.push(products.find(
-					(product : Product) => product.id === item.id )
-				);
+
+	getSelectedProduct() : {
+		product: Product,
+		bundlesIncludedIn: ?Array<Product>
+	}{
+
+		const {products,bundles,productSelectedId} = this.state;
+		const product : Product = products.find(
+			product => productSelectedId === parseInt( product.id,10)
+		);
+
+		const bundlesIncludedIn: Array<Product> = [];
+
+		this.props.settings.bundleOrder
+			.filter( x => ! isNaN(x))
+			.forEach((bundleId:number) => {
+				function findBundle(bundleId:number) : Product {
+					return bundles.find( (bundle:Product) => bundle.id === bundleId );
+				}
+
+				const bundle = findBundle(bundleId);
+				bundlesIncludedIn.push(bundle);
 			});
+
+		return {
+			product,
+			bundlesIncludedIn,
 		}
-
-		return productsInCart;
 	}
 
 
-	/**
-	 * Close before cart info/modal
-	 */
-	closeBeforeCart(){
-		this.setState({showBeforeCart:false})
+	getTransientKey() : string {
+		return'';
 	}
 
+	onPaymentSuccess(data) {
+		const {card_id, card_number} = data;
+		console.log(data);
+		alert("card id is " + card_id + ", card number is " + card_number);
+		// Make payment from server using the token
+	}
+
+	onPaymentError(error) {
+		if (error.detail) {
+			for (let key in error.detail) {
+				console.log(error.detail[key]);
+			}
+		}
+	}
 
 	onValidateToken(jwtToken:string){
 		this.setState({jwtToken});
 	}
+
+	setChosenBundleId(chosenBundleId: number ){
+		this.setState({chosenBundleId});
+	}
 	/** @inheritDoc **/
 	render() {
 		const {state,props} = this;
-		const {searchTerm, hasLoaded,showBeforeCart,jwtToken } = state;
+		const {searchTerm, hasLoaded,productSelectedId,jwtToken,chosenBundleId } = state;
+		const {settings} = props;
 		if( ! hasLoaded ){
 			return <div><div className={'sr-only'}>Loading</div><Spinner/></div>
 		}
-		const productsInCart = this.getProductsInCart();
 		return (
 			<div className={'container'}>
-				{showBeforeCart &&
+				{productSelectedId &&
 					<React.Fragment>
-						<BeforeCart
-							productsInCart={productsInCart}
-							checkoutLink={props.settings.checkoutLink}
-							onClose={this.closeBeforeCart}
+						<SelectBundle
+							product={this.getSelectedProduct().product}
+							bundlesIncludedIn={this.getSelectedProduct().bundlesIncludedIn}
+							onSelectForPurchase={this.setChosenBundleId}
 						/>
-						<CartContentsTable
-							productsInCart={productsInCart}
-						/>
-						<User
-							settings={this.props.userSettings}
-							jwtToken={jwtToken}
-							onValidateToken={this.onValidateToken}
-						/>
+						{chosenBundleId &&
+							<React.Fragment>
+								{! jwtToken &&
+									<User
+										settings={props.userSettings}
+										jwtToken={jwtToken}
+										onValidateToken={this.onValidateToken}
+									/>
+								}
 
+								{jwtToken &&
+										<CreatePayment
+											formId={'payment-form'}
+											mode={'test'}
+											transientKey={this.getTransientKey()}
+											merchantId={settings.merchantId}
+											onSuccess={this.onPaymentSuccess}
+											onError={this.onPaymentError}
+											total={
+												{
+													label: "Total",
+													amount: {
+														currency: 'USD',
+														value: 1.00
+													}
+												}
+											}
+										/>
+								}
+
+							</React.Fragment>
+
+
+						}
 					</React.Fragment>
 
 				}
 
-				{!showBeforeCart &&
-
+				{!productSelectedId &&
 					<React.Fragment>
 						<div className={'row'}>
 							<div className={'col-md-9'}>
@@ -385,10 +386,7 @@ export class CalderaPay extends Component<Props,State> {
 								/>
 							</div>
 							<div className={'col-md-3'}>
-								<CartOverview
-									productsInCart={productsInCart}
-									checkoutLink={props.settings.checkoutLink}
-								/>
+								
 							</div>
 						</div>
 
@@ -397,13 +395,11 @@ export class CalderaPay extends Component<Props,State> {
 								products={state.products}
 								rows={this.getRows()}
 								headers={this.getHeaders()}
-								onAddToCart={this.addToCart}
+								onAddToCart={this.setProductSelected}
 								bundles={bundles}
 							/>
 						</div>
-
 					</React.Fragment>
-
 				}
 
 
