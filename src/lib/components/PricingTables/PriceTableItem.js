@@ -1,31 +1,45 @@
 // @flow
 import React from 'react';
 import type {Product} from "../../types";
+
 type Props = {
 	product: Product,
 	onSelectOption: Function,
 	features: Array<string>,
-	callToAction: string
+	callToAction: string,
+	buttonClassName?: string,
 };
-export const PriceTableItem = (props: Props ) => {
-	const {product,onSelectOption,features,callToAction} = props;
+
+/**
+ * Displays ONE item in a price table
+ *
+ * @param {Props} props
+ * @return {*}
+ * @constructor
+ */
+export const PriceTableItem = (props: Props) => {
+	const {product, onSelectOption, features, callToAction, buttonClassName} = props;
 	const {calderaPay} = product;
-	return(
+
+	return (
 		<div>
 			<h3>{product.title.rendered}</h3>
 			<ul>
-				{features.forEach((feature:string) => {
-					return <li>feature</li>
+				{features.map((feature: string) => {
+					return <li
+						key={feature.replace(/\W/g, '')}
+					>
+						{feature}
+					</li>
 				})}
-				<li>Includes {calderaPay.bundle.includes.length} Add-ons</li>
-				<li>Includes Caldera Pro Service</li>
 			</ul>
+			<div>{calderaPay.prices.price}</div>
 			<button
+				className={buttonClassName}
 				onClick={onSelectOption}
 			>
 				{callToAction}
 			</button>
 		</div>
 	)
-}
-
+};

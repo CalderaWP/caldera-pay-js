@@ -1,75 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CalderaPay components BeforeCart snapshot empty cart 1`] = `
-<div>
-  <a
-    href="https://calderaformscom.lndo.site/checkout"
-  >
-    Checkout Now
-  </a>
-  <button
-    className="components-button"
-    disabled={undefined}
-    onClick={[Function]}
-    type="button"
-  >
-    Continue
-  </button>
-  <div>
-    Items In CartOverview:
-    0
-  </div>
-</div>
-`;
-
-exports[`CalderaPay components BeforeCart snapshot empty cart 2`] = `
-<div>
-  <a
-    href="https://calderaformscom.lndo.site/checkout"
-  >
-    Checkout Now
-  </a>
-  <button
-    className="components-button"
-    disabled={undefined}
-    onClick={[Function]}
-    type="button"
-  >
-    Continue
-  </button>
-  <div>
-    Items In CartOverview:
-    1
-  </div>
-</div>
-`;
-
-exports[`CalderaPay components CartOverview matches snapshot with  items in cart 1`] = `
-<div>
-  <div>
-    Items In CartOverview:
-    1
-  </div>
-  <div>
-    <a
-      href="https://link.com"
-    >
-      Checkout
-    </a>
-  </div>
-</div>
-`;
-
-exports[`CalderaPay components CartOverview matches snapshot with no items in cart 1`] = `
-<div>
-  <div>
-    Items In CartOverview:
-    0
-  </div>
-  0
-</div>
-`;
-
 exports[`CalderaPay components ProductGrid matches snapshot 1`] = `
 <table
   className="striped bordered condensed hover table"
@@ -298,50 +228,6 @@ exports[`CalderaPay components ProductSearch matches snapshot with no search ter
         
       </div>
     </div>
-  </div>
-</div>
-`;
-
-exports[`Individual components BeforeCart snapshot empty cart 1`] = `
-<div>
-  <a
-    href="https://calderaformscom.lndo.site/checkout"
-  >
-    Checkout Now
-  </a>
-  <button
-    className="components-button"
-    disabled={undefined}
-    onClick={[Function]}
-    type="button"
-  >
-    Continue
-  </button>
-  <div>
-    Items In CartOverview:
-    0
-  </div>
-</div>
-`;
-
-exports[`Individual components BeforeCart snapshot empty cart 2`] = `
-<div>
-  <a
-    href="https://calderaformscom.lndo.site/checkout"
-  >
-    Checkout Now
-  </a>
-  <button
-    className="components-button"
-    disabled={undefined}
-    onClick={[Function]}
-    type="button"
-  >
-    Continue
-  </button>
-  <div>
-    Items In CartOverview:
-    1
   </div>
 </div>
 `;

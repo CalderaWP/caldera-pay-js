@@ -9,23 +9,42 @@ type Props = {
 	callToAction: string,
 	onSelectOption: Function
 };
-export const PriceTable = (props: Props ) => {
+
+/**
+ * Display Price table for a component
+ *
+ * @param props
+ * @return {*}
+ * @constructor
+ */
+export const PriceTables = (props: Props ) => {
 	const {products,callToAction,onSelectOption} = props;
 	return(
 		<div>
-			{products.forEach((product: Product) => {
+			{products.map((product: Product) => {
 				const {calderaPay} = product;
 
 				const features=  [
-					`Includes ${calderaPay.bundle.includes.length} Add-ons`,
-					`Includes Caldera Pro Service`
+					`Unlimited Form Submissions`,
+					`Unlimited Forms`
 				];
-				return <PriceTableItem
-					product={product}
-					onSelectOption={onSelectOption}
-					features={features}
-					callToAction={callToAction}
-				/>
+				if(calderaPay.bundle.includes.length ){
+					features.push(`Includes ${calderaPay.bundle.includes.length} Add-ons`);
+					features.push(`Includes Caldera Pro Service`)
+				};
+
+				const onSelectThisOption = () => { onSelectOption(product.id); };
+				return (
+					<React.Fragment key={product.id}>
+						<PriceTableItem
+							product={product}
+							onSelectOption={onSelectThisOption}
+							features={features}
+							callToAction={callToAction}
+						/>
+					</React.Fragment>
+
+				);
 			})}
 		</div>
 	)

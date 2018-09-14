@@ -1,7 +1,7 @@
 // @flow
 import React from 'react';
-import {PriceTable} from "./PricingTables/PriceTables";
-import type{Product} from "../types";
+import {PriceTables} from "../components/PricingTables/PriceTables";
+import type{Product} from "../types/index";
 
 type Props = {
 	product: Product,
@@ -24,7 +24,7 @@ export const SelectBundle = (props : Props ) => {
 
 	return(
 		<div className={'price-table'}>
-			<PriceTable
+			<PriceTables
 				products={productsForPriceTable}
 				callToAction={callToAction}
 				onSelectOption={onSelectForPurchase}

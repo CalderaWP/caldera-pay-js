@@ -15,7 +15,7 @@ import {orderProducts} from "../util/orderProducts";
 import bundles from "../__MOCKDATA__/bundles";
 import {User} from "../containers/User";
 import {requestHeaders} from "../api/requestHeaders";
-import {SelectBundle} from "./SelectBundle";
+import {SelectBundle} from "../containers/SelectBundle";
 import {CreatePayment} from "../containers/CreatePayment";
 
 /**
@@ -39,7 +39,7 @@ type State = {
 	user: WordPressUser,
 	jwtToken: string,
 	productSelectedId: ?number,
-	chosenBundleId: ?number
+	productIdToPurchase: ?number
 };
 
 
@@ -88,7 +88,7 @@ export class CalderaPay extends Component<Props,State> {
 			email: ''
 		},
 		productSelectedId: 0,
-		chosenBundleId: 0
+		productIdToPurchase: 0
 	};
 
 	/** @inheritDoc **/
@@ -97,7 +97,7 @@ export class CalderaPay extends Component<Props,State> {
 		(this: any).setSearchTerm = this.setSearchTerm.bind(this);
 		(this: any).onValidateToken = this.onValidateToken.bind(this);
 		(this: any).setProductSelected = this.setProductSelected.bind(this);
-		(this: any).setChosenBundleId = this.setChosenBundleId.bind(this);
+		(this: any).productIdToPurchase = this.productIdToPurchase.bind(this);
 
 	}
 
@@ -288,6 +288,10 @@ export class CalderaPay extends Component<Props,State> {
 				bundlesIncludedIn.push(bundle);
 			});
 
+		console.log({
+			product,
+			bundlesIncludedIn,
+		});
 		return {
 			product,
 			bundlesIncludedIn,
@@ -318,13 +322,13 @@ export class CalderaPay extends Component<Props,State> {
 		this.setState({jwtToken});
 	}
 
-	setChosenBundleId(chosenBundleId: number ){
-		this.setState({chosenBundleId});
+	productIdToPurchase(productIdToPurchase: number ){
+		this.setState({productIdToPurchase});
 	}
 	/** @inheritDoc **/
 	render() {
 		const {state,props} = this;
-		const {searchTerm, hasLoaded,productSelectedId,jwtToken,chosenBundleId } = state;
+		const {searchTerm, hasLoaded,productSelectedId,jwtToken,productIdToPurchase } = state;
 		const {settings} = props;
 		if( ! hasLoaded ){
 			return <div><div className={'sr-only'}>Loading</div><Spinner/></div>
@@ -333,12 +337,16 @@ export class CalderaPay extends Component<Props,State> {
 			<div className={'container'}>
 				{productSelectedId &&
 					<React.Fragment>
-						<SelectBundle
-							product={this.getSelectedProduct().product}
-							bundlesIncludedIn={this.getSelectedProduct().bundlesIncludedIn}
-							onSelectForPurchase={this.setChosenBundleId}
-						/>
-						{chosenBundleId &&
+						<div>
+							<h2>Choose</h2>
+							<SelectBundle
+								product={this.getSelectedProduct().product}
+								bundlesIncludedIn={this.getSelectedProduct().bundlesIncludedIn}
+								onSelectForPurchase={this.productIdToPurchase}
+							/>
+						</div>
+
+						{productIdToPurchase &&
 							<React.Fragment>
 								{! jwtToken &&
 									<User
