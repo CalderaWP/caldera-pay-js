@@ -6,7 +6,7 @@ This library's boilerplate is [DimiMikadze/create-react-library](https://github.
 ## Usage
 There is a factory function to load app 
 ```js
-import {factory} from "../lib";
+import {factory} from '@caldera-labs/caldera-pay-js';
 import domReady from '@wordpress/dom-ready';
 
 domReady( () => {
@@ -25,7 +25,7 @@ const App = () => (
 	<CalderaPay
 		userSettings={userSettings}
 		settings={{
-			apiRoot: 'https://calderaformscom.lndo.site/wp-json/wp/v2/download',
+			productsRoute: 'https://calderaformscom.lndo.site/wp-json/wp/v2/download',
 			cartRoute: 'https://calderaformscom.lndo.site/wp-json/calderapay/v1/cart',
 			checkoutLink: 'https://calderaformscom.lndo.site/checkout',
 			bundleOrder: [

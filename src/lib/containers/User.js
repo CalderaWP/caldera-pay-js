@@ -14,7 +14,6 @@ type Props = {
 	settings: CalderaPayUserSettings,
 	jwtToken: string,
 	onValidateToken: Function,
-	loginMessage: string
 }
 type State = {
 	user: WordPressUser,

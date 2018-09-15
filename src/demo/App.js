@@ -6,7 +6,7 @@ const userSettings = userSettingsFactory(apiRoot);
 const App = () => (
 	<CalderaPay
 		settings={{
-			apiRoot: 'https://calderaformscom.lndo.site/wp-json/wp/v2/download',
+			productsRoute: 'https://calderaformscom.lndo.site/wp-json/wp/v2/download',
 			cartRoute: 'https://calderaformscom.lndo.site/wp-json/calderapay/v1/cart',
 			checkoutLink: 'https://calderaformscom.lndo.site/checkout',
 			bundleOrder: [

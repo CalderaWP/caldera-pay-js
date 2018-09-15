@@ -1,17 +1,20 @@
+import type {embeddedApi} from "./settings";
+//@todo move to ./settings
 export type CalderaPayUserSettings = {
 	userExistsRoute: string,
 	jwtLoginRoute: string,
 	jwtValidateRoute: string,
 
 }
-
+//@todo move to ./settings
 export type CalderaPaySettings = {
-	apiRoot: string,
+	productsRoute: string,
 	bundleOrder: Array<string|number>,
 	cartRoute: string,
 	checkoutLink: string,
 	jwtToken: ?string,
-	merchantId: string
+	merchantId: string,
+	embeddedApi: embeddedApi
 
 
 }
