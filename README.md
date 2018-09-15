@@ -6,10 +6,11 @@ This library's boilerplate is [DimiMikadze/create-react-library](https://github.
 ## Usage
 There is a factory function to load app 
 ```js
+import {factory} from "../lib";
+import domReady from '@wordpress/dom-ready';
 
-import {factory} from '@caldera-labs/caldera-pay-js';
 domReady( () => {
-	factory({},'id-of-element-to-mount-app-on');
+	factory({},'root');
 } );
 ```
 

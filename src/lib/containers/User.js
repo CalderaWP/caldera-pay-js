@@ -12,14 +12,16 @@ const isEmailMaybe = require('is-email-maybe')
 
 type Props = {
 	settings: CalderaPayUserSettings,
-	jwtToken: ?string,
-	onValidateToken: Function
+	jwtToken: string,
+	onValidateToken: Function,
+	loginMessage: string
 }
 type State = {
 	user: WordPressUser,
 	hasLoaded: boolean,
-	userFound: boolean,
-	password: string
+	userExists: boolean,
+	userNotFound: boolean,
+	loginMessage: string
 }
 
 export class User extends Component<Props, State> {
@@ -34,7 +36,9 @@ export class User extends Component<Props, State> {
 			email: ''
 		},
 		hasLoaded: true,
-		userFound: false,
+		userExists: false,
+		userNotFound: false,
+		loginMessage: ''
 	};
 
 	/** @inheritDoc **/
@@ -42,6 +46,8 @@ export class User extends Component<Props, State> {
 		super(props);
 		(this: any).setUserEmail = this.setUserEmail.bind(this);
 		(this: any).updateUserFields = this.updateUserFields.bind(this);
+		(this: any).shouldShowLogin = this.shouldShowLogin.bind(this);
+		(this: any).onLoginClick = this.onLoginClick.bind(this);
 
 
 		(this: any).requestTokenValidate = this.requestTokenValidate.bind(this);
@@ -65,6 +71,29 @@ export class User extends Component<Props, State> {
 		this.setState({user});
 	}
 
+	/**
+	 * Display password logic
+	 *
+	 * Sser exists OR token is set
+	 *
+	 * @return {State.userExists|boolean}
+	 */
+	shouldShowLogin(): boolean{
+		const {userExists} = this.state;
+		const {jwtToken} = this.props;
+		console.log(jwtToken.length);
+		if (
+			//User exists
+			// can login
+			userExists &&
+			//and JWT token is not set
+			//Did not login
+			0 === jwtToken.length ){
+			return true;
+		}
+
+		return false;
+	}
 
 	requestTokenValidate() {
 		const settings = this.props.settings;
@@ -79,12 +108,13 @@ export class User extends Component<Props, State> {
 			.catch(error => console.error('Error:', error))
 			.then((response) => {
 				this.props.onValidateToken(response.token);
-				this.setState({hasLoaded: true, userFound: true});
+				this.setState({hasLoaded: true, userExists: true});
 			});
 	}
 
-	requestLogin() {
+	requestLogin(password:string) {
 		const settings = this.props.settings;
+		const {user} = this.state;
 		const {jwtLoginRoute} = settings;
 		this.setState({hasLoaded: false});
 		fetch(`${jwtLoginRoute}`, {
@@ -93,16 +123,44 @@ export class User extends Component<Props, State> {
 			method: 'POST',
 			headers: requestHeaders(this.props.jwtToken),
 			body: JSON.stringify({
-				username: this.state.user.username,
-				password: this.state.password
+				username: user.username ? user.username : user.email,
+				password
 			})
 
 		}).then(response => response.json())
 			.catch(error => console.error('Error:', error))
 			.then((response) => {
 				console.log(response);
-				this.props.onValidateToken(response.token);
-				this.setState({hasLoaded: true, userFound: true});
+				let stateUpdate = {
+					hasLoaded: true,
+					userExists: false,
+					loginMessage: '',
+					user: this.state.user
+				};
+				if( response.hasOwnProperty('token') && 'string' === typeof  response.token ){
+					this.props.onValidateToken(response.token);
+					stateUpdate.userExists = true;
+					stateUpdate.loginMessage = 'Login Successful';
+
+				}else{
+
+					if( response.hasOwnProperty('message') && 'string' === typeof  response.message ){
+						stateUpdate.loginMessage = response.message;
+					}
+
+				}
+
+				if( response.hasOwnProperty('calderaPay')){
+					const {calderaPay} = response;
+					this.setState({
+						user: {
+							...user,
+							first_name: calderaPay.hasOwnProperty('first_name' ) ? calderaPay.first_name : 	this.state.user.first_name,
+							last_name: calderaPay.hasOwnProperty('last_name' ) ? calderaPay.last_name : 	this.state.user.last_name,
+						}
+					})
+				}
+				this.setState(stateUpdate);
 			});
 	}
 
@@ -118,18 +176,18 @@ export class User extends Component<Props, State> {
 			headers:requestHeaders(this.props.jwtToken),
 
 		}).then(response => response.json())
-			.catch(error => console.error('Error:', error))
+			.catch(error => {this.setState({userNotFound:true})})
 			.then(response => {
 				console.log(response);
 				if (response.hasOwnProperty('exists') && response.exists) {
-					this.setState({userFound:true})
+					this.setState({userExists:true,userNotFound:false})
 				}
 				this.setState({hasLoaded: true});
 			});
 	}
 
 	setUserEmail(email: string) {
-		const {user} = this.state;
+		const {user,userExists} = this.state;
 		this.setState({
 			user: {
 				...user,
@@ -137,7 +195,7 @@ export class User extends Component<Props, State> {
 			}
 		});
 
-		if (email !== this.state.user.email && !this.state.userFound) {
+		if (email !== user.email && !userExists) {
 			if (isEmailMaybe(email)) {
 				this.deboundedRequestUserExists();
 			}
@@ -146,8 +204,8 @@ export class User extends Component<Props, State> {
 
 	}
 
-	setPassword(password: string) {
-		this.setState({password});
+	onLoginClick(password: string) {
+		this.requestLogin(password);
 	}
 
 	updateUserFields(user: WordPressUser) {
@@ -157,9 +215,7 @@ export class User extends Component<Props, State> {
 
 
 	render() {
-		const {user, hasLoaded} = this.state;
-		//const showPassword = !!this.state.password.length;
-		const showPassword = true;
+		const {user, hasLoaded,loginMessage} = this.state;
 		return (
 			<div>
 				{hasLoaded &&
@@ -169,9 +225,10 @@ export class User extends Component<Props, State> {
 					user={user}
 					onChangeEmail={this.setUserEmail}
 					onUpdateUserFields={this.updateUserFields}
-					onLoginAttempt={this.setPassword}
-					showPassword={showPassword}
+					onLoginAttempt={this.onLoginClick}
+					showPassword={this.shouldShowLogin()}
 				/>
+				<p>{loginMessage}</p>
 			</div>
 		)
 

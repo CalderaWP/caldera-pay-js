@@ -68,7 +68,7 @@ export class UserInfo extends React.Component<Props,State> {
 		const passField = {
 			id: 'caldera-pay-customer-password',
 			label: 'Password',
-			desc: '',
+			desc: 'Account Found Enter Password',
 			type: 'input',
 			required: true,
 			innerType: 'password',
@@ -101,7 +101,7 @@ export class UserInfo extends React.Component<Props,State> {
 			id: 'caldera-pay-customer-last-name',
 			label: 'Last Name',
 			desc: '',
-			required: true,
+			required: false,
 			type: 'input',
 			innerType: 'text',
 			inputClass: 'form-control',
