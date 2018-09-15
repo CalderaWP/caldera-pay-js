@@ -81,7 +81,6 @@ export class User extends Component<Props, State> {
 	shouldShowLogin(): boolean{
 		const {userExists} = this.state;
 		const {jwtToken} = this.props;
-		console.log(jwtToken.length);
 		if (
 			//User exists
 			// can login
@@ -128,9 +127,15 @@ export class User extends Component<Props, State> {
 			})
 
 		}).then(response => response.json())
-			.catch(error => console.error('Error:', error))
+			.catch(error => {
+				console.log(error);
+				if( error.hasOwnProperty('message') && 'string' === typeof  error.message ){
+					this.setState({
+						loginMessage: error.message
+					});
+				}
+			})
 			.then((response) => {
-				console.log(response);
 				let stateUpdate = {
 					hasLoaded: true,
 					userExists: false,
@@ -178,7 +183,6 @@ export class User extends Component<Props, State> {
 		}).then(response => response.json())
 			.catch(error => {this.setState({userNotFound:true})})
 			.then(response => {
-				console.log(response);
 				if (response.hasOwnProperty('exists') && response.exists) {
 					this.setState({userExists:true,userNotFound:false})
 				}
