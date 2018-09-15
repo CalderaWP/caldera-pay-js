@@ -6,7 +6,7 @@ import ReactDOM from 'react-dom';
 import {userSettingsFactory} from "./util/userSettingsFactory";
 import {apiSettingsFactory} from "./util/apiSettingsFactory";
 import {ApiClient} from "./api/ApiClient";
-import {qualPay} from "./qualPay";
+import {qualpayEmbeddedFields} from "./qualpayEmbeddedFields";
 
 /**
  * Renders the application onto a given DOM node.
@@ -21,13 +21,7 @@ export const factory = (settings: CalderaPaySettings, domNodeId : string, apiRoo
 	const userSettings = userSettingsFactory(apiRoot);
 	//@TODO not pass settings to component that are also needed
 	const apiClient = new ApiClient(settings,userSettings);
-	ReactDOM.render(<CalderaPay
-		apiClient={apiClient}
-		settings={settings}
-		userSettings={userSettings}
-	/>, document.getElementById(domNodeId));
-
-	qualPay(
+	const qualpay = new qualpayEmbeddedFields(
 		'caldera-pay-qualpay-form',
 		{
 			merchantId:212000464573,
@@ -35,7 +29,15 @@ export const factory = (settings: CalderaPaySettings, domNodeId : string, apiRoo
 			domNodeId
 		},
 		apiClient
-	).putFormOnDom().loadCheckout();
+	);
+	ReactDOM.render(<CalderaPay
+		apiClient={apiClient}
+		settings={settings}
+		userSettings={userSettings}
+		qualpayEmbeddedFields={qualpay}
+	/>, document.getElementById(domNodeId));
+
+
 
 	return [apiClient];
 };

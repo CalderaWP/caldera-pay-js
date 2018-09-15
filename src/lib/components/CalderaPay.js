@@ -15,7 +15,9 @@ import bundles from "../__MOCKDATA__/bundles";
 import {User} from "../containers/User";
 import {SelectBundle} from "../containers/SelectBundle";
 import {ApiClient} from "../api/ApiClient";
-import type {ProductsData, TransientKeyData} from "../api/ApiClient";
+import type {ProductsData} from "../api/ApiClient";
+import {qualpayEmbeddedFields} from "../qualpayEmbeddedFields";
+import type {PaymentItem} from "../types/qualpay";
 
 /**
  * Props type for CalderaPay Component
@@ -24,7 +26,8 @@ type Props = {
 	settings: CalderaPaySettings,
 	userSettings: CalderaPayUserSettings,
 	fuseOptions: ?Fuse.FuseOptions,
-	apiClient: ApiClient
+	apiClient: ApiClient,
+	qualpayEmbeddedFields: qualpayEmbeddedFields
 };
 
 /**
@@ -40,7 +43,10 @@ type State = {
 	jwtToken: string,
 	productSelectedId: ?number,
 	productIdToPurchase: ?number,
-	transientKey: string
+	isPaymentOpen: boolean,
+	hasPaymentLoaded: boolean,
+	cardToken: string,
+	purchaseErrors: Array<string>
 };
 
 
@@ -87,7 +93,10 @@ export class CalderaPay extends Component<Props, State> {
 		},
 		productSelectedId: 0,
 		productIdToPurchase: 0,
-		transientKey: ''
+		isPaymentOpen: false,
+		hasPaymentLoaded: false,
+		cardToken: '',
+		purchaseErrors: []
 	};
 
 	/** @inheritDoc **/
@@ -97,6 +106,9 @@ export class CalderaPay extends Component<Props, State> {
 		(this: any).onValidateToken = this.onValidateToken.bind(this);
 		(this: any).setProductSelected = this.setProductSelected.bind(this);
 		(this: any).productIdToPurchase = this.productIdToPurchase.bind(this);
+		(this: any).onPurchaseError = this.onPurchaseError.bind(this);
+		(this: any).onPurchaseSuccess = this.onPurchaseSuccess.bind(this);
+		(this: any).getPurchaseTotal = this.getPurchaseTotal.bind(this);
 
 		const {settings,userSettings} = this.props;
 	}
@@ -257,24 +269,121 @@ export class CalderaPay extends Component<Props, State> {
 		}
 	}
 
-
+	/**
+	 * Callback when JWT Token is validated
+	 *
+	 * @param jwtToken
+	 */
 	onValidateToken(jwtToken: string) {
 		this.setState({jwtToken});
 	}
 
-	productIdToPurchase(productIdToPurchase: number) {
-		this.setState({productIdToPurchase});
+	/**
+	 * Callback when payment has succeed
+	 * @param cardToken
+	 */
+	onPurchaseSuccess(cardToken: string){
+		this.setState({
+			isPaymentOpen: false,
+			cardToken,
+			purchaseErrors: []
+		});
 	}
+
+	/**
+	 * Set payment errors
+	 * @param purchaseErrors
+	 */
+	onPurchaseError(purchaseErrors: Array<string>){
+		this.setState({purchaseErrors});
+	}
+
+	/**
+	 * When product ID to prucahse is set, load paymen
+	 * @param productIdToPurchase
+	 */
+	productIdToPurchase(productIdToPurchase: number) {
+		const{hasPaymentLoaded}= this.state;
+		const{qualpayEmbeddedFields}= this.props;
+		this.setState({
+			productIdToPurchase,
+			isPaymentOpen: true,
+		});
+		if(! hasPaymentLoaded ){
+			const total = this.getPurchaseTotal();
+			qualpayEmbeddedFields
+				.putFormOnDom()
+				.loadCheckout(
+					{
+						total,
+						displayItems:[
+							{
+								label: 'Tax',
+								amount: {
+									currency: 'USD',
+									value: 1.00,
+								},
+							},
+							{
+								label: 'Subtotal',
+								amount: {
+									currency: 'USD',
+									value: 10.00,
+								},
+							},
+						]
+					},
+					this.onPurchaseSuccess,
+					this.onPurchaseError
+				);
+		}
+	}
+
+	/**
+	 * Get the total for the purchase
+	 * @return {number}
+	 */
+
+
+	getPurchaseTotal(): PaymentItem
+	{
+		const {products, productIdToPurchase} = this.state;
+		function findPurchaseProduct(): Product {
+			return products.find((product: Product) => product.id === productIdToPurchase);
+		}
+
+		const product = findPurchaseProduct();
+		return {
+			label: product.title.rendered,
+			amount: {
+				currency: 'USD',
+				value: product.calderaPay.prices.price
+			}
+		}
+	}
+
 
 	/** @inheritDoc **/
 	render() {
 		const {state, props} = this;
-		const {searchTerm, hasLoaded, productSelectedId, jwtToken, productIdToPurchase} = state;
+		const {searchTerm, hasLoaded, productSelectedId, jwtToken, productIdToPurchase,isPaymentOpen} = state;
 		const {userSettings} = props;
 		if (!hasLoaded) {
 			return <div>
 				<div className={'sr-only'}>Loading</div>
 				<Spinner/></div>
+		}
+
+		if( isPaymentOpen){
+			return (
+				<div className={'container'}>
+					<User
+						settings={userSettings}
+						jwtToken={jwtToken}
+						onValidateToken={this.onValidateToken}
+					/>
+				</div>
+			);
 		}
 		return (
 			<div className={'container'}>
@@ -300,11 +409,6 @@ export class CalderaPay extends Component<Props, State> {
 								onValidateToken={this.onValidateToken}
 							/>
 						</div>
-						<div className={'col-sm-12 col-md-6'}>
-
-							<div>Payment Form</div>
-						</div>
-
 
 					</div>
 
