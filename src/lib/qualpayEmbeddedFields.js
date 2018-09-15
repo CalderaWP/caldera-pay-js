@@ -80,8 +80,8 @@ export class qualpayEmbeddedFields {
 	}
 
 
-	putFormOnDom(){
-		const {formId,domNodeId} = this;
+	putFormOnDom(parentNode: Node){
+		const {formId} = this;
 			/** Put the form in the DOM **/
 			const form = `
 				<form id="${formId}" method="post" action="/">
@@ -89,10 +89,9 @@ export class qualpayEmbeddedFields {
 				  </div>
 				  <input type="submit" name="submit" value="Pay Now" />
 				</form>`;
-			const appNode : Node = document.getElementById(domNodeId);
 			const el = document.createElement('div');
 			el.innerHTML = form;
-			appNode.appendChild(el);
+			parentNode.appendChild(el);
 			return this;
 		}
 

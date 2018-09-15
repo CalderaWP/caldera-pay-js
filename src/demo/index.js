@@ -4,9 +4,7 @@ import domReady from '@wordpress/dom-ready';
 const loadScript = require('simple-load-script');
 
 domReady(  () => {
-	const domNodeId= 'root';
+	const domNodeId= 'caldera-pay-app';
 	const calderaPaySystem = factory({},domNodeId, 'https://calderaformscom.lndo.site/wp-json' );
-
-
 } );
 

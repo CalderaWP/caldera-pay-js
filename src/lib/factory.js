@@ -30,11 +30,16 @@ export const factory = (settings: CalderaPaySettings, domNodeId : string, apiRoo
 		},
 		apiClient
 	);
+	const leftTop = document.getElementById('caldera-pay-left');
+	const rightTop = document.getElementById('caldera-pay-right');
+
 	ReactDOM.render(<CalderaPay
 		apiClient={apiClient}
 		settings={settings}
 		userSettings={userSettings}
 		qualpayEmbeddedFields={qualpay}
+		leftTopDomNode={leftTop}
+		rightTopDomNode={rightTop}
 	/>, document.getElementById(domNodeId));
 
 

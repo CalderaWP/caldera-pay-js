@@ -18,6 +18,8 @@ import {ApiClient} from "../api/ApiClient";
 import type {ProductsData} from "../api/ApiClient";
 import {qualpayEmbeddedFields} from "../qualpayEmbeddedFields";
 import type {PaymentItem} from "../types/qualpay";
+import {LeftTop} from "./portals/LeftTop";
+import {RightTop} from "./portals/RightTop";
 
 /**
  * Props type for CalderaPay Component
@@ -27,7 +29,9 @@ type Props = {
 	userSettings: CalderaPayUserSettings,
 	fuseOptions: ?Fuse.FuseOptions,
 	apiClient: ApiClient,
-	qualpayEmbeddedFields: qualpayEmbeddedFields
+	qualpayEmbeddedFields: qualpayEmbeddedFields,
+	leftTopDomNode: Node,
+	rightTopDomNode: Node
 };
 
 /**
@@ -109,8 +113,6 @@ export class CalderaPay extends Component<Props, State> {
 		(this: any).onPurchaseError = this.onPurchaseError.bind(this);
 		(this: any).onPurchaseSuccess = this.onPurchaseSuccess.bind(this);
 		(this: any).getPurchaseTotal = this.getPurchaseTotal.bind(this);
-
-		const {settings,userSettings} = this.props;
 	}
 
 	/** @inheritDoc **/
@@ -304,15 +306,17 @@ export class CalderaPay extends Component<Props, State> {
 	 */
 	productIdToPurchase(productIdToPurchase: number) {
 		const{hasPaymentLoaded}= this.state;
-		const{qualpayEmbeddedFields}= this.props;
+		const{qualpayEmbeddedFields,rightTopDomNode}= this.props;
 		this.setState({
 			productIdToPurchase,
 			isPaymentOpen: true,
 		});
+
+
 		if(! hasPaymentLoaded ){
-			const total = this.getPurchaseTotal();
+			const total = this.getPurchaseTotal(productIdToPurchase);
 			qualpayEmbeddedFields
-				.putFormOnDom()
+				.putFormOnDom(rightTopDomNode)
 				.loadCheckout(
 					{
 						total,
@@ -345,11 +349,11 @@ export class CalderaPay extends Component<Props, State> {
 	 */
 
 
-	getPurchaseTotal(): PaymentItem
+	getPurchaseTotal(productIdToPurchase: number): PaymentItem
 	{
-		const {products, productIdToPurchase} = this.state;
+		const {products,bundles} = this.state;
 		function findPurchaseProduct(): Product {
-			return products.find((product: Product) => product.id === productIdToPurchase);
+			return bundles.concat(products).find((product: Product) => product.id === productIdToPurchase);
 		}
 
 		const product = findPurchaseProduct();
@@ -366,76 +370,39 @@ export class CalderaPay extends Component<Props, State> {
 	/** @inheritDoc **/
 	render() {
 		const {state, props} = this;
-		const {searchTerm, hasLoaded, productSelectedId, jwtToken, productIdToPurchase,isPaymentOpen} = state;
-		const {userSettings} = props;
-		if (!hasLoaded) {
-			return <div>
-				<div className={'sr-only'}>Loading</div>
-				<Spinner/></div>
-		}
+		const {searchTerm, hasLoaded, productSelectedId, jwtToken,isPaymentOpen} = state;
+		const {userSettings,leftTopDomNode,rightTopDomNode} = props;
 
-		if( isPaymentOpen){
+		//Initial Load
+		if (!hasLoaded) {
 			return (
-				<div className={'container'}>
-					<User
-						settings={userSettings}
-						jwtToken={jwtToken}
-						onValidateToken={this.onValidateToken}
-					/>
+				<div>
+					<div className={'sr-only'}>Loading</div>
+					<Spinner/>
 				</div>
 			);
 		}
-		return (
-			<div className={'container'}>
-				{productSelectedId &&
+
+		//Choosing a product
+		if( !productSelectedId ){
+			return(
 				<React.Fragment>
-					<div>
-						{!productIdToPurchase &&
-						<SelectBundle
-							product={this.getSelectedProduct().product}
-							bundlesIncludedIn={this.getSelectedProduct().bundlesIncludedIn}
-							onSelectForPurchase={this.productIdToPurchase}
+					<LeftTop element={leftTopDomNode}>
+						<ProductSearch
+							searchTerm={searchTerm}
+							onProductSearch={this.setSearchTerm}
 						/>
-						}
+					</LeftTop>
+					<RightTop
+						element={rightTopDomNode}
+					>
+						<User
+							settings={userSettings}
+							jwtToken={jwtToken}
+							onValidateToken={this.onValidateToken}
+						/>
+					</RightTop>
 
-					</div>
-
-					{productIdToPurchase &&
-					<div className={'row'}>
-						<div className={'col-sm-12 col-md-6'}>
-							<User
-								settings={userSettings}
-								jwtToken={jwtToken}
-								onValidateToken={this.onValidateToken}
-							/>
-						</div>
-
-					</div>
-
-					}
-				</React.Fragment>
-
-				}
-
-				{!productSelectedId &&
-				<React.Fragment>
-					<div className={'row'}>
-						<div className={'col-md-9'}>
-							<ProductSearch
-								searchTerm={searchTerm}
-								onProductSearch={this.setSearchTerm}
-							/>
-						</div>
-						<div className={'col-md-3'}>
-							<User
-								settings={userSettings}
-								jwtToken={jwtToken}
-								onValidateToken={this.onValidateToken}
-							/>
-						</div>
-					</div>
-
-					<div>
 						<ProductGrid
 							products={state.products}
 							rows={this.getRows()}
@@ -443,14 +410,39 @@ export class CalderaPay extends Component<Props, State> {
 							onAddToCart={this.setProductSelected}
 							bundles={bundles}
 						/>
-					</div>
 				</React.Fragment>
-				}
+			);
+		}
 
 
-			</div>
+		//Entering Credit Card Details
+		if( isPaymentOpen){
+			return (
+				<LeftTop
+					element={leftTopDomNode}
 
-		);
+				>
+					<User
+						settings={userSettings}
+						jwtToken={jwtToken}
+						onValidateToken={this.onValidateToken}
+					/>
+				</LeftTop>
+
+			);
+		}
+
+		if( productSelectedId ){
+			return(
+				<SelectBundle
+					product={this.getSelectedProduct().product}
+					bundlesIncludedIn={this.getSelectedProduct().bundlesIncludedIn}
+					onSelectForPurchase={this.productIdToPurchase}
+				/>
+			);
+
+		}
+
 
 
 	}
