@@ -20,6 +20,7 @@ import {qualpayEmbeddedFields} from "../qualpayEmbeddedFields";
 import type {PaymentItem} from "../types/qualpay";
 import {LeftTop} from "./portals/LeftTop";
 import {RightTop} from "./portals/RightTop";
+import {PurchaseDetails} from "./PurchaseDetails";
 
 /**
  * Props type for CalderaPay Component
@@ -113,6 +114,7 @@ export class CalderaPay extends Component<Props, State> {
 		(this: any).onPurchaseError = this.onPurchaseError.bind(this);
 		(this: any).onPurchaseSuccess = this.onPurchaseSuccess.bind(this);
 		(this: any).getPurchaseTotal = this.getPurchaseTotal.bind(this);
+		(this: any).findPurchaseProduct = this.findPurchaseProduct.bind(this);
 	}
 
 	/** @inheritDoc **/
@@ -343,20 +345,27 @@ export class CalderaPay extends Component<Props, State> {
 		}
 	}
 
+
+	/**
+	 * Find the product to purchase, based on state.productIdToPurchase
+	 * @return {Product}
+	 */
+	findPurchaseProduct(productIdToPurchase: number): Product {
+		const {products,bundles} = this.state;
+		return bundles.concat(products).find((product: Product) => {
+			return product.id === productIdToPurchase
+		});
+	}
+
 	/**
 	 * Get the total for the purchase
-	 * @return {number}
+	 *
+	 * @param productIdToPurchase
+	 * @return {{label: string, amount: {currency: string, value: number}}}
 	 */
-
-
 	getPurchaseTotal(productIdToPurchase: number): PaymentItem
 	{
-		const {products,bundles} = this.state;
-		function findPurchaseProduct(): Product {
-			return bundles.concat(products).find((product: Product) => product.id === productIdToPurchase);
-		}
-
-		const product = findPurchaseProduct();
+		const product = this.findPurchaseProduct(productIdToPurchase);
 		return {
 			label: product.title.rendered,
 			amount: {
@@ -370,7 +379,7 @@ export class CalderaPay extends Component<Props, State> {
 	/** @inheritDoc **/
 	render() {
 		const {state, props} = this;
-		const {searchTerm, hasLoaded, productSelectedId, jwtToken,isPaymentOpen} = state;
+		const {searchTerm, hasLoaded, productSelectedId, jwtToken,isPaymentOpen,productIdToPurchase} = state;
 		const {userSettings,leftTopDomNode,rightTopDomNode} = props;
 
 		//Initial Load
@@ -416,18 +425,29 @@ export class CalderaPay extends Component<Props, State> {
 
 
 		//Entering Credit Card Details
+		//Do NOT use <RightTop> when payment is open
 		if( isPaymentOpen){
 			return (
-				<LeftTop
-					element={leftTopDomNode}
 
-				>
-					<User
-						settings={userSettings}
-						jwtToken={jwtToken}
-						onValidateToken={this.onValidateToken}
+				<React.Fragment>
+
+					<LeftTop
+						element={leftTopDomNode}
+
+					>
+						<User
+							settings={userSettings}
+							jwtToken={jwtToken}
+							onValidateToken={this.onValidateToken}
+						/>
+					</LeftTop>
+					<PurchaseDetails
+						product={this.findPurchaseProduct(productIdToPurchase)}
+						heading={'Payment Details'}
 					/>
-				</LeftTop>
+				</React.Fragment>
+
+
 
 			);
 		}

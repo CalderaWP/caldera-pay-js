@@ -28,6 +28,7 @@ export const SelectBundle = (props : Props ) => {
 				products={productsForPriceTable}
 				callToAction={callToAction}
 				onSelectOption={onSelectForPurchase}
+
 			/>
 		</div>
 	);

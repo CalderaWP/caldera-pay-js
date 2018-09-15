@@ -4,10 +4,11 @@ import type {Product} from "../../types";
 
 type Props = {
 	product: Product,
-	onSelectOption: Function,
+	onSelectOption ?: Function,
 	features: Array<string>,
-	callToAction: string,
+	callToAction ?: string,
 	buttonClassName?: string,
+	showPurchase ?: boolean
 };
 
 /**
@@ -18,7 +19,7 @@ type Props = {
  * @constructor
  */
 export const PriceTableItem = (props: Props) => {
-	const {product, onSelectOption, features, callToAction, buttonClassName} = props;
+	const {product, onSelectOption, features, callToAction, buttonClassName,showPurchase} = props;
 	const {calderaPay} = product;
 
 	return (
@@ -34,12 +35,14 @@ export const PriceTableItem = (props: Props) => {
 				})}
 			</ul>
 			<div>{calderaPay.prices.price}</div>
-			<button
-				className={buttonClassName}
-				onClick={onSelectOption}
-			>
-				{callToAction}
-			</button>
+			{showPurchase &&
+				<button
+					className={buttonClassName}
+					onClick={onSelectOption}
+				>
+					{callToAction}
+				</button>
+			}
 		</div>
 	)
 };
