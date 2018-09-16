@@ -7,7 +7,10 @@
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "demo": "node scripts/demo.js",
-    "test": "node scripts/test.js --env=jsdom"
+    "test": "node scripts/test.js --env=jsdom",
+    "release": "npm run release:patch",
+    "release:minor": "npm version minor -m \"version %s\" ",
+    "release:patch": "npm version patch -m \"version %s\" "
   },
   "repository": {
     "type": "git",

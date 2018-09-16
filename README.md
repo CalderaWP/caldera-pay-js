@@ -82,6 +82,19 @@ Produces production version of library under the `build` folder.
 
 ## Publish library
 
-`npm publish`
+Must be [logged in as project maintainer via npm cli](https://docs.npmjs.com/cli/adduser)
 
+### Prepare Release
+
+* Patch release:
+    - `yarn release`
+
+* Minor release:
+    - `yarn release:minor`
+
+* Major release:
+    - `yarn release:major`
+
+### Publish To NPM
+`npm publish`
 
