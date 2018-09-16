@@ -33,7 +33,8 @@ export const factory = (settings: CalderaPaySettings, domNodeId : string, apiRoo
 	const leftTop = document.getElementById('caldera-pay-left');
 	const rightTop = document.getElementById('caldera-pay-right');
 
-	ReactDOM.render(<CalderaPay
+	ReactDOM.render(
+	<CalderaPay
 		apiClient={apiClient}
 		settings={settings}
 		userSettings={userSettings}

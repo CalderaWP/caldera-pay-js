@@ -3,39 +3,65 @@
 
 This library's boilerplate is [DimiMikadze/create-react-library](https://github.com/DimiMikadze/create-react-library)
 
+
+## Install
+* Install using npm:
+`npm i caldera-labs/caldera-pay-js`
+
+* Install with yarn:
+
+`yarn add caldera-labs/caldera-pay-js`
+
 ## Usage
-There is a factory function to load app 
+There is a factory function to load app.
 ```js
 import {factory} from '@caldera-labs/caldera-pay-js';
 import domReady from '@wordpress/dom-ready';
 
 domReady( () => {
-	factory({},'root');
+	factory({},'caldera-pay-app');
 } );
+```
+
+This assumes an HTML markup like this:
+
+```html
+<div class="caldera-pay">
+    <div class="container">
+       <div class="row">
+         <div class="col-sm-12 col-lg-6" id="caldera-pay-left"></div>
+         <div class="col-sm-12 col-lg-6" id="caldera-pay-right"></div>
+       </div>
+       <div id="caldera-pay-app"></div>
+     </div>
+</div>
 ```
 
 Or you can use the component.
 ```js
 import React from 'react';
 import './App.css';
-import {CalderaPay,userSettingsFactory} from '@caldera-labs/caldera-pay-js';
-const userSettings = userSettingsFactory('https://calderaformscom.lndo.site');
+import {
+	CalderaPay, //main component
+	apiSettingsFactory, // main settings
+	userSettingsFactory, //user settings
+	ApiClient, // Client for all API requests
+	qualpayEmbeddedFields, //manages loading qualpay hosted fields
+}from '@caldera-labs/caldera-pay-js';
+
+//URL for the WordPress REST API
+const apiRootUrl = 'https://calderaformscom.lndo.site/wp-json';
+const settings=  apiSettingsFactory({
+    //overides for settings
+}, apiRootUrl );
+const userSettings = userSettingsFactory(apiRootUrl);
 
 const App = () => (
 	<CalderaPay
 		userSettings={userSettings}
-		settings={{
-			productsRoute: 'https://calderaformscom.lndo.site/wp-json/wp/v2/download',
-			cartRoute: 'https://calderaformscom.lndo.site/wp-json/calderapay/v1/cart',
-			checkoutLink: 'https://calderaformscom.lndo.site/checkout',
-			bundleOrder: [
-				'isFree',
-				20520, //Individual
-				20518, //Advanced
-				48255, //Agency
-			],
-
-		}}
+		settings={settings}
+		leftTopDomNode={document.getElementById('left-top')}
+        rightTopDomNode={document.getElementById('right-top')}
 	/>
 );
 
