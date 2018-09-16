@@ -85,7 +85,7 @@ export class qualpayEmbeddedFields {
 			/** Put the form in the DOM **/
 			const form = `
 				<form id="${formId}" method="post" action="/">
-				  <div id="qp-embedded-container" align="center">
+				  <div id="qp-embedded-container" align="center" style="min-height: 150px;">
 				  </div>
 				  <input type="submit" name="submit" value="Pay Now" />
 				</form>`;
@@ -129,7 +129,7 @@ export class qualpayEmbeddedFields {
 						},
 						font: 'Titillium Web',
 						style:
-							"#root { min-width: 260px; }",
+							"#root { min-width: 260px; min-height:500px; }",
 
 						paymentRequestConfig: {
 							paymentDetails,

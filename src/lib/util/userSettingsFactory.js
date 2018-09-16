@@ -7,8 +7,8 @@ function addApiRoot(apiRoot:string,endpoint:string):string{
 
 export function userSettingsFactory(apiRoot:string) : CalderaPayUserSettings  {
 	return {
-		userExistsRoute: addApiRoot(apiRoot,'wp-json/calderapay/v1/user/exists'),
-		jwtLoginRoute: addApiRoot(apiRoot,'wp-json/jwt-auth/v1/token'),
-		jwtValidateRoute: addApiRoot(apiRoot,'wp-json/jwt-auth/v1/token/validate')
+		userExistsRoute: addApiRoot(apiRoot,'calderapay/v1/user/exists'),
+		jwtLoginRoute: addApiRoot(apiRoot,'jwt-auth/v1/token'),
+		jwtValidateRoute: addApiRoot(apiRoot,'jwt-auth/v1/token/validate')
 	};
 }

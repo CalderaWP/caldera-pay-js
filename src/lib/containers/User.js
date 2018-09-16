@@ -34,7 +34,7 @@ export class User extends Component<Props, State> {
 			last_name: '',
 			email: ''
 		},
-		hasLoaded: true,
+		hasLoaded: false,
 		userExists: false,
 		userNotFound: false,
 		loginMessage: ''

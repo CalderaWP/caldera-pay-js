@@ -402,23 +402,15 @@ export class CalderaPay extends Component<Props, State> {
 							onProductSearch={this.setSearchTerm}
 						/>
 					</LeftTop>
-					<RightTop
-						element={rightTopDomNode}
-					>
-						<User
-							settings={userSettings}
-							jwtToken={jwtToken}
-							onValidateToken={this.onValidateToken}
-						/>
-					</RightTop>
 
-						<ProductGrid
-							products={state.products}
-							rows={this.getRows()}
-							headers={this.getHeaders()}
-							onAddToCart={this.setProductSelected}
-							bundles={bundles}
-						/>
+
+					<ProductGrid
+						products={state.products}
+						rows={this.getRows()}
+						headers={this.getHeaders()}
+						onAddToCart={this.setProductSelected}
+						bundles={bundles}
+					/>
 				</React.Fragment>
 			);
 		}
