@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2467cfb6-9d72-4e41-90b3-1b336ac64977" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/demo/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/demo/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/components/BreadCrumbs/BreadCrumbs.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/BreadCrumbs/BreadCrumbs.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/components/BreadCrumbs/Breadcrumbs.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/BreadCrumbs/Breadcrumbs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/components/BreadCrumbs/__snapshots__/BreadCrumbs.test.js.snap" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/BreadCrumbs/__snapshots__/BreadCrumbs.test.js.snap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/components/CalderaPay.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/CalderaPay.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/qualpayEmbeddedFields.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/qualpayEmbeddedFields.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,7 +30,7 @@
           <entry key="css" value="1" />
           <entry key="gitignore" value="1" />
           <entry key="html" value="8" />
-          <entry key="js" value="202" />
+          <entry key="js" value="203" />
           <entry key="json" value="16" />
           <entry key="md" value="6" />
           <entry key="npmignore" value="1" />
@@ -48,7 +44,7 @@
           <entry key="CSS" value="1" />
           <entry key="HTML" value="8" />
           <entry key="JSON" value="16" />
-          <entry key="JavaScript" value="202" />
+          <entry key="JavaScript" value="203" />
           <entry key="Jest Snapshot" value="9" />
           <entry key="Markdown" value="6" />
           <entry key="PHP" value="1" />
@@ -60,7 +56,7 @@
         <counts>
           <entry key="dummy" value="25" />
           <entry key="html" value="187" />
-          <entry key="js" value="34747" />
+          <entry key="js" value="34749" />
           <entry key="json" value="436" />
           <entry key="md" value="1377" />
           <entry key="npmignore" value="14" />
@@ -71,7 +67,7 @@
         <counts>
           <entry key="HTML" value="238" />
           <entry key="JSON" value="436" />
-          <entry key="JavaScript" value="34720" />
+          <entry key="JavaScript" value="34722" />
           <entry key="Jest Snapshot" value="2" />
           <entry key="Markdown" value="1353" />
           <entry key="PLAIN_TEXT" value="39" />
@@ -111,11 +107,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/lib/qualpayEmbeddedFields.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="618">
-                  <caret line="86" column="59" selection-start-line="86" selection-start-column="59" selection-end-line="86" selection-end-column="59" />
+                <state relative-caret-position="646">
+                  <caret line="133" column="98" selection-start-line="133" selection-start-column="98" selection-end-line="133" selection-end-column="98" />
                   <folding>
                     <element signature="e#10#52#0" expanded="true" />
                     <element signature="n#style#0;n#div#0;n#form#0;n#!!top" expanded="true" />
@@ -124,11 +120,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/lib/components/CalderaPay.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="455">
-                  <caret line="327" column="31" selection-start-line="327" selection-start-column="31" selection-end-line="327" selection-end-column="31" />
+                <state relative-caret-position="185">
+                  <caret line="309" column="7" lean-forward="true" selection-start-line="309" selection-start-column="7" selection-end-line="309" selection-end-column="7" />
                   <folding>
                     <element signature="e#9#48#0" expanded="true" />
                     <element signature="n#!!block;n#getRows#0;n#CalderaPay#0" />
@@ -140,10 +136,19 @@
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/lib/containers/Payment.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="75">
+                  <caret line="5" selection-start-line="5" selection-end-line="5" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/demo/index.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="120">
-                  <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+                  <caret line="8" selection-start-line="8" selection-end-line="8" />
                   <folding>
                     <element signature="e#0#31#0" expanded="true" />
                   </folding>
@@ -167,7 +172,7 @@
             <entry file="file://$PROJECT_DIR$/src/lib/components/UserInfo.test.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="607">
-                  <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
+                  <caret line="45" selection-start-line="45" selection-end-line="45" />
                   <folding>
                     <element signature="e#0#26#0" expanded="true" />
                   </folding>
@@ -331,7 +336,6 @@
         <option value="$PROJECT_DIR$/src/lib/factory.js" />
         <option value="$PROJECT_DIR$/src/lib/index.js" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/src/lib/qualpayEmbeddedFields.js" />
         <option value="$PROJECT_DIR$/src/lib/components/TabWrapper.js" />
         <option value="$PROJECT_DIR$/src/lib/components/Breadcrumbs.js" />
         <option value="$PROJECT_DIR$/src/lib/components/UserInfo.test.js" />
@@ -339,6 +343,7 @@
         <option value="$PROJECT_DIR$/src/demo/index.js" />
         <option value="$PROJECT_DIR$/src/lib/components/BreadCrumbs/Breadcrumbs.js" />
         <option value="$PROJECT_DIR$/src/lib/components/CalderaPay.js" />
+        <option value="$PROJECT_DIR$/src/lib/qualpayEmbeddedFields.js" />
       </list>
     </option>
   </component>
@@ -364,11 +369,10 @@
       <path value="$PROJECT_DIR$/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="15" />
+  <component name="ProjectFrameBounds">
     <option name="y" value="23" />
-    <option name="width" value="1905" />
-    <option name="height" value="1057" />
+    <option name="width" value="1920" />
+    <option name="height" value="1177" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -503,18 +507,18 @@
       <workItem from="1536860999579" duration="6665000" />
       <workItem from="1536935502832" duration="20025000" />
       <workItem from="1537024563941" duration="25641000" />
-      <workItem from="1537191205849" duration="8327000" />
+      <workItem from="1537191205849" duration="8786000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="117898000" />
+    <option name="totallyTimeSpent" value="118357000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1920" height="1177" extended-state="6" />
+    <frame x="0" y="23" width="1920" height="1177" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13578275" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13578275" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -530,7 +534,7 @@
       <window_info anchor="bottom" id="Flow" order="9" sideWeight="0.4946752" weight="0.32953367" />
       <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="TypeScript" order="11" />
-      <window_info active="true" anchor="bottom" x="2121" y="45" width="902" height="654" id="Terminal" order="12" sideWeight="0.48828542" type="WINDOWED" visible="true" weight="0.17788018" />
+      <window_info anchor="bottom" x="2121" y="45" width="902" height="654" id="Terminal" order="12" sideWeight="0.48828542" type="WINDOWED" visible="true" weight="0.17788018" />
       <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.5117146" side_tool="true" weight="0.34196892" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -641,13 +645,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/lib/containers/CreatePayment.js" />
-    <entry file="file://$PROJECT_DIR$/src/lib/containers/Payment.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/react-dom/umd/react-dom.development.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="184">
@@ -843,17 +840,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/lib/qualpayEmbeddedFields.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="618">
-          <caret line="86" column="59" selection-start-line="86" selection-start-column="59" selection-end-line="86" selection-end-column="59" />
-          <folding>
-            <element signature="e#10#52#0" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#form#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/lib/components/TabWrapper.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -874,7 +860,7 @@
     <entry file="file://$PROJECT_DIR$/src/lib/components/UserInfo.test.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="607">
-          <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
+          <caret line="45" selection-start-line="45" selection-end-line="45" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -914,7 +900,7 @@
     <entry file="file://$PROJECT_DIR$/src/demo/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>
@@ -933,13 +919,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/lib/components/CalderaPay.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="455">
-          <caret line="327" column="31" selection-start-line="327" selection-start-column="31" selection-end-line="327" selection-end-column="31" />
+        <state relative-caret-position="185">
+          <caret line="309" column="7" lean-forward="true" selection-start-line="309" selection-start-column="7" selection-end-line="309" selection-end-column="7" />
           <folding>
             <element signature="e#9#48#0" expanded="true" />
             <element signature="n#!!block;n#getRows#0;n#CalderaPay#0" />
             <element signature="n#!!block;n#getHeaders#0;n#CalderaPay#0" />
             <element signature="n#!!block;n#setSearchTerm#0;n#CalderaPay#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lib/containers/Payment.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lib/qualpayEmbeddedFields.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="133" column="98" selection-start-line="133" selection-start-column="98" selection-end-line="133" selection-end-column="98" />
+          <folding>
+            <element signature="e#10#52#0" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#form#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

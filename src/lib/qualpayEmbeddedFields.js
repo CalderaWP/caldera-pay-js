@@ -131,7 +131,7 @@ export class qualpayEmbeddedFields {
 						</label>
      					<div id="${cardCvvId}" class="form-control"></div>
 				  	</div>
-				  <input type="submit" name="submit" value="Pay Now" />
+				  <input type="submit" name="submit" value="Pay Now" class="btn-primary btn-orange" />
 				</form>`;
 			const el = document.createElement('div');
 			el.innerHTML = form;
