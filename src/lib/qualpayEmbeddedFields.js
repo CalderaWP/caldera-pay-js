@@ -124,7 +124,7 @@ export class qualpayEmbeddedFields {
      					<div id="${cardExpId}" class="form-control"></div>
 				  	</div>
 				  	<div class="form-group">
-						<label 
+						<label
 							for="${cardCvvId}"
 						>
 							CVV
@@ -133,11 +133,11 @@ export class qualpayEmbeddedFields {
 				  	</div>
 				  <input type="submit" name="submit" value="Pay Now" class="btn-primary btn-orange" />
 				</form>`;
-			const el = document.createElement('div');
-			el.innerHTML = form;
-			parentNode.appendChild(el);
-			return this;
-		}
+		const el = document.createElement('div');
+		el.innerHTML = form;
+		parentNode.appendChild(el);
+		return this;
+	}
 
 	loadCheckout(
 		paymentDetails: QualpayPaymentDetails,

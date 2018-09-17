@@ -30,20 +30,33 @@ export class UserInfo extends React.Component<Props,State> {
 		(this: any).handleLogin = this.handleLogin.bind(this);
 	}
 
+	/**
+	 * Set password in state
+	 *
+	 * @param password
+	 */
 	setPassword(password:string){
 		this.setState({password});
 	}
 
-	getConfigFields(){
+	/**
+	 * Call onLoginAttempt, passing password from state
+	 */
+	handleLogin(){
+		this.props.onLoginAttempt(this.state.password);
+	}
+
+
+	/** @inheritDoc**/
+	render() {
+
 		const {props,state} = this;
-		const user = props.user ? props.user : {
-			id: 0,
-			username:'',
-			name: '',
-			first_name: '',
-			last_name: '',
-			email: ''
-		};
+		const {showPassword,user} = props;
+		//@todo solve this problem in components library
+		const fullWidthClassName = 'col-sm-12';
+		const halfWidthClassName =  'col-sm-12 col-md-6';
+		const emailClassName = showPassword ? halfWidthClassName : fullWidthClassName;
+
 
 
 		const emailField = {
@@ -53,7 +66,7 @@ export class UserInfo extends React.Component<Props,State> {
 			type: 'input',
 			required: true,
 			innerType: 'email',
-			inputClass: 'form-control',
+			fieldClassName: 'form-control',
 			value: user.email,
 			onValueChange: (newValue) => {
 				props.onChangeEmail(newValue);
@@ -72,7 +85,7 @@ export class UserInfo extends React.Component<Props,State> {
 			type: 'input',
 			required: true,
 			innerType: 'password',
-			inputClass: 'form-control',
+			fieldClassName: 'form-control',
 			value: state.password,
 			onValueChange: (newValue) => {
 				this.setPassword(newValue);
@@ -87,7 +100,7 @@ export class UserInfo extends React.Component<Props,State> {
 			required: true,
 			type: 'input',
 			innerType: 'text',
-			inputClass: 'form-control',
+			fieldClassName: 'form-control',
 			value: user.first_name,
 			onValueChange: (newValue) => {
 				props.onUpdateUserFields({
@@ -104,7 +117,7 @@ export class UserInfo extends React.Component<Props,State> {
 			required: false,
 			type: 'input',
 			innerType: 'text',
-			inputClass: 'form-control',
+			fieldClassName: 'form-control',
 			value: user.last_name,
 			onValueChange: (newValue) => {
 				props.onUpdateUserFields({
@@ -114,37 +127,45 @@ export class UserInfo extends React.Component<Props,State> {
 			}
 		};
 
-		const configFields = [
-			emailField
-		];
 
-		if( props.showPassword ){
-			configFields.push(passField);
-		}
-
-
-
-		configFields.push(firstNameField);
-		configFields.push(lastNameField);
-
-
-		return configFields;
-	}
-
-	handleLogin(){
-		this.props.onLoginAttempt(this.state.password);
-	}
-	render() {
-		const {props} = this;
 
 		return (
-			<div>
-				<RenderGroup
-					configFields={this.getConfigFields()}
-					className={'caldera-pay-customer-information'}
-				/>
+			<div
+				className={'caldera-pay-customer-information'}
+			>
+				<div className={'row'}>
+					<RenderGroup
+						configFields={[emailField]}
+						className={emailClassName}
+					/>
+					{ showPassword &&
+						<RenderGroup
+							configFields={[passField]}
+							className={halfWidthClassName}
+						/>
+					}
+
+				</div>
+
+				<div className={'row'}>
+					<RenderGroup
+						configFields={[firstNameField]}
+						className={halfWidthClassName}
+					/>
+					<RenderGroup
+						configFields={[lastNameField]}
+						className={halfWidthClassName}
+					/>
+				</div>
+
 				{props.showPassword &&
-					<button onClick={this.handleLogin}>Login</button>
+					<div className={'row'}>
+						<button
+							className={'btn-green'}
+							onClick={this.handleLogin}>
+							Login
+						</button>
+					</div>
 
 				}
 			</div>

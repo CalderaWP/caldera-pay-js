@@ -23,26 +23,35 @@ export const PriceTableItem = (props: Props) => {
 	const {calderaPay} = product;
 
 	return (
-		<div>
-			<h3>{product.title.rendered}</h3>
-			<ul>
-				{features.map((feature: string) => {
-					return <li
-						key={feature.replace(/\W/g, '')}
-					>
-						{feature}
-					</li>
-				})}
-			</ul>
-			<div>{calderaPay.prices.price}</div>
-			{showPurchase &&
-				<button
-					className={buttonClassName}
-					onClick={onSelectOption}
+		<div className="panel price panel-orange">
+			<div className="panel-heading arrow_box text-center">
+				<h3>{product.title.rendered}</h3>
+				<strong>{calderaPay.prices.price}</strong>
+				<ul
+					className={"list-group list-group-flush text-center"}
 				>
-					{callToAction}
-				</button>
-			}
+					{features.map((feature: string) => {
+						return <li
+							className={"list-group-item"}
+							key={feature.replace(/\W/g, '')}
+						>
+							<span>{feature}</span>
+						</li>
+					})}
+				</ul>
+
+				{showPurchase &&
+					<div className="panel-footer">
+						<a
+							style={{width: '100%'}}
+							className={buttonClassName}
+							onClick={onSelectOption}
+						>
+							{callToAction}
+						</a>
+					</div>
+				}
+			</div>
 		</div>
 	)
 };

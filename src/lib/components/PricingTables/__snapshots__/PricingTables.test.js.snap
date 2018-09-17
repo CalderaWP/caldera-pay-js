@@ -1,20 +1,36 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Pricing table components Item in table snapshot 1`] = `
-<div>
-  <h3>
-    Caldera Forms Pro Agency
-  </h3>
-  <ul>
-    <li>
-      feature1
-    </li>
-    <li>
-      feature 2
-    </li>
-  </ul>
-  <div>
-    549.89
+<div
+  className="panel price panel-orange"
+>
+  <div
+    className="panel-heading arrow_box text-center"
+  >
+    <h3>
+      Caldera Forms Pro Agency
+    </h3>
+    <strong>
+      549.89
+    </strong>
+    <ul
+      className="list-group list-group-flush text-center"
+    >
+      <li
+        className="list-group-item"
+      >
+        <span>
+          feature1
+        </span>
+      </li>
+      <li
+        className="list-group-item"
+      >
+        <span>
+          feature 2
+        </span>
+      </li>
+    </ul>
   </div>
 </div>
 `;
@@ -26,33 +42,66 @@ exports[`Pricing table components Pricing Tables with 1 products 1`] = `
   <div
     className="col-sm-12 col-md-12"
   >
-    <div>
-      <h3>
-        Caldera Forms Pro Agency
-      </h3>
-      <ul>
-        <li>
-          Unlimited Form Submissions
-        </li>
-        <li>
-          Unlimited Forms
-        </li>
-        <li>
-          Includes 31 Add-ons
-        </li>
-        <li>
-          Includes Caldera Pro Service
-        </li>
-      </ul>
-      <div>
-        549.89
-      </div>
-      <button
-        className={undefined}
-        onClick={[Function]}
+    <div
+      className="panel price panel-orange"
+    >
+      <div
+        className="panel-heading arrow_box text-center"
       >
-        Buy the only option
-      </button>
+        <h3>
+          Caldera Forms Pro Agency
+        </h3>
+        <strong>
+          549.89
+        </strong>
+        <ul
+          className="list-group list-group-flush text-center"
+        >
+          <li
+            className="list-group-item"
+          >
+            <span>
+              Unlimited Form Submissions
+            </span>
+          </li>
+          <li
+            className="list-group-item"
+          >
+            <span>
+              Unlimited Forms
+            </span>
+          </li>
+          <li
+            className="list-group-item"
+          >
+            <span>
+              Includes 31 Add-ons
+            </span>
+          </li>
+          <li
+            className="list-group-item"
+          >
+            <span>
+              Includes Caldera Pro Service
+            </span>
+          </li>
+        </ul>
+        <div
+          className="panel-footer"
+        >
+          <a
+            className={undefined}
+            onClick={[Function]}
+            style={
+              Object {
+                "width": "100%",
+              }
+            }
+          >
+            Buy the only option
+          </a>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -65,97 +114,196 @@ exports[`Pricing table components Pricing Tables with 3 products 1`] = `
   <div
     className="col-sm-12 col-md-4"
   >
-    <div>
-      <h3>
-        Caldera Forms Pro Agency
-      </h3>
-      <ul>
-        <li>
-          Unlimited Form Submissions
-        </li>
-        <li>
-          Unlimited Forms
-        </li>
-        <li>
-          Includes 31 Add-ons
-        </li>
-        <li>
-          Includes Caldera Pro Service
-        </li>
-      </ul>
-      <div>
-        549.89
-      </div>
-      <button
-        className={undefined}
-        onClick={[Function]}
+    <div
+      className="panel price panel-orange"
+    >
+      <div
+        className="panel-heading arrow_box text-center"
       >
-        Buy This ONe
-      </button>
+        <h3>
+          Caldera Forms Pro Agency
+        </h3>
+        <strong>
+          549.89
+        </strong>
+        <ul
+          className="list-group list-group-flush text-center"
+        >
+          <li
+            className="list-group-item"
+          >
+            <span>
+              Unlimited Form Submissions
+            </span>
+          </li>
+          <li
+            className="list-group-item"
+          >
+            <span>
+              Unlimited Forms
+            </span>
+          </li>
+          <li
+            className="list-group-item"
+          >
+            <span>
+              Includes 31 Add-ons
+            </span>
+          </li>
+          <li
+            className="list-group-item"
+          >
+            <span>
+              Includes Caldera Pro Service
+            </span>
+          </li>
+        </ul>
+        <div
+          className="panel-footer"
+        >
+          <a
+            className={undefined}
+            onClick={[Function]}
+            style={
+              Object {
+                "width": "100%",
+              }
+            }
+          >
+            Buy This ONe
+          </a>
+        </div>
+      </div>
     </div>
   </div>
   <div
     className="col-sm-12 col-md-4"
   >
-    <div>
-      <h3>
-        Caldera Forms Pro Individual
-      </h3>
-      <ul>
-        <li>
-          Unlimited Form Submissions
-        </li>
-        <li>
-          Unlimited Forms
-        </li>
-        <li>
-          Includes 10 Add-ons
-        </li>
-        <li>
-          Includes Caldera Pro Service
-        </li>
-      </ul>
-      <div>
-        164.89
-      </div>
-      <button
-        className={undefined}
-        onClick={[Function]}
+    <div
+      className="panel price panel-orange"
+    >
+      <div
+        className="panel-heading arrow_box text-center"
       >
-        Buy This ONe
-      </button>
+        <h3>
+          Caldera Forms Pro Individual
+        </h3>
+        <strong>
+          164.89
+        </strong>
+        <ul
+          className="list-group list-group-flush text-center"
+        >
+          <li
+            className="list-group-item"
+          >
+            <span>
+              Unlimited Form Submissions
+            </span>
+          </li>
+          <li
+            className="list-group-item"
+          >
+            <span>
+              Unlimited Forms
+            </span>
+          </li>
+          <li
+            className="list-group-item"
+          >
+            <span>
+              Includes 10 Add-ons
+            </span>
+          </li>
+          <li
+            className="list-group-item"
+          >
+            <span>
+              Includes Caldera Pro Service
+            </span>
+          </li>
+        </ul>
+        <div
+          className="panel-footer"
+        >
+          <a
+            className={undefined}
+            onClick={[Function]}
+            style={
+              Object {
+                "width": "100%",
+              }
+            }
+          >
+            Buy This ONe
+          </a>
+        </div>
+      </div>
     </div>
   </div>
   <div
     className="col-sm-12 col-md-4"
   >
-    <div>
-      <h3>
-        Caldera Forms Pro Advanced
-      </h3>
-      <ul>
-        <li>
-          Unlimited Form Submissions
-        </li>
-        <li>
-          Unlimited Forms
-        </li>
-        <li>
-          Includes 15 Add-ons
-        </li>
-        <li>
-          Includes Caldera Pro Service
-        </li>
-      </ul>
-      <div>
-        274.89
-      </div>
-      <button
-        className={undefined}
-        onClick={[Function]}
+    <div
+      className="panel price panel-orange"
+    >
+      <div
+        className="panel-heading arrow_box text-center"
       >
-        Buy This ONe
-      </button>
+        <h3>
+          Caldera Forms Pro Advanced
+        </h3>
+        <strong>
+          274.89
+        </strong>
+        <ul
+          className="list-group list-group-flush text-center"
+        >
+          <li
+            className="list-group-item"
+          >
+            <span>
+              Unlimited Form Submissions
+            </span>
+          </li>
+          <li
+            className="list-group-item"
+          >
+            <span>
+              Unlimited Forms
+            </span>
+          </li>
+          <li
+            className="list-group-item"
+          >
+            <span>
+              Includes 15 Add-ons
+            </span>
+          </li>
+          <li
+            className="list-group-item"
+          >
+            <span>
+              Includes Caldera Pro Service
+            </span>
+          </li>
+        </ul>
+        <div
+          className="panel-footer"
+        >
+          <a
+            className={undefined}
+            onClick={[Function]}
+            style={
+              Object {
+                "width": "100%",
+              }
+            }
+          >
+            Buy This ONe
+          </a>
+        </div>
+      </div>
     </div>
   </div>
 </div>

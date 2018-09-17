@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2467cfb6-9d72-4e41-90b3-1b336ac64977" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/lib/components/PricingTables/PriceTableItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/PricingTables/PriceTableItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/components/UserInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/UserInfo.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lib/qualpayEmbeddedFields.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/qualpayEmbeddedFields.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,7 +32,7 @@
           <entry key="css" value="1" />
           <entry key="gitignore" value="1" />
           <entry key="html" value="8" />
-          <entry key="js" value="203" />
+          <entry key="js" value="206" />
           <entry key="json" value="16" />
           <entry key="md" value="6" />
           <entry key="npmignore" value="1" />
@@ -44,7 +46,7 @@
           <entry key="CSS" value="1" />
           <entry key="HTML" value="8" />
           <entry key="JSON" value="16" />
-          <entry key="JavaScript" value="203" />
+          <entry key="JavaScript" value="206" />
           <entry key="Jest Snapshot" value="9" />
           <entry key="Markdown" value="6" />
           <entry key="PHP" value="1" />
@@ -56,7 +58,7 @@
         <counts>
           <entry key="dummy" value="25" />
           <entry key="html" value="187" />
-          <entry key="js" value="34749" />
+          <entry key="js" value="35396" />
           <entry key="json" value="436" />
           <entry key="md" value="1377" />
           <entry key="npmignore" value="14" />
@@ -67,7 +69,7 @@
         <counts>
           <entry key="HTML" value="238" />
           <entry key="JSON" value="436" />
-          <entry key="JavaScript" value="34722" />
+          <entry key="JavaScript" value="35369" />
           <entry key="Jest Snapshot" value="2" />
           <entry key="Markdown" value="1353" />
           <entry key="PLAIN_TEXT" value="39" />
@@ -92,29 +94,37 @@
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/README.md">
-              <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-                <state split_layout="SPLIT">
-                  <first_editor relative-caret-position="90">
-                    <caret line="6" column="15" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="15" />
-                    <folding>
-                      <element signature="e#0#53#0" expanded="true" />
-                      <element signature="e#0#26#0" expanded="true" />
-                    </folding>
-                  </first_editor>
-                  <second_editor />
+            <entry file="file://$PROJECT_DIR$/src/lib/qualpayEmbeddedFields.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="463">
+                  <caret line="126" column="30" lean-forward="true" selection-start-line="126" selection-start-column="30" selection-end-line="126" selection-end-column="30" />
+                  <folding>
+                    <element signature="e#10#52#0" expanded="true" />
+                    <element signature="n#style#0;n#div#0;n#form#0;n#!!top" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/lib/components/UserInfo.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="388">
+                  <caret line="118" column="30" lean-forward="true" selection-start-line="118" selection-start-column="30" selection-end-line="118" selection-end-column="30" />
+                  <folding>
+                    <element signature="e#9#35#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/lib/qualpayEmbeddedFields.js">
+            <entry file="file://$PROJECT_DIR$/src/lib/components/PricingTables/PriceTableItem.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="646">
-                  <caret line="133" column="98" selection-start-line="133" selection-start-column="98" selection-end-line="133" selection-end-column="98" />
+                <state relative-caret-position="675">
+                  <caret line="45" column="51" selection-start-line="45" selection-start-column="51" selection-end-line="45" selection-end-column="51" />
                   <folding>
-                    <element signature="e#10#52#0" expanded="true" />
-                    <element signature="n#style#0;n#div#0;n#form#0;n#!!top" expanded="true" />
+                    <element signature="e#9#35#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -192,27 +202,6 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/lib/components/BreadCrumbs/__snapshots__/BreadCrumbs.test.js.snap">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="217">
-                  <caret line="36" column="9" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="9" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/lib/factory.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="510">
-                  <caret line="41" column="8" selection-start-line="41" selection-start-column="8" selection-end-line="42" selection-end-column="34" />
-                  <folding>
-                    <element signature="e#9#57#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
         </leaf>
       </split-first>
       <split-second>
@@ -245,7 +234,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>basic-card</find>
       <find>payment</find>
       <find>Payment</find>
       <find>key</find>
@@ -275,6 +263,7 @@
       <find>setC</find>
       <find>set</find>
       <find>productSelectedId</find>
+      <find>buttonClassName</find>
     </findStrings>
     <replaceStrings>
       <replace>hasProductsInCart</replace>
@@ -309,7 +298,6 @@
         <option value="$PROJECT_DIR$/src/lib/util/queryString.js" />
         <option value="$PROJECT_DIR$/src/lib/util/uril.test.js" />
         <option value="$PROJECT_DIR$/src/lib/api/requestHeaders.js" />
-        <option value="$PROJECT_DIR$/src/lib/components/UserInfo.js" />
         <option value="$PROJECT_DIR$/src/lib/types/settings.js" />
         <option value="$PROJECT_DIR$/src/lib/types/index.js" />
         <option value="$PROJECT_DIR$/src/demo/App.js" />
@@ -325,7 +313,6 @@
         <option value="$PROJECT_DIR$/src/lib/containers/LeftTop.js" />
         <option value="$PROJECT_DIR$/src/lib/components/portals/index.js" />
         <option value="$PROJECT_DIR$/src/lib/components/portals/RightTop.js" />
-        <option value="$PROJECT_DIR$/src/lib/components/PricingTables/PriceTableItem.js" />
         <option value="$PROJECT_DIR$/src/lib/components/PurchaseDetails.js" />
         <option value="$PROJECT_DIR$/src/lib/containers/SelectBundle.js" />
         <option value="$PROJECT_DIR$/src/lib/components/PricingTables/PriceTables.js" />
@@ -344,6 +331,8 @@
         <option value="$PROJECT_DIR$/src/lib/components/BreadCrumbs/Breadcrumbs.js" />
         <option value="$PROJECT_DIR$/src/lib/components/CalderaPay.js" />
         <option value="$PROJECT_DIR$/src/lib/qualpayEmbeddedFields.js" />
+        <option value="$PROJECT_DIR$/src/lib/components/UserInfo.js" />
+        <option value="$PROJECT_DIR$/src/lib/components/PricingTables/PriceTableItem.js" />
       </list>
     </option>
   </component>
@@ -437,6 +426,14 @@
               <item name="caldera-pay-js" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="PricingTables" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="caldera-pay-js" type="b2602c69:ProjectViewProjectNode" />
+              <item name="caldera-pay-js" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
               <item name="containers" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -507,12 +504,12 @@
       <workItem from="1536860999579" duration="6665000" />
       <workItem from="1536935502832" duration="20025000" />
       <workItem from="1537024563941" duration="25641000" />
-      <workItem from="1537191205849" duration="8786000" />
+      <workItem from="1537191205849" duration="10664000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="118357000" />
+    <option name="totallyTimeSpent" value="120235000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1177" extended-state="0" />
@@ -678,6 +675,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="16" column="30" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -685,23 +685,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="525">
           <caret line="35" selection-start-line="35" selection-end-line="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/lib/components/PricingTables/PriceTableItem.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="466">
-          <caret line="37" column="25" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="25" />
-          <folding>
-            <element signature="e#9#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/lib/components/PricingTables/PriceTables.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="48" column="18" lean-forward="true" selection-start-line="48" selection-start-column="18" selection-end-line="48" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -742,13 +725,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="15" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/lib/components/UserInfo.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2150">
-          <caret line="153" selection-start-line="153" selection-end-line="153" />
         </state>
       </provider>
     </entry>
@@ -939,11 +915,41 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/lib/qualpayEmbeddedFields.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="133" column="98" selection-start-line="133" selection-start-column="98" selection-end-line="133" selection-end-column="98" />
+        <state relative-caret-position="463">
+          <caret line="126" column="30" lean-forward="true" selection-start-line="126" selection-start-column="30" selection-end-line="126" selection-end-column="30" />
           <folding>
             <element signature="e#10#52#0" expanded="true" />
             <element signature="n#style#0;n#div#0;n#form#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lib/components/UserInfo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="388">
+          <caret line="118" column="30" lean-forward="true" selection-start-line="118" selection-start-column="30" selection-end-line="118" selection-end-column="30" />
+          <folding>
+            <element signature="e#9#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lib/components/PricingTables/PriceTables.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="637">
+          <caret line="48" column="18" lean-forward="true" selection-start-line="48" selection-start-column="18" selection-end-line="48" selection-end-column="18" />
+          <folding>
+            <element signature="e#9#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lib/components/PricingTables/PriceTableItem.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="45" column="51" selection-start-line="45" selection-start-column="51" selection-end-line="45" selection-end-column="51" />
+          <folding>
+            <element signature="e#9#35#0" expanded="true" />
           </folding>
         </state>
       </provider>
