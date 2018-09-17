@@ -1,6 +1,6 @@
 {
   "name": "@caldera-labs/caldera-pay-js",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Caldera Pay JavaScript client",
   "main": "build/index.js",
   "scripts": {
