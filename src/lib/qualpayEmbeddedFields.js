@@ -86,7 +86,18 @@ export class qualpayEmbeddedFields {
 			const form = `
 				<form id="${formId}" method="post" action="/">
 				  <div id="qp-embedded-container" align="center" style="min-height: 150px;">
-				  </div>
+				  	<div class="form-group">
+						<label for="card-number">Card Number</label>
+     					<div id="card-number"></div>
+				  	</div>
+				  	<div class="form-group">
+						<label for="exp-date">Expiration Date</label>
+     					<div id="exp-date" class="form-control"></div>
+				  	</div>
+				  	<div class="form-group">
+						<label for="cvv">CVV</label>
+     					<div id="cvv" class="form-control"></div>
+				  	</div>
 				  <input type="submit" name="submit" value="Pay Now" />
 				</form>`;
 			const el = document.createElement('div');

@@ -39,12 +39,6 @@
     "@wordpress/hooks" "^2.0.0"
     "@wordpress/i18n" "^2.0.0"
 
-"@wordpress/api-request@^1.0.0-alpha.3":
-  version "1.0.0-alpha.3"
-  resolved "https://registry.yarnpkg.com/@wordpress/api-request/-/api-request-1.0.0-alpha.3.tgz#d7373d9720d345d7bc3a4b267a66432b47417131"
-  dependencies:
-    jquery "^3.3.1"
-
 "@wordpress/components@^3.0.0":
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/@wordpress/components/-/components-3.0.0.tgz#bbaf884aa8987ff6559d10a0998c469562ff59e2"
@@ -4258,10 +4252,6 @@ jest@20.0.4:
   resolved "https://registry.yarnpkg.com/jest/-/jest-20.0.4.tgz#3dd260c2989d6dad678b1e9cc4d91944f6d602ac"
   dependencies:
     jest-cli "^20.0.4"
-
-jquery@^3.3.1:
-  version "3.3.1"
-  resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.3.1.tgz#958ce29e81c9790f31be7792df5d4d95fc57fbca"
 
 js-base64@^2.1.9:
   version "2.4.9"
