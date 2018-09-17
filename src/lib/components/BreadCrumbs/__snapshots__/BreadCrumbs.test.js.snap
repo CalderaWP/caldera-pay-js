@@ -1,11 +1,27 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Breadcrumbs components Disables a tab 1`] = `
+<ol
+  className="breadcrumb"
+>
+  <li
+    className="breadcrumb"
+  >
+    <span
+      className="disabled"
+    >
+      Should Be Disabled
+    </span>
+  </li>
+</ol>
+`;
+
 exports[`Breadcrumbs components shows active tab 1`] = `
 <ol
   className="breadcrumb"
 >
   <li
-    className="active"
+    className="active breadcrumb"
   >
     <a
       aria-controls="page-2"
@@ -23,7 +39,7 @@ exports[`Breadcrumbs components shows not tab 1`] = `
   className="breadcrumb"
 >
   <li
-    className=""
+    className="breadcrumb"
   >
     <a
       aria-controls="page-1"
@@ -41,7 +57,7 @@ exports[`Breadcrumbs components works with multiple tabs 1`] = `
   className="breadcrumb"
 >
   <li
-    className=""
+    className="breadcrumb"
   >
     <a
       aria-controls="page-1"
@@ -52,7 +68,7 @@ exports[`Breadcrumbs components works with multiple tabs 1`] = `
     </a>
   </li>
   <li
-    className="active"
+    className="active breadcrumb"
   >
     <a
       aria-controls="page-2"

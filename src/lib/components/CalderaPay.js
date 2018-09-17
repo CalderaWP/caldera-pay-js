@@ -19,7 +19,10 @@ import type {ProductsData} from "../api/ApiClient";
 import {qualpayEmbeddedFields} from "../qualpayEmbeddedFields";
 import type {PaymentItem} from "../types/qualpay";
 import {LeftTop} from "./portals/LeftTop";
+import {RightTop} from "./portals/RightTop";
 import {PurchaseDetails} from "./PurchaseDetails";
+import {BreadCrumbs} from "./BreadCrumbs/Breadcrumbs";
+import type {BreadCrumbItem} from "./BreadCrumbs/Breadcrumbs";
 
 /**
  * Props type for CalderaPay Component
@@ -34,6 +37,7 @@ type Props = {
 	rightTopDomNode: Node
 };
 
+export type CrumbName = 'product'|'bundle'|'info'|'payment'
 /**
  * State type for CalderaPay Component
  */
@@ -50,7 +54,8 @@ type State = {
 	isPaymentOpen: boolean,
 	hasPaymentLoaded: boolean,
 	cardToken: string,
-	purchaseErrors: Array<string>
+	purchaseErrors: Array<string>,
+	currentCrumb: CrumbName
 };
 
 
@@ -100,7 +105,8 @@ export class CalderaPay extends Component<Props, State> {
 		isPaymentOpen: false,
 		hasPaymentLoaded: false,
 		cardToken: '',
-		purchaseErrors: []
+		purchaseErrors: [],
+		currentCrumb: 'product'
 	};
 
 	/** @inheritDoc **/
@@ -114,6 +120,7 @@ export class CalderaPay extends Component<Props, State> {
 		(this: any).onPurchaseSuccess = this.onPurchaseSuccess.bind(this);
 		(this: any).getPurchaseTotal = this.getPurchaseTotal.bind(this);
 		(this: any).findPurchaseProduct = this.findPurchaseProduct.bind(this);
+		(this: any).setCurrentCrumb = this.setCurrentCrumb.bind(this);
 	}
 
 	/** @inheritDoc **/
@@ -239,7 +246,14 @@ export class CalderaPay extends Component<Props, State> {
 	 * @param productSelectedId
 	 */
 	setProductSelected(productSelectedId: number) {
-		this.setState({productSelectedId});
+		this.setState({
+			productSelectedId,
+			currentCrumb: 'bundle'
+		});
+	}
+
+	setCurrentCrumb(currentCrumb: CrumbName ){
+		this.setState({currentCrumb});
 	}
 
 
@@ -311,6 +325,7 @@ export class CalderaPay extends Component<Props, State> {
 		this.setState({
 			productIdToPurchase,
 			isPaymentOpen: true,
+			currentCrumb: 'info'
 		});
 
 
@@ -375,10 +390,58 @@ export class CalderaPay extends Component<Props, State> {
 	}
 
 
+	getBreadCrumbs() : Array<BreadCrumbItem> {
+		const {currentCrumb,productSelectedId,productIdToPurchase} = this.state;
+		function createCrumb(breadCrumb){
+			return breadCrumb = {
+				...breadCrumb,
+				active: currentCrumb === breadCrumb.crumbName
+			}
+		}
+
+
+		const breadCrumbs = [
+			createCrumb({
+				page: 1,
+				pageElementId: 'page-1',
+				label: 'Choose Product',
+				crumbName: 'product',
+				disabled: false,
+			}),
+
+			createCrumb({
+				page: 2,
+				pageElementId: 'page-2',
+				label: 'Select Price Option',
+				crumbName: 'bundle',
+				disabled: productSelectedId === 0,
+			}),
+			createCrumb({
+				page: 3,
+				pageElementId: 'page-3',
+				label: 'Your Information',
+				crumbName: 'info',
+				disabled: productIdToPurchase === 0,
+
+			}),
+			createCrumb({
+				page: 4,
+				pageElementId: 'page-4',
+				label: 'Payment Details',
+				crumbName: 'payment',
+				disabled: productSelectedId === 0 || productIdToPurchase === 0
+			}),
+		];
+
+		console.log(breadCrumbs);
+		return breadCrumbs;
+
+	}
+
 	/** @inheritDoc **/
 	render() {
 		const {state, props} = this;
-		const {searchTerm, hasLoaded, productSelectedId, jwtToken,isPaymentOpen,productIdToPurchase} = state;
+		const {searchTerm, hasLoaded, productSelectedId, jwtToken,isPaymentOpen,productIdToPurchase,currentCrumb} = state;
 		const {userSettings,leftTopDomNode,rightTopDomNode} = props;
 
 		//Initial Load
@@ -391,37 +454,11 @@ export class CalderaPay extends Component<Props, State> {
 			);
 		}
 
-		//Choosing a product
-		if( !productSelectedId ){
-			return(
-				<React.Fragment>
-					<LeftTop element={leftTopDomNode}>
-						<ProductSearch
-							searchTerm={searchTerm}
-							onProductSearch={this.setSearchTerm}
-						/>
-					</LeftTop>
-
-
-					<ProductGrid
-						products={state.products}
-						rows={this.getRows()}
-						headers={this.getHeaders()}
-						onAddToCart={this.setProductSelected}
-						bundles={bundles}
-					/>
-				</React.Fragment>
-			);
-		}
-
-
 		//Entering Credit Card Details
 		//Do NOT use <RightTop> when payment is open
 		if( isPaymentOpen){
 			return (
-
 				<React.Fragment>
-
 					<LeftTop
 						element={leftTopDomNode}
 
@@ -443,18 +480,58 @@ export class CalderaPay extends Component<Props, State> {
 			);
 		}
 
-		if( productSelectedId ){
-			return(
-				<SelectBundle
-					product={this.getSelectedProduct().product}
-					bundlesIncludedIn={this.getSelectedProduct().bundlesIncludedIn}
-					onSelectForPurchase={this.productIdToPurchase}
-				/>
-			);
-
+		const Inside = () => {
+			switch( currentCrumb ){
+				case 'bundle':
+					return(
+						<SelectBundle
+							product={this.getSelectedProduct().product}
+							bundlesIncludedIn={this.getSelectedProduct().bundlesIncludedIn}
+							onSelectForPurchase={this.productIdToPurchase}
+						/>
+					);
+				case 'info':
+					return(
+						<User
+							settings={userSettings}
+							jwtToken={jwtToken}
+							onValidateToken={this.onValidateToken}
+						/>
+					);
+				case 'product':
+					default :
+					return (
+						<ProductGrid
+							products={state.products}
+							rows={this.getRows()}
+							headers={this.getHeaders()}
+							onAddToCart={this.setProductSelected}
+							bundles={bundles}
+						/>
+					);
+			}
 		}
 
 
+
+
+		return(
+			<React.Fragment>
+				<LeftTop element={leftTopDomNode}>
+					<BreadCrumbs
+						onNavigate={this.setCurrentCrumb}
+						items={this.getBreadCrumbs()}
+					/>
+				</LeftTop>
+				<RightTop element={rightTopDomNode}>
+					<ProductSearch
+						searchTerm={searchTerm}
+						onProductSearch={this.setSearchTerm}
+					/>
+				</RightTop>
+				<Inside/>
+			</React.Fragment>
+		);
 
 	}
 }

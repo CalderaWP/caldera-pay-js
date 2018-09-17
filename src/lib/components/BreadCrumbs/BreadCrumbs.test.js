@@ -12,14 +12,18 @@ describe( 'Breadcrumbs components', () => {
 			active: false,
 			page: 1,
 			pageElementId: 'page-1',
-			label: 'Not Active'
+			label: 'Not Active',
+			crumbName: 'hats',
+			disabled: false
 		},
 
 		{
 			active: true,
 			page: 2,
 			pageElementId: 'page-2',
-			label: 'Active'
+			label: 'Active',
+			crumbName: 'shoes',
+			disabled: false
 		},
 
 	]
@@ -33,6 +37,23 @@ describe( 'Breadcrumbs components', () => {
 	it( 'shows not tab', () => {
 		const component = renderer.create(
 			<BreadCrumbs onNavigate={genericHandler} items={[items[0]]}/>
+		);
+		expect( component.toJSON() ).toMatchSnapshot();
+	});
+
+
+	it( 'Disables a tab', () => {
+		const component = renderer.create(
+			<BreadCrumbs onNavigate={genericHandler} items={[
+				{
+					active: false,
+					page: 1,
+					pageElementId: 'page-1',
+					label: 'Should Be Disabled',
+					crumbName: 'hats',
+					disabled: true
+				}
+			]}/>
 		);
 		expect( component.toJSON() ).toMatchSnapshot();
 	});
