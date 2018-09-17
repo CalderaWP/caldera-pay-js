@@ -4,7 +4,17 @@
 This library's boilerplate is [DimiMikadze/create-react-library](https://github.com/DimiMikadze/create-react-library)
 
 
+## Requirements
+A WordPress site with:
+* WordPress 4.9.6 +
+* PHP 7.0 +
+* Caldera Pay WordPress Client Plugin
+    ** Currently only exists on CalderaForms.com caldera-pay branch, will be externalized soon
+* Easy Digital Downloads
+* Caldera Forms
+
 ## Install
+
 * Install using npm:
 `npm i caldera-labs/caldera-pay-js`
 
