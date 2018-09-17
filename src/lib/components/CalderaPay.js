@@ -19,7 +19,6 @@ import type {ProductsData} from "../api/ApiClient";
 import {qualpayEmbeddedFields} from "../qualpayEmbeddedFields";
 import type {PaymentItem} from "../types/qualpay";
 import {LeftTop} from "./portals/LeftTop";
-import {RightTop} from "./portals/RightTop";
 import {PurchaseDetails} from "./PurchaseDetails";
 
 /**

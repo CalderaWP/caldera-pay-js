@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2467cfb6-9d72-4e41-90b3-1b336ac64977" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/qualpayEmbeddedFields.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/qualpayEmbeddedFields.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/components/BreadCrumbs/BreadCrumbs.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/components/BreadCrumbs/Breadcrumbs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/components/CalderaPay.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/CalderaPay.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/components/PricingTables/__snapshots__/PricingTables.test.js.snap" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/PricingTables/__snapshots__/PricingTables.test.js.snap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/components/UserInfo.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/UserInfo.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/components/__snapshots__/UserInfo.test.js.snap" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/__snapshots__/UserInfo.test.js.snap" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,12 +36,12 @@
           <entry key="css" value="1" />
           <entry key="gitignore" value="1" />
           <entry key="html" value="8" />
-          <entry key="js" value="192" />
+          <entry key="js" value="198" />
           <entry key="json" value="16" />
           <entry key="md" value="6" />
           <entry key="npmignore" value="1" />
           <entry key="php" value="1" />
-          <entry key="snap" value="8" />
+          <entry key="snap" value="9" />
           <entry key="ts" value="2" />
         </counts>
       </usages-collector>
@@ -45,8 +50,8 @@
           <entry key="CSS" value="1" />
           <entry key="HTML" value="8" />
           <entry key="JSON" value="16" />
-          <entry key="JavaScript" value="192" />
-          <entry key="Jest Snapshot" value="8" />
+          <entry key="JavaScript" value="198" />
+          <entry key="Jest Snapshot" value="9" />
           <entry key="Markdown" value="6" />
           <entry key="PHP" value="1" />
           <entry key="PLAIN_TEXT" value="2" />
@@ -57,7 +62,7 @@
         <counts>
           <entry key="dummy" value="25" />
           <entry key="html" value="187" />
-          <entry key="js" value="32748" />
+          <entry key="js" value="33587" />
           <entry key="json" value="436" />
           <entry key="md" value="1377" />
           <entry key="npmignore" value="14" />
@@ -68,7 +73,7 @@
         <counts>
           <entry key="HTML" value="238" />
           <entry key="JSON" value="436" />
-          <entry key="JavaScript" value="32721" />
+          <entry key="JavaScript" value="33560" />
           <entry key="Jest Snapshot" value="2" />
           <entry key="Markdown" value="1353" />
           <entry key="PLAIN_TEXT" value="39" />
@@ -106,7 +111,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/lib/qualpayEmbeddedFields.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="618">
@@ -115,6 +120,76 @@
                 <element signature="e#10#52#0" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#form#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/lib/components/CalderaPay.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="374" column="5" selection-start-line="374" selection-start-column="5" selection-end-line="374" selection-end-column="5" />
+              <folding>
+                <element signature="e#9#48#0" expanded="true" />
+                <element signature="n#!!block;n#getRows#0;n#CalderaPay#0" />
+                <element signature="n#!!block;n#setSearchTerm#0;n#CalderaPay#0" />
+                <element signature="n#!!block;n#setProductSelected#0;n#CalderaPay#0" />
+                <element signature="n#!!block;n#getSelectedProduct#0;n#CalderaPay#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/lib/components/BreadCrumbs/Breadcrumbs.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="645">
+              <caret line="43" column="28" selection-start-line="43" selection-start-column="28" selection-end-line="43" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/lib/components/UserInfo.test.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="727">
+              <caret line="53" column="31" selection-start-line="53" selection-start-column="31" selection-end-line="53" selection-end-column="31" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/lib/components/CalderaPay.test.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="20">
+              <caret line="33" selection-start-line="33" selection-end-line="33" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/lib/components/BreadCrumbs/BreadCrumbs.test.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="630">
+              <caret line="42" column="23" selection-start-line="42" selection-start-column="23" selection-end-line="42" selection-end-column="23" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/lib/components/BreadCrumbs/__snapshots__/BreadCrumbs.test.js.snap">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="217">
+              <caret line="20" column="9" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -190,10 +265,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/lib/components/ProductGrid.js" />
-        <option value="$PROJECT_DIR$/src/lib/components/ProductSearch.js" />
-        <option value="$PROJECT_DIR$/src/lib/components/CartContents.js" />
-        <option value="$PROJECT_DIR$/src/lib/components/CartOverview.js" />
         <option value="$PROJECT_DIR$/src/lib/components/CartContentsTable.js" />
         <option value="$PROJECT_DIR$/src/lib/containers.js" />
         <option value="$PROJECT_DIR$/src/lib/types/WordPress.js" />
@@ -210,7 +281,6 @@
         <option value="$PROJECT_DIR$/src/lib/util/queryString.js" />
         <option value="$PROJECT_DIR$/src/lib/util/uril.test.js" />
         <option value="$PROJECT_DIR$/src/lib/api/requestHeaders.js" />
-        <option value="$PROJECT_DIR$/src/lib/components/UserInfo.test.js" />
         <option value="$PROJECT_DIR$/src/lib/components/UserInfo.js" />
         <option value="$PROJECT_DIR$/src/lib/types/settings.js" />
         <option value="$PROJECT_DIR$/src/lib/types/index.js" />
@@ -234,13 +304,18 @@
         <option value="$PROJECT_DIR$/src/lib/components/PricingTables/PriceTables.js" />
         <option value="$PROJECT_DIR$/src/lib/util/userSettingsFactory.js" />
         <option value="$PROJECT_DIR$/src/lib/containers/User.js" />
-        <option value="$PROJECT_DIR$/src/lib/components/CalderaPay.js" />
         <option value="$PROJECT_DIR$/.npmignore" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/lib/factory.js" />
         <option value="$PROJECT_DIR$/src/lib/index.js" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/lib/qualpayEmbeddedFields.js" />
+        <option value="$PROJECT_DIR$/src/lib/components/CalderaPay.js" />
+        <option value="$PROJECT_DIR$/src/lib/components/TabWrapper.js" />
+        <option value="$PROJECT_DIR$/src/lib/components/Breadcrumbs.js" />
+        <option value="$PROJECT_DIR$/src/lib/components/BreadCrumbs/BreadCrumbs.test.js" />
+        <option value="$PROJECT_DIR$/src/lib/components/BreadCrumbs/Breadcrumbs.js" />
+        <option value="$PROJECT_DIR$/src/lib/components/UserInfo.test.js" />
       </list>
     </option>
   </component>
@@ -266,11 +341,10 @@
       <path value="$PROJECT_DIR$/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="15" />
+  <component name="ProjectFrameBounds">
     <option name="y" value="23" />
-    <option name="width" value="1905" />
-    <option name="height" value="1057" />
+    <option name="width" value="1437" />
+    <option name="height" value="1177" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -301,6 +375,28 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="lib" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="caldera-pay-js" type="b2602c69:ProjectViewProjectNode" />
+              <item name="caldera-pay-js" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="caldera-pay-js" type="b2602c69:ProjectViewProjectNode" />
+              <item name="caldera-pay-js" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="BreadCrumbs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="caldera-pay-js" type="b2602c69:ProjectViewProjectNode" />
+              <item name="caldera-pay-js" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="containers" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -320,12 +416,13 @@
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/lib/components/portals" />
-      <recent name="$PROJECT_DIR$/src/lib/containers" />
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/lib/components" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/lib/components/BreadCrumbs" />
+      <recent name="$PROJECT_DIR$/src/lib/components/portals" />
+      <recent name="$PROJECT_DIR$/src/lib/containers" />
       <recent name="$PROJECT_DIR$/src/lib/components" />
     </key>
   </component>
@@ -368,18 +465,18 @@
       <workItem from="1536860999579" duration="6665000" />
       <workItem from="1536935502832" duration="20025000" />
       <workItem from="1537024563941" duration="25641000" />
-      <workItem from="1537191205849" duration="3406000" />
+      <workItem from="1537191205849" duration="6075000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="112977000" />
+    <option name="totallyTimeSpent" value="115646000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1920" height="1177" extended-state="6" />
+    <frame x="0" y="23" width="1437" height="1177" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13578275" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1827957" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -395,7 +492,7 @@
       <window_info anchor="bottom" id="Flow" order="9" sideWeight="0.4946752" weight="0.32953367" />
       <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="TypeScript" order="11" />
-      <window_info anchor="bottom" x="670" y="310" width="579" height="482" id="Terminal" order="12" sideWeight="0.48828542" visible="true" weight="0.0" />
+      <window_info anchor="bottom" x="2121" y="45" width="902" height="654" id="Terminal" order="12" sideWeight="0.48828542" type="WINDOWED" visible="true" weight="0.17788018" />
       <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.5117146" side_tool="true" weight="0.34196892" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -429,35 +526,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/lib/components/CalderaPay.js</url>
-          <line>171</line>
+          <line>170</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/lib/__MOCKDATA__/bundles.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="32" lean-forward="true" selection-start-column="32" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/lib/components/__snapshots__/CalderaPay.test.js.snap">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="319" column="6" selection-start-line="319" selection-start-column="3" selection-end-line="319" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/lib/__MOCKDATA__/products.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="871">
-          <caret line="1542" column="12" selection-start-line="1542" selection-start-column="7" selection-end-line="1542" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/lib/components/PricingTables/types.js" />
     <entry file="file://$PROJECT_DIR$/src/lib/types/WordPress.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -476,13 +551,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/lib/components/CalderaPay.test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="33" selection-start-line="33" selection-end-line="33" />
         </state>
       </provider>
     </entry>
@@ -514,16 +582,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/lib/components/UserInfo.test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="47" column="21" selection-start-line="47" selection-start-column="12" selection-end-line="47" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -715,20 +773,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/lib/components/CalderaPay.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="390" column="20" selection-start-line="390" selection-start-column="20" selection-end-line="390" selection-end-column="20" />
-          <folding>
-            <element signature="e#9#48#0" expanded="true" />
-            <element signature="n#!!block;n#getRows#0;n#CalderaPay#0" />
-            <element signature="n#!!block;n#setSearchTerm#0;n#CalderaPay#0" />
-            <element signature="n#!!block;n#setProductSelected#0;n#CalderaPay#0" />
-            <element signature="n#!!block;n#getSelectedProduct#0;n#CalderaPay#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/lib/util/apiSettingsFactory.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -782,6 +826,74 @@
           <folding>
             <element signature="e#10#52#0" expanded="true" />
             <element signature="n#style#0;n#div#0;n#form#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lib/components/CalderaPay.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="374" column="5" selection-start-line="374" selection-start-column="5" selection-end-line="374" selection-end-column="5" />
+          <folding>
+            <element signature="e#9#48#0" expanded="true" />
+            <element signature="n#!!block;n#getRows#0;n#CalderaPay#0" />
+            <element signature="n#!!block;n#setSearchTerm#0;n#CalderaPay#0" />
+            <element signature="n#!!block;n#setProductSelected#0;n#CalderaPay#0" />
+            <element signature="n#!!block;n#getSelectedProduct#0;n#CalderaPay#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lib/components/TabWrapper.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="5" selection-start-column="5" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lib/components/CalderaPay.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lib/components/BreadCrumbs/BreadCrumbs.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="42" column="23" selection-start-line="42" selection-start-column="23" selection-end-line="42" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lib/components/BreadCrumbs/__snapshots__/BreadCrumbs.test.js.snap">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="20" column="9" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lib/components/BreadCrumbs/Breadcrumbs.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="645">
+          <caret line="43" column="28" selection-start-line="43" selection-start-column="28" selection-end-line="43" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lib/components/UserInfo.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="727">
+          <caret line="53" column="31" selection-start-line="53" selection-start-column="31" selection-end-line="53" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>

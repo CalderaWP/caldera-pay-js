@@ -16,133 +16,147 @@ exports[`Pricing table components Item in table snapshot 1`] = `
   <div>
     549.89
   </div>
-  <button
-    className={undefined}
-    onClick={[Function]}
-  >
-    Buy Me!
-  </button>
 </div>
 `;
 
 exports[`Pricing table components Pricing Tables with 1 products 1`] = `
-<div>
-  <div>
-    <h3>
-      Caldera Forms Pro Agency
-    </h3>
-    <ul>
-      <li>
-        Unlimited Form Submissions
-      </li>
-      <li>
-        Unlimited Forms
-      </li>
-      <li>
-        Includes 31 Add-ons
-      </li>
-      <li>
-        Includes Caldera Pro Service
-      </li>
-    </ul>
+<div
+  className="row"
+>
+  <div
+    className="col-sm-12 col-md-12"
+  >
     <div>
-      549.89
+      <h3>
+        Caldera Forms Pro Agency
+      </h3>
+      <ul>
+        <li>
+          Unlimited Form Submissions
+        </li>
+        <li>
+          Unlimited Forms
+        </li>
+        <li>
+          Includes 31 Add-ons
+        </li>
+        <li>
+          Includes Caldera Pro Service
+        </li>
+      </ul>
+      <div>
+        549.89
+      </div>
+      <button
+        className={undefined}
+        onClick={[Function]}
+      >
+        Buy the only option
+      </button>
     </div>
-    <button
-      className={undefined}
-      onClick={[Function]}
-    >
-      Buy the only option
-    </button>
   </div>
 </div>
 `;
 
 exports[`Pricing table components Pricing Tables with 3 products 1`] = `
-<div>
-  <div>
-    <h3>
-      Caldera Forms Pro Agency
-    </h3>
-    <ul>
-      <li>
-        Unlimited Form Submissions
-      </li>
-      <li>
-        Unlimited Forms
-      </li>
-      <li>
-        Includes 31 Add-ons
-      </li>
-      <li>
-        Includes Caldera Pro Service
-      </li>
-    </ul>
+<div
+  className="row"
+>
+  <div
+    className="col-sm-12 col-md-4"
+  >
     <div>
-      549.89
+      <h3>
+        Caldera Forms Pro Agency
+      </h3>
+      <ul>
+        <li>
+          Unlimited Form Submissions
+        </li>
+        <li>
+          Unlimited Forms
+        </li>
+        <li>
+          Includes 31 Add-ons
+        </li>
+        <li>
+          Includes Caldera Pro Service
+        </li>
+      </ul>
+      <div>
+        549.89
+      </div>
+      <button
+        className={undefined}
+        onClick={[Function]}
+      >
+        Buy This ONe
+      </button>
     </div>
-    <button
-      className={undefined}
-      onClick={[Function]}
-    >
-      Buy This ONe
-    </button>
   </div>
-  <div>
-    <h3>
-      Caldera Forms Pro Individual
-    </h3>
-    <ul>
-      <li>
-        Unlimited Form Submissions
-      </li>
-      <li>
-        Unlimited Forms
-      </li>
-      <li>
-        Includes 10 Add-ons
-      </li>
-      <li>
-        Includes Caldera Pro Service
-      </li>
-    </ul>
+  <div
+    className="col-sm-12 col-md-4"
+  >
     <div>
-      164.89
+      <h3>
+        Caldera Forms Pro Individual
+      </h3>
+      <ul>
+        <li>
+          Unlimited Form Submissions
+        </li>
+        <li>
+          Unlimited Forms
+        </li>
+        <li>
+          Includes 10 Add-ons
+        </li>
+        <li>
+          Includes Caldera Pro Service
+        </li>
+      </ul>
+      <div>
+        164.89
+      </div>
+      <button
+        className={undefined}
+        onClick={[Function]}
+      >
+        Buy This ONe
+      </button>
     </div>
-    <button
-      className={undefined}
-      onClick={[Function]}
-    >
-      Buy This ONe
-    </button>
   </div>
-  <div>
-    <h3>
-      Caldera Forms Pro Advanced
-    </h3>
-    <ul>
-      <li>
-        Unlimited Form Submissions
-      </li>
-      <li>
-        Unlimited Forms
-      </li>
-      <li>
-        Includes 15 Add-ons
-      </li>
-      <li>
-        Includes Caldera Pro Service
-      </li>
-    </ul>
+  <div
+    className="col-sm-12 col-md-4"
+  >
     <div>
-      274.89
+      <h3>
+        Caldera Forms Pro Advanced
+      </h3>
+      <ul>
+        <li>
+          Unlimited Form Submissions
+        </li>
+        <li>
+          Unlimited Forms
+        </li>
+        <li>
+          Includes 15 Add-ons
+        </li>
+        <li>
+          Includes Caldera Pro Service
+        </li>
+      </ul>
+      <div>
+        274.89
+      </div>
+      <button
+        className={undefined}
+        onClick={[Function]}
+      >
+        Buy This ONe
+      </button>
     </div>
-    <button
-      className={undefined}
-      onClick={[Function]}
-    >
-      Buy This ONe
-    </button>
   </div>
 </div>
 `;

@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Breadcrumbs components shows active tab 1`] = `
+<ol
+  className="breadcrumb"
+>
+  <li
+    className="active"
+  >
+    <a
+      aria-controls="page-2"
+      aria-expanded="true"
+      onClick={[Function]}
+    >
+      Active
+    </a>
+  </li>
+</ol>
+`;
+
+exports[`Breadcrumbs components shows not tab 1`] = `
+<ol
+  className="breadcrumb"
+>
+  <li
+    className=""
+  >
+    <a
+      aria-controls="page-1"
+      aria-expanded="false"
+      onClick={[Function]}
+    >
+      Not Active
+    </a>
+  </li>
+</ol>
+`;
+
+exports[`Breadcrumbs components works with multiple tabs 1`] = `
+<ol
+  className="breadcrumb"
+>
+  <li
+    className=""
+  >
+    <a
+      aria-controls="page-1"
+      aria-expanded="false"
+      onClick={[Function]}
+    >
+      Not Active
+    </a>
+  </li>
+  <li
+    className="active"
+  >
+    <a
+      aria-controls="page-2"
+      aria-expanded="true"
+      onClick={[Function]}
+    >
+      Active
+    </a>
+  </li>
+</ol>
+`;

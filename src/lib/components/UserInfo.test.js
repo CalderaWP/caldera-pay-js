@@ -51,7 +51,7 @@ describe( 'UserInfo component', () => {
 			last_name: 'Sivan'
 		}
 		const component = renderer.create(<UserInfo
-				user={knownUseru}
+				user={knownUser}
 				onChangeEmail={genericHandler}
 				onUpdateUserFields={genericHandler}
 				onLoginAttempt={genericHandler}
