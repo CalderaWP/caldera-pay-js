@@ -158,38 +158,30 @@ exports[`UserInfo component Does show first name and last name fields with first
       </div>
     </div>
     <div
-      className="col-sm-12 col-md-6"
+      className="caldera-config-group"
     >
       <div
-        className="caldera-config-group"
+        className="caldera-config-field"
       >
-        <div
-          className="caldera-config-field"
+        <label
+          htmlFor="caldera-pay-customer-password"
         >
-          <label
-            htmlFor="caldera-pay-customer-password"
-          >
-            Password
-          </label>
-          <input
-            aria-describedby="caldera-pay-customer-password-description"
-            className="field-config field-config"
-            disabled={false}
-            id="caldera-pay-customer-password"
-            onBlur={undefined}
-            onChange={[Function]}
-            onFocus={undefined}
-            required={false}
-            type="text"
-            value=""
-          />
-          <p
-            className="description"
-            id="caldera-pay-customer-password-description"
-          >
-            Account Found Enter Password
-          </p>
-        </div>
+          Password
+        </label>
+        <input
+          aria-describedby="caldera-pay-customer-password-description"
+          className="field-config field-config"
+          id="caldera-pay-customer-email"
+          onChange={[Function]}
+          type="password"
+          value=""
+        />
+        <p
+          className="description"
+          id="caldera-pay-customer-email-description"
+        >
+          Your CalderaForms.com Password (Required)
+        </p>
       </div>
     </div>
   </div>
@@ -318,38 +310,30 @@ exports[`UserInfo component Does show password when told  to 1`] = `
       </div>
     </div>
     <div
-      className="col-sm-12 col-md-6"
+      className="caldera-config-group"
     >
       <div
-        className="caldera-config-group"
+        className="caldera-config-field"
       >
-        <div
-          className="caldera-config-field"
+        <label
+          htmlFor="caldera-pay-customer-password"
         >
-          <label
-            htmlFor="caldera-pay-customer-password"
-          >
-            Password
-          </label>
-          <input
-            aria-describedby="caldera-pay-customer-password-description"
-            className="field-config field-config"
-            disabled={false}
-            id="caldera-pay-customer-password"
-            onBlur={undefined}
-            onChange={[Function]}
-            onFocus={undefined}
-            required={false}
-            type="text"
-            value=""
-          />
-          <p
-            className="description"
-            id="caldera-pay-customer-password-description"
-          >
-            Account Found Enter Password
-          </p>
-        </div>
+          Password
+        </label>
+        <input
+          aria-describedby="caldera-pay-customer-password-description"
+          className="field-config field-config"
+          id="caldera-pay-customer-email"
+          onChange={[Function]}
+          type="password"
+          value=""
+        />
+        <p
+          className="description"
+          id="caldera-pay-customer-email-description"
+        >
+          Your CalderaForms.com Password (Required)
+        </p>
       </div>
     </div>
   </div>
