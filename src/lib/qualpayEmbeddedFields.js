@@ -106,32 +106,39 @@ export class qualpayEmbeddedFields {
 			/** Put the form in the DOM **/
 			const form = `
 				<form id="${formId}" method="post" action="/">
-				  <div id="qp-embedded-container" align="center" style="min-height: 150px;">
-				  	<div class="form-group">
-						<label 
-							for="${cardNumberId}"
-						>
-							Card Number
-						</label>
-     					<div id="${cardNumberId}"  class="form-control"></div>
-				  	</div>
-				  	<div class="form-group">
-						<label 
-							for="${cardExpId}"
-						>
-							Expiration Date
-						</label>
-     					<div id="${cardExpId}" class="form-control"></div>
-				  	</div>
-				  	<div class="form-group">
-						<label
-							for="${cardCvvId}"
-						>
-							CVV
-						</label>
-     					<div id="${cardCvvId}" class="form-control"></div>
-				  	</div>
-				  <input type="submit" name="submit" value="Pay Now" class="btn-primary btn-orange" />
+				  <div id="qp-embedded-container" align="center">
+					  <div class="row">
+						<div class="form-group">
+							<label 
+								for="${cardNumberId}"
+							>
+								Card Number
+							</label>
+							<div id="${cardNumberId}"></div>
+						</div>
+						</div>
+					<div class="row">
+						<div class="form-group col-sm-12 col-md-6">
+							<label 
+								for="${cardExpId}"
+							>
+								Expiration Date
+							</label>
+							<div id="${cardExpId}"></div>
+						</div>
+						<div class="form-group col-sm-12 col-md-6">
+							<label
+								for="${cardCvvId}"
+							>
+								CVV
+							</label>
+							<div id="${cardCvvId}"></div>
+						</div>
+					</div>
+				  	<div class="row">
+				  		<input type="submit" name="submit" value="Pay Now" class="btn-primary btn-orange" />
+					</div>
+										
 				</form>`;
 		const el = document.createElement('div');
 		el.innerHTML = form;

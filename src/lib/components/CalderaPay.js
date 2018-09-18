@@ -441,7 +441,7 @@ export class CalderaPay extends Component<Props, State> {
 	/** @inheritDoc **/
 	render() {
 		const {state, props} = this;
-		const {searchTerm, hasLoaded, productSelectedId, jwtToken,isPaymentOpen,productIdToPurchase,currentCrumb} = state;
+		const {searchTerm, hasLoaded, jwtToken,isPaymentOpen,productIdToPurchase,currentCrumb} = state;
 		const {userSettings,leftTopDomNode,rightTopDomNode} = props;
 
 		//Initial Load
