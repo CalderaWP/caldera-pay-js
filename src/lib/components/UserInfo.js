@@ -139,10 +139,32 @@ export class UserInfo extends React.Component<Props,State> {
 						className={emailClassName}
 					/>
 					{ showPassword &&
-						<RenderGroup
-							configFields={[passField]}
-							className={halfWidthClassName}
-						/>
+						<div className="caldera-config-group">
+							<div className="caldera-config-field">
+									<label
+										htmlFor="caldera-pay-customer-password"
+									>
+										Password
+									</label>
+								<input
+									type="password"
+									id="caldera-pay-customer-email"
+									className="field-config field-config"
+									aria-describedby="caldera-pay-customer-password-description"
+									value={state.password}
+									onChange={(event) => {
+										this.setPassword(event.target.value);
+									}}
+								/>
+								<p
+									id="caldera-pay-customer-email-description"
+									className="description"
+								>
+									Your CalderaForms.com Password (Required)
+								</p>
+							</div>
+						</div>
+
 					}
 
 				</div>

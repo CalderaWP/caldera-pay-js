@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2467cfb6-9d72-4e41-90b3-1b336ac64977" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/lib/components/portals/TopBar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/util/getElement.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/components/CalderaPay.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/CalderaPay.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lib/components/UserInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/UserInfo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/components/__snapshots__/UserInfo.test.js.snap" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/__snapshots__/UserInfo.test.js.snap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/components/portals/LeftTop.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/portals/LeftTop.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/components/portals/RightTop.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/portals/RightTop.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/containers/Payment.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/factory.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/factory.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/qualpayEmbeddedFields.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/qualpayEmbeddedFields.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -67,7 +56,7 @@
         <counts>
           <entry key="dummy" value="25" />
           <entry key="html" value="217" />
-          <entry key="js" value="37644" />
+          <entry key="js" value="37778" />
           <entry key="json" value="487" />
           <entry key="md" value="1377" />
           <entry key="npmignore" value="14" />
@@ -78,7 +67,7 @@
         <counts>
           <entry key="HTML" value="294" />
           <entry key="JSON" value="487" />
-          <entry key="JavaScript" value="37591" />
+          <entry key="JavaScript" value="37725" />
           <entry key="Jest Snapshot" value="2" />
           <entry key="Markdown" value="1353" />
           <entry key="PLAIN_TEXT" value="39" />
@@ -99,7 +88,7 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.6759088">
+    <splitter split-orientation="horizontal" split-proportion="0.9">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
@@ -135,8 +124,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/lib/components/UserInfo.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="333">
-                  <caret line="141" selection-start-line="141" selection-end-line="141" />
+                <state relative-caret-position="793">
+                  <caret line="155" column="75" selection-start-line="155" selection-start-column="75" selection-end-line="155" selection-end-column="75" />
                   <folding>
                     <element signature="e#9#35#0" expanded="true" />
                   </folding>
@@ -413,13 +402,6 @@
               <item name="lib" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="caldera-pay-js" type="b2602c69:ProjectViewProjectNode" />
-              <item name="caldera-pay-js" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -489,12 +471,12 @@
       <workItem from="1536860999579" duration="6665000" />
       <workItem from="1536935502832" duration="20025000" />
       <workItem from="1537024563941" duration="25641000" />
-      <workItem from="1537191205849" duration="18445000" />
+      <workItem from="1537191205849" duration="18678000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="128016000" />
+    <option name="totallyTimeSpent" value="128249000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1177" extended-state="0" />
@@ -936,8 +918,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/lib/components/UserInfo.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="141" selection-start-line="141" selection-end-line="141" />
+        <state relative-caret-position="793">
+          <caret line="155" column="75" selection-start-line="155" selection-start-column="75" selection-end-line="155" selection-end-column="75" />
           <folding>
             <element signature="e#9#35#0" expanded="true" />
           </folding>
