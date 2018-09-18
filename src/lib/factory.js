@@ -7,6 +7,7 @@ import {userSettingsFactory} from "./util/userSettingsFactory";
 import {apiSettingsFactory} from "./util/apiSettingsFactory";
 import {ApiClient} from "./api/ApiClient";
 import {qualpayEmbeddedFields} from "./qualpayEmbeddedFields";
+import {getElement} from "./util/getElement";
 
 /**
  * Renders the application onto a given DOM node.
@@ -30,18 +31,21 @@ export const factory = (settings: CalderaPaySettings, domNodeId : string, apiRoo
 		},
 		apiClient
 	);
-	const leftTop = document.getElementById('caldera-pay-left');
-	const rightTop = document.getElementById('caldera-pay-right');
 
+
+	const leftTopDomNode = getElement('caldera-pay-left');
+	const rightTopDomNode = getElement('caldera-pay-right');
+	const topBarDomNode = getElement('caldera-pay-top-bar');
 	ReactDOM.render(
 	<CalderaPay
 		apiClient={apiClient}
 		settings={settings}
 		userSettings={userSettings}
 		qualpayEmbeddedFields={qualpay}
-		leftTopDomNode={leftTop}
-		rightTopDomNode={rightTop}
-	/>, document.getElementById(domNodeId));
+		leftTopDomNode={leftTopDomNode}
+		rightTopDomNode={rightTopDomNode}
+		topBarDomNode={topBarDomNode}
+	/>, getElement(domNodeId));
 
 
 

@@ -2,7 +2,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 type Props = {
-	element: Node,
+	element: HTMLElement,
 	children : any
 }
 

@@ -62,7 +62,7 @@ export class UserInfo extends React.Component<Props,State> {
 		const emailField = {
 			id: 'caldera-pay-customer-email',
 			label: 'Email Address',
-			desc: '',
+			desc: 'If you have an account on CalderaForms.com enter the email you used. If not, we\'ll create one for you! (required)',
 			type: 'input',
 			required: true,
 			innerType: 'email',
@@ -96,7 +96,7 @@ export class UserInfo extends React.Component<Props,State> {
 		const firstNameField = {
 			id: 'caldera-pay-customer-first-name',
 			label: 'First Name',
-			desc: '',
+			desc: 'Your first name (required)',
 			required: true,
 			type: 'input',
 			innerType: 'text',

@@ -19,6 +19,7 @@ import type {ProductsData} from "../api/ApiClient";
 import {qualpayEmbeddedFields} from "../qualpayEmbeddedFields";
 import type {PaymentItem} from "../types/qualpay";
 import {LeftTop} from "./portals/LeftTop";
+import {TopBar} from "./portals/TopBar";
 import {RightTop} from "./portals/RightTop";
 import {PurchaseDetails} from "./PurchaseDetails";
 import {BreadCrumbs} from "./BreadCrumbs/Breadcrumbs";
@@ -33,8 +34,9 @@ type Props = {
 	fuseOptions: ?Fuse.FuseOptions,
 	apiClient: ApiClient,
 	qualpayEmbeddedFields: qualpayEmbeddedFields,
-	leftTopDomNode: Node,
-	rightTopDomNode: Node
+	leftTopDomNode: HTMLElement,
+	rightTopDomNode: HTMLElement,
+	topBarDomNode: HTMLElement
 };
 
 export type CrumbName = 'product'|'bundle'|'info'|'payment'
@@ -433,7 +435,6 @@ export class CalderaPay extends Component<Props, State> {
 			}),
 		];
 
-		console.log(breadCrumbs);
 		return breadCrumbs;
 
 	}
@@ -442,15 +443,31 @@ export class CalderaPay extends Component<Props, State> {
 	render() {
 		const {state, props} = this;
 		const {searchTerm, hasLoaded, jwtToken,isPaymentOpen,productIdToPurchase,currentCrumb} = state;
-		const {userSettings,leftTopDomNode,rightTopDomNode} = props;
+		const {userSettings,leftTopDomNode,rightTopDomNode,topBarDomNode} = props;
+		const BreadCrumbsInTopBar = () => {
+			return(
+				<TopBar element={topBarDomNode}>
+					<BreadCrumbs
+						onNavigate={this.setCurrentCrumb}
+						items={this.getBreadCrumbs()}
+					/>
+				</TopBar>
+			);
+		};
+
+
 
 		//Initial Load
 		if (!hasLoaded) {
 			return (
-				<div>
-					<div className={'sr-only'}>Loading</div>
-					<Spinner/>
-				</div>
+				<React.Fragment>
+					<BreadCrumbsInTopBar/>
+					<div>
+						<div className={'sr-only'}>Loading</div>
+						<Spinner/>
+					</div>
+				</React.Fragment>
+
 			);
 		}
 
@@ -459,6 +476,7 @@ export class CalderaPay extends Component<Props, State> {
 		if( isPaymentOpen){
 			return (
 				<React.Fragment>
+					<BreadCrumbsInTopBar/>
 					<LeftTop
 						element={leftTopDomNode}
 
@@ -474,8 +492,6 @@ export class CalderaPay extends Component<Props, State> {
 						heading={'Payment Details'}
 					/>
 				</React.Fragment>
-
-
 
 			);
 		}
@@ -512,17 +528,9 @@ export class CalderaPay extends Component<Props, State> {
 			}
 		}
 
-
-
-
 		return(
 			<React.Fragment>
-				<LeftTop element={leftTopDomNode}>
-					<BreadCrumbs
-						onNavigate={this.setCurrentCrumb}
-						items={this.getBreadCrumbs()}
-					/>
-				</LeftTop>
+				<BreadCrumbsInTopBar/>
 				<RightTop element={rightTopDomNode}>
 					<ProductSearch
 						searchTerm={searchTerm}

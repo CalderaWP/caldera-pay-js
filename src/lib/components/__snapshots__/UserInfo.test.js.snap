@@ -22,7 +22,7 @@ exports[`UserInfo component Does not show password when told not to 1`] = `
             Email Address
           </label>
           <input
-            aria-describedby={null}
+            aria-describedby="caldera-pay-customer-email-description"
             className="field-config field-config"
             disabled={false}
             id="caldera-pay-customer-email"
@@ -33,7 +33,12 @@ exports[`UserInfo component Does not show password when told not to 1`] = `
             type="text"
             value=""
           />
-          
+          <p
+            className="description"
+            id="caldera-pay-customer-email-description"
+          >
+            If you have an account on CalderaForms.com enter the email you used. If not, we'll create one for you! (required)
+          </p>
         </div>
       </div>
     </div>
@@ -56,7 +61,7 @@ exports[`UserInfo component Does not show password when told not to 1`] = `
             First Name
           </label>
           <input
-            aria-describedby={null}
+            aria-describedby="caldera-pay-customer-first-name-description"
             className="field-config field-config"
             disabled={false}
             id="caldera-pay-customer-first-name"
@@ -67,7 +72,12 @@ exports[`UserInfo component Does not show password when told not to 1`] = `
             type="text"
             value=""
           />
-          
+          <p
+            className="description"
+            id="caldera-pay-customer-first-name-description"
+          >
+            Your first name (required)
+          </p>
         </div>
       </div>
     </div>
@@ -127,7 +137,7 @@ exports[`UserInfo component Does show first name and last name fields with first
             Email Address
           </label>
           <input
-            aria-describedby={null}
+            aria-describedby="caldera-pay-customer-email-description"
             className="field-config field-config"
             disabled={false}
             id="caldera-pay-customer-email"
@@ -138,7 +148,12 @@ exports[`UserInfo component Does show first name and last name fields with first
             type="text"
             value=""
           />
-          
+          <p
+            className="description"
+            id="caldera-pay-customer-email-description"
+          >
+            If you have an account on CalderaForms.com enter the email you used. If not, we'll create one for you! (required)
+          </p>
         </div>
       </div>
     </div>
@@ -196,7 +211,7 @@ exports[`UserInfo component Does show first name and last name fields with first
             First Name
           </label>
           <input
-            aria-describedby={null}
+            aria-describedby="caldera-pay-customer-first-name-description"
             className="field-config field-config"
             disabled={false}
             id="caldera-pay-customer-first-name"
@@ -207,7 +222,12 @@ exports[`UserInfo component Does show first name and last name fields with first
             type="text"
             value="Roy"
           />
-          
+          <p
+            className="description"
+            id="caldera-pay-customer-first-name-description"
+          >
+            Your first name (required)
+          </p>
         </div>
       </div>
     </div>
@@ -277,7 +297,7 @@ exports[`UserInfo component Does show password when told  to 1`] = `
             Email Address
           </label>
           <input
-            aria-describedby={null}
+            aria-describedby="caldera-pay-customer-email-description"
             className="field-config field-config"
             disabled={false}
             id="caldera-pay-customer-email"
@@ -288,7 +308,12 @@ exports[`UserInfo component Does show password when told  to 1`] = `
             type="text"
             value=""
           />
-          
+          <p
+            className="description"
+            id="caldera-pay-customer-email-description"
+          >
+            If you have an account on CalderaForms.com enter the email you used. If not, we'll create one for you! (required)
+          </p>
         </div>
       </div>
     </div>
@@ -346,7 +371,7 @@ exports[`UserInfo component Does show password when told  to 1`] = `
             First Name
           </label>
           <input
-            aria-describedby={null}
+            aria-describedby="caldera-pay-customer-first-name-description"
             className="field-config field-config"
             disabled={false}
             id="caldera-pay-customer-first-name"
@@ -357,7 +382,12 @@ exports[`UserInfo component Does show password when told  to 1`] = `
             type="text"
             value=""
           />
-          
+          <p
+            className="description"
+            id="caldera-pay-customer-first-name-description"
+          >
+            Your first name (required)
+          </p>
         </div>
       </div>
     </div>

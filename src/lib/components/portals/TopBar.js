@@ -7,13 +7,14 @@ type Props = {
 }
 
 /**
- * Render in the Left Top area, which is outside of the app root
+ * Render in the TopBar area, which is outside of the app root
  *
  * @param props
  * @return {{$$typeof, key, children, containerInfo, implementation}}
  * @constructor
  */
-export  const LeftTop = (props: Props ) => {
+export const TopBar = (props: Props ) => {
+	console.log(props.element);
 	return ReactDOM.createPortal(
 		props.children,
 		props.element,
