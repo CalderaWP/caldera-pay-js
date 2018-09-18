@@ -22,17 +22,14 @@ export class qualpayEmbeddedFields {
 	cardNumberId: string;
 	cardExpId: string;
 	cardCvvId: string;
-	paymentFields: {};
 
 
-	createLabelId(mainId : string ) : string {
-		return `${mainId}-label`;
-	}
-
-	createDescribedId(mainId: string ) : string{
-		return `${mainId}-description`;
-
-	}
+	/**
+	 * Create Qualpay emebed fields
+	 * @param {string} formId ID of form element to use
+	 * @param {QualpaySettings} settings
+	 * @param {ApiClient} apiClient
+	 */
 	constructor (formId: string, settings: QualpaySettings, apiClient: ApiClient){
 		const{domNodeId} = settings;
 		this.formId = formId;
@@ -41,7 +38,65 @@ export class qualpayEmbeddedFields {
 		this.cardCvvId = settings.cvvId ? settings.cvvId : 'caldera-pay-card-cvv';
 
 		this.domNodeId = domNodeId;
-		this.paymentFields = {
+
+		this.settings = settings;
+		this.apiClient = apiClient;
+	}
+
+	/**
+	 * Create element ID for label
+	 *
+	 * @param {string} mainId ID of element being labeled
+	 * @return {string}
+	 */
+	createLabelId(mainId : string ) : string {
+		return `${mainId}-label`;
+	}
+
+	/**
+	 * Create element ID for aria description
+	 *
+	 * @param {string} mainId ID of element being described
+	 * @return {string}
+	 */
+	createDescribedId(mainId: string ) : string{
+		return `${mainId}-description`;
+
+	}
+
+	/**
+	 * Create payment fields
+	 * @return {{card_number: {id: string, attributes: {id: string, required: boolean, placeholder: string, arialabelledby: string, ariadescribedby: string}, onblur(BlurEvent): void}, exp_date: {id: string, attributes: {id: string, placeholder: string, arialabelledby: string, ariadescribedby: string}, onblur(BlurEvent): void}, cvv2: {id: string, attributes: {id: string, placeholder: string, required: boolean, arialabelledby: string, ariadescribedby: string}, onblur(BlurEvent): void}}}
+	 */
+	getPaymentFields(){
+		/**
+		 * Get HTML element by ID in a way that Flow will not raise errors
+		 * @see https://stackoverflow.com/a/44979814/1469799
+
+		 *
+		 * @param {String} id
+		 * @return {HTMLElement}
+		 */
+		const getElement = (id:string) : Element => {
+			const el = document.getElementById(id);
+			if(el && el.offsetWidth) {
+				return el;
+			}
+			throw 'Missing element'
+		};
+		const cardNumberMessagesElement = getElement(this.createDescribedId(this.cardNumberId));
+		const cardExpMessagesElement = getElement(this.createDescribedId(this.cardExpId));
+		const cardCvvMessagesElement = getElement(this.createDescribedId(this.cardCvvId));
+		type BlurEvent = {errors: Array<string>};
+		const handleErrorsOnBlur = (event: BlurEvent,element : Element) => {
+			if( undefined === typeof  event.errors || null === cardNumberMessagesElement ){
+				return;
+			}
+			const {errors} = event;
+			const message =  Array.isArray(errors) && errors.length ? errors[0] : '';
+			element.innerHTML = message;
+		}
+		return {
 			"card_number": {
 				id: this.cardNumberId,
 				attributes: {
@@ -51,13 +106,8 @@ export class qualpayEmbeddedFields {
 					arialabelledby: this.createLabelId(this.cardNumberId),
 					ariadescribedby: this.createDescribedId(this.cardNumberId)
 				},
-				onblur: function (event) {
-					let response = "{";
-					for (let key in event) {
-						response += key + ":" + event[key] + ",";
-					}
-					response += "}";
-					console.log("Card number blur event is " + response);
+				onblur(event: BlurEvent)  {
+					handleErrorsOnBlur(event,cardNumberMessagesElement);
 				}
 			},
 			"exp_date": {
@@ -68,13 +118,8 @@ export class qualpayEmbeddedFields {
 					arialabelledby: this.createLabelId(this.cardExpId),
 					ariadescribedby: this.createDescribedId(this.cardExpId)
 				},
-				onblur: function (event) {
-					let response = "{";
-					for (let key in event) {
-						response += key + ":" + event[key] + ",";
-					}
-					response += "}";
-					console.log("Exp date blur event is " + response);
+				onblur(event: BlurEvent)  {
+					handleErrorsOnBlur(event,cardExpMessagesElement);
 				}
 			},
 			"cvv2": {
@@ -86,20 +131,12 @@ export class qualpayEmbeddedFields {
 					arialabelledby: this.createLabelId(this.cardCvvId),
 					ariadescribedby: this.createDescribedId(this.cardCvvId)
 				},
-				onblur: function (event) {
-					let response = "{";
-					for (let key in event) {
-						response += key + ":" + event[key] + ",";
-					}
-					response += "}";
-					console.log("cvv blur event is " + response);
+				onblur(event: BlurEvent)  {
+					handleErrorsOnBlur(event,cardCvvMessagesElement);
 				}
 			}
 		};
-		this.settings = settings;
-		this.apiClient = apiClient;
 	}
-
 
 	putFormOnDom(parentNode: Node){
 		const {formId,cardExpId,cardNumberId,cardCvvId} = this;
@@ -107,38 +144,44 @@ export class qualpayEmbeddedFields {
 			const form = `
 				<form id="${formId}" method="post" action="/">
 				  <div id="qp-embedded-container" align="center">
-					  <div class="row">
-						<div class="form-group">
-							<label 
-								for="${cardNumberId}"
-							>
-								Card Number
-							</label>
-							<div id="${cardNumberId}"></div>
+					  	<div class="row">
+							<div class="form-group">
+								<label
+									id="${this.createLabelId(cardNumberId)}"
+									for="${cardNumberId}"
+								>
+									Card Number
+								</label>
+								<div id="${cardNumberId}"></div>
+								<div class="description" id="${this.createDescribedId(cardNumberId)}"></div>								
+							</div>
 						</div>
+						<div class="row">
+							<div class="form-group col-sm-12 col-md-6">
+								<label
+									id="${this.createLabelId(cardExpId)}"
+									for="${cardExpId}"
+								>
+									Expiration Date
+								</label>
+								<div id="${cardExpId}"></div>
+								<div class="description" id="${this.createDescribedId(cardExpId)}"></div>
+							</div>
+							<div class="form-group col-sm-12 col-md-6">
+								<label
+									id="${this.createLabelId(cardCvvId)}"								
+									for="${cardCvvId}"
+								>
+									CVV
+								</label>
+								<div id="${cardCvvId}"></div>
+								<div class="description" id="${this.createDescribedId(cardCvvId)}"></div>
+							</div>
 						</div>
-					<div class="row">
-						<div class="form-group col-sm-12 col-md-6">
-							<label 
-								for="${cardExpId}"
-							>
-								Expiration Date
-							</label>
-							<div id="${cardExpId}"></div>
+						<div class="row">
+							<input type="submit" name="submit" value="Pay Now" class="btn-primary btn-orange" />
 						</div>
-						<div class="form-group col-sm-12 col-md-6">
-							<label
-								for="${cardCvvId}"
-							>
-								CVV
-							</label>
-							<div id="${cardCvvId}"></div>
-						</div>
-					</div>
-				  	<div class="row">
-				  		<input type="submit" name="submit" value="Pay Now" class="btn-primary btn-orange" />
-					</div>
-										
+											
 				</form>`;
 		const el = document.createElement('div');
 		el.innerHTML = form;
@@ -146,21 +189,29 @@ export class qualpayEmbeddedFields {
 		return this;
 	}
 
+	/**
+	 * Load Qualpay hosted check out
+	 *
+	 *
+	 * @param {QualpayPaymentDetails} paymentDetails Details for payment
+	 * @param {Function} onSuccess Callback function when payment is successful. Passed tokenized card ID.
+	 * @param {Function} onError Callback when payment errors
+	 * @return {qualpayEmbeddedFields}
+	 */
 	loadCheckout(
 		paymentDetails: QualpayPaymentDetails,
 		onSuccess:(cardId: string) => void,
 		onError: (errors:Array<string>) => void
 	){
 		const clientSource = 'https://app-dev.qualpay.com/hosted/embedded/js/qp-embedded-sdk.min.js';
-		const {apiClient,settings,formId,paymentFields} = this;
-		console.log(formId);
+		const {apiClient,settings,formId} = this;
 		const {merchantId} = settings;
 		loadScript(clientSource)
 			.then(async (scriptRef) => {
 				const response = await apiClient.getCheckoutKey();
 				const {transientKey} = response;
 				const qualPayArgs = {
-					fields: paymentFields,
+					fields: this.getPaymentFields(),
 					formId,
 					mode: settings.mode,
 					transientKey: transientKey,
@@ -169,13 +220,8 @@ export class qualpayEmbeddedFields {
 						return onSuccess(data.card_id);
 					},
 					onError: (error) => {
-						const errors = [];
-						if( error.detail ) {
-							for( let key in error.detail ) {
-								errors.push(error.detail[key]);
-							}
-						}
-						return onError(errors);
+						return onError(error);
+
 					},
 					font: 'Titillium Web',
 					style:
@@ -192,7 +238,6 @@ export class qualpayEmbeddedFields {
 						},
 					}
 				};
-				console.log(qualPayArgs);
 				window.qpEmbeddedForm.loadFrame(merchantId,qualPayArgs);
 			});
 		return this;
